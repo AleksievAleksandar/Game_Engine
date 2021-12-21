@@ -24,6 +24,7 @@
 *.sdf
 *.pyc
 *.xml
+*.opendb
 ipch/
 obj/
 [Bb]in
