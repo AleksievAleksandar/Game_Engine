@@ -3,6 +3,7 @@
 
 #include <SDL.h>
 #include <SDL_ttf.h>
+#include <SDL_image.h>
 
 int32_t main([[maybe_unused]] int argc, [[maybe_unused]] char* args[])
 {

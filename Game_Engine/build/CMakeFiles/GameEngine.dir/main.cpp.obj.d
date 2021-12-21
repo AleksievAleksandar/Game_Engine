@@ -128,4 +128,5 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: \
  C:/mingw_dev_libs/include/SDL2/SDL_locale.h \
  C:/mingw_dev_libs/include/SDL2/SDL_misc.h \
  C:/mingw_dev_libs/include/SDL2/SDL_ttf.h \
- C:/mingw_dev_libs/include/SDL2/SDL.h
+ C:/mingw_dev_libs/include/SDL2/SDL.h \
+ C:/mingw_dev_libs/include/SDL2/SDL_image.h
