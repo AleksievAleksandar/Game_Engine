@@ -152,6 +152,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sdl_wrapper/SDL_Loader.obj: sdl_wrapper/SDL_Loader.cpp.obj
+.PHONY : sdl_wrapper/SDL_Loader.obj
+
+# target to build an object file
+sdl_wrapper/SDL_Loader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj
+.PHONY : sdl_wrapper/SDL_Loader.cpp.obj
+
+sdl_wrapper/SDL_Loader.i: sdl_wrapper/SDL_Loader.cpp.i
+.PHONY : sdl_wrapper/SDL_Loader.i
+
+# target to preprocess a source file
+sdl_wrapper/SDL_Loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.i
+.PHONY : sdl_wrapper/SDL_Loader.cpp.i
+
+sdl_wrapper/SDL_Loader.s: sdl_wrapper/SDL_Loader.cpp.s
+.PHONY : sdl_wrapper/SDL_Loader.s
+
+# target to generate assembly for a file
+sdl_wrapper/SDL_Loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.s
+.PHONY : sdl_wrapper/SDL_Loader.cpp.s
+
+sdl_wrapper/Window.obj: sdl_wrapper/Window.cpp.obj
+.PHONY : sdl_wrapper/Window.obj
+
+# target to build an object file
+sdl_wrapper/Window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj
+.PHONY : sdl_wrapper/Window.cpp.obj
+
+sdl_wrapper/Window.i: sdl_wrapper/Window.cpp.i
+.PHONY : sdl_wrapper/Window.i
+
+# target to preprocess a source file
+sdl_wrapper/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.i
+.PHONY : sdl_wrapper/Window.cpp.i
+
+sdl_wrapper/Window.s: sdl_wrapper/Window.cpp.s
+.PHONY : sdl_wrapper/Window.s
+
+# target to generate assembly for a file
+sdl_wrapper/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.s
+.PHONY : sdl_wrapper/Window.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +212,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... sdl_wrapper/SDL_Loader.obj
+	@echo ... sdl_wrapper/SDL_Loader.i
+	@echo ... sdl_wrapper/SDL_Loader.s
+	@echo ... sdl_wrapper/Window.obj
+	@echo ... sdl_wrapper/Window.i
+	@echo ... sdl_wrapper/Window.s
 .PHONY : help
 
 

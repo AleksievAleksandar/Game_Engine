@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GameEngine.dir/main.cpp.obj"
   "CMakeFiles/GameEngine.dir/main.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj.d"
   "GameEngine.exe"
   "GameEngine.exe.manifest"
   "GameEngine.pdb"

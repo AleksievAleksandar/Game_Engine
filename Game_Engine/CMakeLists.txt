@@ -28,6 +28,11 @@ set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 #generate project binary
 add_executable(
     ${PROJECT_NAME}  
+        ${_BASE_DIR}/sdl_wrapper/SDL_Loader.h
+        ${_BASE_DIR}/sdl_wrapper/SDL_Loader.cpp
+        ${_BASE_DIR}/sdl_wrapper/Window.h
+        ${_BASE_DIR}/sdl_wrapper/Window.cpp
+
         ${_BASE_DIR}/main.cpp
 )
 
