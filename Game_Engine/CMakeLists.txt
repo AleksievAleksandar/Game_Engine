@@ -32,6 +32,8 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/SDL_Loader.cpp
         ${_BASE_DIR}/sdl_wrapper/Window.h
         ${_BASE_DIR}/sdl_wrapper/Window.cpp
+        ${_BASE_DIR}/sdl_wrapper/Image_Handler.h
+        ${_BASE_DIR}/sdl_wrapper/Image_Handler.cpp
 
         ${_BASE_DIR}/main.cpp
 )

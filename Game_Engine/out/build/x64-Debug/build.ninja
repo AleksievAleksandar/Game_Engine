@@ -59,6 +59,14 @@ build CMakeFiles\GameEngine.dir\sdl_wrapper\Window.cpp.obj: CXX_COMPILER__GameEn
   TARGET_COMPILE_PDB = CMakeFiles\GameEngine.dir\
   TARGET_PDB = GameEngine.pdb
 
+build CMakeFiles\GameEngine.dir\sdl_wrapper\Image_Handler.cpp.obj: CXX_COMPILER__GameEngine_Debug ..\..\..\sdl_wrapper\Image_Handler.cpp || cmake_object_order_depends_target_GameEngine
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -Wall -Wextra -Werror -Wundef -Wuninitialized -Wreorder -Wshadow -Wpointer-arith -Wcast-align -Wcast-qual -Wconversion -Wunused-parameter -Wlogical-op -Wdouble-promotion -Wnon-virtual-dtor -Woverloaded-virtual -Wduplicated-cond -Wduplicated-branches -Wnull-dereference -std:c++17
+  INCLUDES = -IC:\mingw_dev_libs\include\SDL2
+  OBJECT_DIR = CMakeFiles\GameEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\GameEngine.dir\sdl_wrapper
+  TARGET_COMPILE_PDB = CMakeFiles\GameEngine.dir\
+  TARGET_PDB = GameEngine.pdb
+
 build CMakeFiles\GameEngine.dir\main.cpp.obj: CXX_COMPILER__GameEngine_Debug ..\..\..\main.cpp || cmake_object_order_depends_target_GameEngine
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -Wall -Wextra -Werror -Wundef -Wuninitialized -Wreorder -Wshadow -Wpointer-arith -Wcast-align -Wcast-qual -Wconversion -Wunused-parameter -Wlogical-op -Wdouble-promotion -Wnon-virtual-dtor -Woverloaded-virtual -Wduplicated-cond -Wduplicated-branches -Wnull-dereference -std:c++17
   INCLUDES = -IC:\mingw_dev_libs\include\SDL2
@@ -75,7 +83,7 @@ build CMakeFiles\GameEngine.dir\main.cpp.obj: CXX_COMPILER__GameEngine_Debug ..\
 #############################################
 # Link the executable GameEngine.exe
 
-build GameEngine.exe: CXX_EXECUTABLE_LINKER__GameEngine_Debug CMakeFiles\GameEngine.dir\sdl_wrapper\SDL_Loader.cpp.obj CMakeFiles\GameEngine.dir\sdl_wrapper\Window.cpp.obj CMakeFiles\GameEngine.dir\main.cpp.obj | C$:\mingw_dev_libs\lib\libSDL2.a C$:\mingw_dev_libs\lib\libSDL2_image.a C$:\mingw_dev_libs\lib\libSDL2_ttf.a C$:\mingw_dev_libs\lib\libSDL2_mixer.a
+build GameEngine.exe: CXX_EXECUTABLE_LINKER__GameEngine_Debug CMakeFiles\GameEngine.dir\sdl_wrapper\SDL_Loader.cpp.obj CMakeFiles\GameEngine.dir\sdl_wrapper\Window.cpp.obj CMakeFiles\GameEngine.dir\sdl_wrapper\Image_Handler.cpp.obj CMakeFiles\GameEngine.dir\main.cpp.obj | C$:\mingw_dev_libs\lib\libSDL2.a C$:\mingw_dev_libs\lib\libSDL2_image.a C$:\mingw_dev_libs\lib\libSDL2_ttf.a C$:\mingw_dev_libs\lib\libSDL2_mixer.a
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\mingw_dev_libs\lib\libSDL2.a  C:\mingw_dev_libs\lib\libSDL2_image.a  C:\mingw_dev_libs\lib\libSDL2_ttf.a  C:\mingw_dev_libs\lib\libSDL2_mixer.a  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
