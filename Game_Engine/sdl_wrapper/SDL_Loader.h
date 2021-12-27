@@ -10,11 +10,19 @@ struct SDL_Surface;
 class SDL_Loader
 {
 public:
-	SDL_Loader() = delete;
+	int32_t init();
+	void deinit();
+	int32_t draw() const;
 
-	static int32_t init(SDL_Window*& outWindow, SDL_Surface*& outSurface, SDL_Surface*& outImage);
-	static void deinit(SDL_Window*& outWindow, SDL_Surface*& outImage);
-	static int32_t draw(SDL_Window* window, SDL_Surface* surface, SDL_Surface* image);
+private:
+	//The window we'll be rendering(drawing) to
+	SDL_Window* _window = nullptr;
+
+	//The surface(data structure) contained by the window
+	SDL_Surface* _surface = nullptr;
+
+	//The image that will be loaded from disk and shown on the screen
+	SDL_Surface* _image = nullptr;
 };
 
 #endif // !SDL_LOADER_H

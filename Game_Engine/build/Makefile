@@ -128,6 +128,30 @@ GameEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/build
 .PHONY : GameEngine/fast
 
+engine/Engine.obj: engine/Engine.cpp.obj
+.PHONY : engine/Engine.obj
+
+# target to build an object file
+engine/Engine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj
+.PHONY : engine/Engine.cpp.obj
+
+engine/Engine.i: engine/Engine.cpp.i
+.PHONY : engine/Engine.i
+
+# target to preprocess a source file
+engine/Engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/engine/Engine.cpp.i
+.PHONY : engine/Engine.cpp.i
+
+engine/Engine.s: engine/Engine.cpp.s
+.PHONY : engine/Engine.s
+
+# target to generate assembly for a file
+engine/Engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/engine/Engine.cpp.s
+.PHONY : engine/Engine.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -233,6 +257,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... GameEngine
+	@echo ... engine/Engine.obj
+	@echo ... engine/Engine.i
+	@echo ... engine/Engine.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

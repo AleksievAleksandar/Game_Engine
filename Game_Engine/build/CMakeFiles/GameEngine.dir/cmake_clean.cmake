@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj"
+  "CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/main.cpp.obj"
   "CMakeFiles/GameEngine.dir/main.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj"

@@ -105,4 +105,4 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\istream.tcc \
- D:\Aleksandar\Projects\Cpp\ Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper/SDL_Loader.h
+ D:\Aleksandar\Projects\Cpp\ Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\engine/Engine.h

@@ -6,7 +6,7 @@
 #include <iostream>
 #include <SDL.h>
 
-int32_t SDL_Loader::init(SDL_Window*& outWindow, SDL_Surface*& outSurface, SDL_Surface*& outImage)
+int32_t SDL_Loader::init()
 {
 	//Initialize SDL
 	if (EXIT_SUCCESS != SDL_Init(SDL_INIT_VIDEO))
@@ -17,22 +17,22 @@ int32_t SDL_Loader::init(SDL_Window*& outWindow, SDL_Surface*& outSurface, SDL_S
 
 	//Create an Operation System window
 	WindowCfg windowCfg;
-	Window::createWindow(windowCfg, outWindow);
-	if (nullptr == outWindow)
+	Window::createWindow(windowCfg, this->_window);
+	if (nullptr == this->_window)
 	{
 		std::cerr << "ERROR -> Window::createWindow()" << std::endl;
 		return EXIT_FAILURE;
 	}
 
 	//Get window surface
-	outSurface = Window::getSurfaceFromWindow(outWindow);
-	if (nullptr == outSurface)
+	this->_surface = Window::getSurfaceFromWindow(this->_window);
+	if (nullptr == this->_surface)
 	{
 		std::cerr << "ERROR -> Window::getSurfaceFromWindow()" << std::endl;
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != Image_Handler::loadImage(outImage))
+	if (EXIT_SUCCESS != Image_Handler::loadImage(this->_image))
 	{
 		std::cerr << "ERROR -> Image_Handler::loadImage()" << std::endl;
 		return EXIT_FAILURE;
@@ -41,25 +41,25 @@ int32_t SDL_Loader::init(SDL_Window*& outWindow, SDL_Surface*& outSurface, SDL_S
 	return EXIT_SUCCESS;
 }
 
-void SDL_Loader::deinit(SDL_Window*& outWindow, SDL_Surface*& outImage)
+void SDL_Loader::deinit()
 {
 	//Deallocate surface
-	Image_Handler::deinit(outImage);
+	Image_Handler::deinit(this->_image);
 
 	//Destroy window
-	Window::destroyWindow(outWindow);
+	Window::destroyWindow(this->_window);
 
 	//Quit SDL subsystems
 	SDL_Quit();
 }
 
-int32_t SDL_Loader::draw(SDL_Window* window, SDL_Surface* surface, SDL_Surface* image)
+int32_t SDL_Loader::draw() const
 {
 	//Apply(update) the image
-	SDL_BlitSurface(image, nullptr, surface, nullptr);
+	SDL_BlitSurface(this->_image, nullptr, this->_surface, nullptr);
 
 	//Update the window surface
-	if (EXIT_SUCCESS != SDL_UpdateWindowSurface(window))
+	if (EXIT_SUCCESS != SDL_UpdateWindowSurface(this->_window))
 	{
 		std::cerr << "ERROR -> SDL_UpdateWindowSurface() failed. SDL_Error: " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;

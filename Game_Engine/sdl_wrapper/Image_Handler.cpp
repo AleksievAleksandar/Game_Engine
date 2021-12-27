@@ -19,6 +19,9 @@ int32_t Image_Handler::loadImage(SDL_Surface*& outImage)
 void Image_Handler::deinit(SDL_Surface*& outImage)
 {
     //Deallocate surface
-    SDL_FreeSurface(outImage);
-    outImage = nullptr;
+    if (nullptr != outImage)
+    {
+        SDL_FreeSurface(outImage);
+        outImage = nullptr;
+    }
 }
