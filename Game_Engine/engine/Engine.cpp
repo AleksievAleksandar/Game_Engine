@@ -10,7 +10,7 @@ int32_t Engine::init()
 	this->sdl_loader = new SDL_Loader();
 	if (EXIT_SUCCESS != this->sdl_loader->init())
 	{
-		std::cerr << "ERROR -> Engine::init() failed. " << std::endl;
+		std::cerr << "ERROR -> this->sdl_loader->init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 

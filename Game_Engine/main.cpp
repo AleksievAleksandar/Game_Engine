@@ -7,8 +7,18 @@
 int32_t main([[maybe_unused]] int argc, [[maybe_unused]] char* args[]) 
 {
     Engine engine;
-    engine.init();
-    engine.draw();
+
+    if (EXIT_SUCCESS != engine.init())
+    {
+        std::cerr << "ERROR -> Engine::init() failed. " << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    if (EXIT_SUCCESS != engine.draw())
+    {
+        return EXIT_FAILURE;
+    }
+
     engine.deinit();
 
     return EXIT_SUCCESS;
