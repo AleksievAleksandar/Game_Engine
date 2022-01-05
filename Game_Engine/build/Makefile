@@ -200,6 +200,30 @@ sdl_wrapper/Image_Handler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.s
 .PHONY : sdl_wrapper/Image_Handler.cpp.s
 
+sdl_wrapper/Input_Events.obj: sdl_wrapper/Input_Events.cpp.obj
+.PHONY : sdl_wrapper/Input_Events.obj
+
+# target to build an object file
+sdl_wrapper/Input_Events.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.obj
+.PHONY : sdl_wrapper/Input_Events.cpp.obj
+
+sdl_wrapper/Input_Events.i: sdl_wrapper/Input_Events.cpp.i
+.PHONY : sdl_wrapper/Input_Events.i
+
+# target to preprocess a source file
+sdl_wrapper/Input_Events.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.i
+.PHONY : sdl_wrapper/Input_Events.cpp.i
+
+sdl_wrapper/Input_Events.s: sdl_wrapper/Input_Events.cpp.s
+.PHONY : sdl_wrapper/Input_Events.s
+
+# target to generate assembly for a file
+sdl_wrapper/Input_Events.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.s
+.PHONY : sdl_wrapper/Input_Events.cpp.s
+
 sdl_wrapper/SDL_Loader.obj: sdl_wrapper/SDL_Loader.cpp.obj
 .PHONY : sdl_wrapper/SDL_Loader.obj
 
@@ -248,6 +272,30 @@ sdl_wrapper/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.s
 .PHONY : sdl_wrapper/Window.cpp.s
 
+utils/drawing/Point.obj: utils/drawing/Point.cpp.obj
+.PHONY : utils/drawing/Point.obj
+
+# target to build an object file
+utils/drawing/Point.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj
+.PHONY : utils/drawing/Point.cpp.obj
+
+utils/drawing/Point.i: utils/drawing/Point.cpp.i
+.PHONY : utils/drawing/Point.i
+
+# target to preprocess a source file
+utils/drawing/Point.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.i
+.PHONY : utils/drawing/Point.cpp.i
+
+utils/drawing/Point.s: utils/drawing/Point.cpp.s
+.PHONY : utils/drawing/Point.s
+
+# target to generate assembly for a file
+utils/drawing/Point.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.s
+.PHONY : utils/drawing/Point.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -266,12 +314,18 @@ help:
 	@echo ... sdl_wrapper/Image_Handler.obj
 	@echo ... sdl_wrapper/Image_Handler.i
 	@echo ... sdl_wrapper/Image_Handler.s
+	@echo ... sdl_wrapper/Input_Events.obj
+	@echo ... sdl_wrapper/Input_Events.i
+	@echo ... sdl_wrapper/Input_Events.s
 	@echo ... sdl_wrapper/SDL_Loader.obj
 	@echo ... sdl_wrapper/SDL_Loader.i
 	@echo ... sdl_wrapper/SDL_Loader.s
 	@echo ... sdl_wrapper/Window.obj
 	@echo ... sdl_wrapper/Window.i
 	@echo ... sdl_wrapper/Window.s
+	@echo ... utils/drawing/Point.obj
+	@echo ... utils/drawing/Point.i
+	@echo ... utils/drawing/Point.s
 .PHONY : help
 
 
