@@ -1,6 +1,7 @@
 #include "Engine.h"
 
 #include "../sdl_wrapper/SDL_Loader.h"
+#include "../utils/thread/ThreadUtils.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -54,6 +55,8 @@ void Engine::mainLoop()
 			std::cerr << "ERROR -> Engine::draw() failed." << std::endl;
 			break;
 		}
+
+		this->limitFPS();
 	}
 }
 
@@ -85,6 +88,11 @@ bool Engine::handleEvent()
 	}
 
 	return false;
+}
+
+void Engine::limitFPS() const
+{
+	ThreadUtil::sleepFor(15000);
 }
 
 void Engine::start()

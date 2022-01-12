@@ -39,8 +39,12 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/Input_Events.cpp
 
         ${_BASE_DIR}/utils/EventDefines.h
+
         ${_BASE_DIR}/utils/drawing/Point.h
         ${_BASE_DIR}/utils/drawing/Point.cpp
+
+        ${_BASE_DIR}/utils/thread/ThreadUtils.h
+        ${_BASE_DIR}/utils/thread/ThreadUtils.cpp
 
         ${_BASE_DIR}/engine/Engine.h
         ${_BASE_DIR}/engine/Engine.cpp

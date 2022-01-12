@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj"
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj"
+  "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj.d"
   "GameEngine.exe"
   "GameEngine.exe.manifest"
   "GameEngine.pdb"

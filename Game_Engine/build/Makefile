@@ -296,6 +296,30 @@ utils/drawing/Point.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.s
 .PHONY : utils/drawing/Point.cpp.s
 
+utils/thread/ThreadUtils.obj: utils/thread/ThreadUtils.cpp.obj
+.PHONY : utils/thread/ThreadUtils.obj
+
+# target to build an object file
+utils/thread/ThreadUtils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj
+.PHONY : utils/thread/ThreadUtils.cpp.obj
+
+utils/thread/ThreadUtils.i: utils/thread/ThreadUtils.cpp.i
+.PHONY : utils/thread/ThreadUtils.i
+
+# target to preprocess a source file
+utils/thread/ThreadUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.i
+.PHONY : utils/thread/ThreadUtils.cpp.i
+
+utils/thread/ThreadUtils.s: utils/thread/ThreadUtils.cpp.s
+.PHONY : utils/thread/ThreadUtils.s
+
+# target to generate assembly for a file
+utils/thread/ThreadUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.s
+.PHONY : utils/thread/ThreadUtils.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -326,6 +350,9 @@ help:
 	@echo ... utils/drawing/Point.obj
 	@echo ... utils/drawing/Point.i
 	@echo ... utils/drawing/Point.s
+	@echo ... utils/thread/ThreadUtils.obj
+	@echo ... utils/thread/ThreadUtils.i
+	@echo ... utils/thread/ThreadUtils.s
 .PHONY : help
 
 

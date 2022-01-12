@@ -64,9 +64,5 @@ int32_t SDL_Loader::draw() const
 		std::cerr << "ERROR -> SDL_UpdateWindowSurface() failed. SDL_Error: " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 	}
-
-	//Wait three seconds before exiting
-	//SDL_Delay(3000);
-
 	return EXIT_SUCCESS;
 }
