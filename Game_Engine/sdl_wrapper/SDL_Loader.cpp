@@ -66,7 +66,7 @@ int32_t SDL_Loader::draw() const
 	}
 
 	//Wait three seconds before exiting
-	SDL_Delay(3000);
+	//SDL_Delay(3000);
 
 	return EXIT_SUCCESS;
 }

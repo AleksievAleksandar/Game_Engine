@@ -161,8 +161,8 @@ enum MouseKey {
 
 enum class TouchEvent : uint8_t {
   UNKNOWN = 0,
-  TOUCH_PRESS,
-  TOUCH_RELEASE,
+  MOUSE_PRESS,
+  MOUSE_RELEASE,
   KEYBOARD_PRESS,
   KEYBOARD_RELEASE
 };

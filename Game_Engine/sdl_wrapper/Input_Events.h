@@ -10,7 +10,10 @@ union SDL_Event;
 class InputEvent
 {
 public:
-	bool pollEvent() const;
+	int32_t init();
+	void deinit();
+	bool pollEvent();
+	bool checkForExitRequestEvent() const;
 
 	Point mousePos = Point::UNKNOWN;
 	int32_t key = Keyboard::Key::KEY_UNKNOWN;
@@ -18,6 +21,8 @@ public:
 	TouchEvent touchEvent = TouchEvent::UNKNOWN;
 
 private:
+	void processEvent();
+
 	/** Holds the OS communication event system */
 	SDL_Event* _sdlEvent = nullptr;
 };

@@ -1,6 +1,7 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
+#include "../sdl_wrapper/Input_Events.h"
 #include <cstdint>
 
 //Forword Declarations
@@ -11,10 +12,15 @@ class Engine
 public:
 	int32_t init();
 	void deinit();
-	int32_t draw() const;
+	void start();
 
 private:
+	int32_t draw() const;
+	void mainLoop();
+	bool handleEvent();
+
 	SDL_Loader* sdl_loader = nullptr;
+	InputEvent event;
 };
 
 #endif // !ENGINE_H

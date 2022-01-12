@@ -26,6 +26,7 @@ find_package(${SDL_MIXER_PKG_NAME} REQUIRED)
 set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 #generate project binary
+message(${_BASE_DIR})
 add_executable(
     ${PROJECT_NAME}  
         ${_BASE_DIR}/sdl_wrapper/SDL_Loader.h

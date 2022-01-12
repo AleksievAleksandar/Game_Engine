@@ -14,10 +14,7 @@ int32_t main([[maybe_unused]] int argc, [[maybe_unused]] char* args[])
         return EXIT_FAILURE;
     }
 
-    if (EXIT_SUCCESS != engine.draw())
-    {
-        return EXIT_FAILURE;
-    }
+    engine.start();
 
     engine.deinit();
 
