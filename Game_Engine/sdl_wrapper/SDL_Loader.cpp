@@ -32,9 +32,9 @@ int32_t SDL_Loader::init()
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != Image_Handler::loadImage(this->_image))
+	if (EXIT_SUCCESS != this->imageHandler.loadImage())
 	{
-		std::cerr << "ERROR -> Image_Handler::loadImage()" << std::endl;
+		std::cerr << "ERROR -> _imageHandler.loadImage()" << std::endl;
 		return EXIT_FAILURE;
 	}
 
@@ -44,7 +44,7 @@ int32_t SDL_Loader::init()
 void SDL_Loader::deinit()
 {
 	//Deallocate surface
-	Image_Handler::deinit(this->_image);
+	this->imageHandler.deinit();
 
 	//Destroy window
 	Window::destroyWindow(this->_window);
@@ -56,7 +56,7 @@ void SDL_Loader::deinit()
 int32_t SDL_Loader::draw() const
 {
 	//Apply(update) the image
-	SDL_BlitSurface(this->_image, nullptr, this->_surface, nullptr);
+	SDL_BlitSurface(this->imageHandler._currentImage, nullptr, this->_surface, nullptr);
 
 	//Update the window surface
 	if (EXIT_SUCCESS != SDL_UpdateWindowSurface(this->_window))

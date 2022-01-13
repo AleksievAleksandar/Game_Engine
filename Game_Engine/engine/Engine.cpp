@@ -2,6 +2,7 @@
 
 #include "../sdl_wrapper/SDL_Loader.h"
 #include "../utils/thread/ThreadUtils.h"
+#include "../utils/time_measurement/Time.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -20,7 +21,7 @@ int32_t Engine::init()
 		std::cerr << "ERROR -> this->event->init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
-	
+
 	return EXIT_SUCCESS;
 }
 
@@ -42,8 +43,11 @@ int32_t Engine::draw() const
 
 void Engine::mainLoop()
 {
+	Time time;
 	while (true)
 	{
+		time.getElapsed();
+
 		const bool shouldExit = this->handleEvent();
 		if (shouldExit)
 		{
@@ -56,7 +60,8 @@ void Engine::mainLoop()
 			break;
 		}
 
-		this->limitFPS();
+		this->limitFPS(time.getElapsed().toMicroseconds());
+
 	}
 }
 
@@ -64,21 +69,25 @@ bool Engine::handleEvent()
 {
 	while (this->event.pollEvent())
 	{
-		if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS)
+		if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_UP)
 		{
-			std::cout << "Keyboard press: " << (char)this->event.key << std::endl;
+			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::UP];
+		}
+		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_DOWN)
+		{
+			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::DOWN];
+		}
+		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_LEFT)
+		{
+			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::LEFT];
+		}
+		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_RIGHT)
+		{
+			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::RIGHT];
 		}
 		else if (this->event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
 		{
-			std::cout << "Keyboard release: " << (char)this->event.key << std::endl;
-		}
-		else if (this->event.touchEvent == TouchEvent::MOUSE_PRESS)
-		{
-			std::cout << "Keyboard release: " << (char)this->event.mouseButton << std::endl;
-		}
-		else if (this->event.touchEvent == TouchEvent::MOUSE_RELEASE)
-		{
-			std::cout << "Keyboard release: " << (char)this->event.mouseButton << std::endl;
+			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::PRESS_KEYS];
 		}
 
 		if (this->event.checkForExitRequestEvent())
@@ -90,9 +99,19 @@ bool Engine::handleEvent()
 	return false;
 }
 
-void Engine::limitFPS() const
+void Engine::limitFPS(int64_t elapsedMicroseconds) const
 {
-	ThreadUtil::sleepFor(15000);
+	constexpr auto maxFrames = 60;
+	constexpr auto microsecondsInASeconds = 1000000;
+	constexpr auto maxMicrosecondsPerFrame = microsecondsInASeconds / maxFrames;
+
+	const int64_t microSecondsFpsDelay = maxMicrosecondsPerFrame - elapsedMicroseconds;
+
+	if (0 < microSecondsFpsDelay)
+	{
+		ThreadUtil::sleepFor(microSecondsFpsDelay);
+		//std::cout << "Sleep time = " << microSecondsFpsDelay << std::endl;
+	}
 }
 
 void Engine::start()

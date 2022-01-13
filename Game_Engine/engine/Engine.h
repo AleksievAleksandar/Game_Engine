@@ -18,7 +18,7 @@ private:
 	int32_t draw() const;
 	void mainLoop();
 	bool handleEvent();
-	void limitFPS() const;
+	void limitFPS(int64_t elapsedMicroseconds) const;
 
 	SDL_Loader* sdl_loader = nullptr;
 	InputEvent event;

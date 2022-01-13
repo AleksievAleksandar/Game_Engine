@@ -320,6 +320,30 @@ utils/thread/ThreadUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.s
 .PHONY : utils/thread/ThreadUtils.cpp.s
 
+utils/time_measurement/Time.obj: utils/time_measurement/Time.cpp.obj
+.PHONY : utils/time_measurement/Time.obj
+
+# target to build an object file
+utils/time_measurement/Time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj
+.PHONY : utils/time_measurement/Time.cpp.obj
+
+utils/time_measurement/Time.i: utils/time_measurement/Time.cpp.i
+.PHONY : utils/time_measurement/Time.i
+
+# target to preprocess a source file
+utils/time_measurement/Time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.i
+.PHONY : utils/time_measurement/Time.cpp.i
+
+utils/time_measurement/Time.s: utils/time_measurement/Time.cpp.s
+.PHONY : utils/time_measurement/Time.s
+
+# target to generate assembly for a file
+utils/time_measurement/Time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.s
+.PHONY : utils/time_measurement/Time.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -353,6 +377,9 @@ help:
 	@echo ... utils/thread/ThreadUtils.obj
 	@echo ... utils/thread/ThreadUtils.i
 	@echo ... utils/thread/ThreadUtils.s
+	@echo ... utils/time_measurement/Time.obj
+	@echo ... utils/time_measurement/Time.i
+	@echo ... utils/time_measurement/Time.s
 .PHONY : help
 
 

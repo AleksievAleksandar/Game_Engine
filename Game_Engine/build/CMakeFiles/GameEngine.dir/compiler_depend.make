@@ -20,7 +20,17 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
   ../utils/EventDefines.h \
   ../sdl_wrapper/SDL_Loader.h \
+  ../sdl_wrapper/Image_Handler.h \
   ../utils/thread/ThreadUtils.h \
+  ../utils/time_measurement/Time.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/chrono \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ratio \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/type_traits \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ctime \
+  C:/MinGW/include/time.h \
+  C:/MinGW/include/sys/types.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdlib \
   C:/MinGW/include/stdlib.h \
   C:/MinGW/include/errno.h \
@@ -39,7 +49,6 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h \
   C:/MinGW/include/stdlib.h \
   C:/MinGW/include/time.h \
-  C:/MinGW/include/sys/types.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/exception \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_ptr.h \
@@ -51,7 +60,6 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/nested_exception.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/move.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/concept_check.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/type_traits \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_algobase.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/functexcept.h \
@@ -94,7 +102,6 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/alloc_traits.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/alloc_traits.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string_view \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/functional_hash.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/string_view.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/string_conversions.h \
@@ -254,7 +261,9 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/include/sdkddkver.h \
   C:/MinGW/include/features.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
-  C:/mingw_dev_libs/include/SDL2/SDL_surface.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_image.h \
+  C:/mingw_dev_libs/include/SDL2/SDL.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_main.h \
   C:/mingw_dev_libs/include/SDL2/SDL_stdinc.h \
   C:/mingw_dev_libs/include/SDL2/SDL_config.h \
   C:/mingw_dev_libs/include/SDL2/SDL_platform.h \
@@ -266,12 +275,114 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/include/errno.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/std_abs.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h \
-  C:/mingw_dev_libs/include/SDL2/SDL_pixels.h \
-  C:/mingw_dev_libs/include/SDL2/SDL_endian.h \
-  C:/mingw_dev_libs/include/SDL2/SDL_rect.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_assert.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_atomic.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_audio.h \
   C:/mingw_dev_libs/include/SDL2/SDL_error.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_endian.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_mutex.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_thread.h \
+  C:/MinGW/include/process.h \
+  C:/MinGW/include/sys/types.h \
+  C:/MinGW/include/stdint.h \
   C:/mingw_dev_libs/include/SDL2/SDL_rwops.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_clipboard.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_cpuinfo.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/immintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/mmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/xmmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/mm_malloc.h \
+  C:/MinGW/include/errno.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/emmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/pmmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/tmmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/smmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/popcntintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/wmmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/fxsrintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/xsaveintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/xsaveoptintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/xsavesintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/xsavecintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avxintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx2intrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512fintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512erintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512pfintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512cdintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vlintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512bwintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512dqintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vlbwintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vldqintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512ifmaintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512ifmavlintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vbmiintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vbmivlintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx5124fmapsintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx5124vnniwintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vpopcntdqintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vbmi2intrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vbmi2vlintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vnniintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vnnivlintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vpopcntdqvlintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512bitalgintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/shaintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/lzcntintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/bmiintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/bmi2intrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/fmaintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/f16cintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/rtmintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/xtestintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/cetintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/gfniintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/vaesintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/vpclmulqdqintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/movdirintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/sgxintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/pconfigintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/waitpkgintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/cldemoteintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/rdseedintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/prfchwintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/adxintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/clwbintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/clflushoptintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/wbnoinvdintrin.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/pkuintrin.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_events.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_video.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_pixels.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_rect.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_surface.h \
   C:/mingw_dev_libs/include/SDL2/SDL_blendmode.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_keyboard.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_keycode.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_scancode.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_mouse.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_joystick.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_gamecontroller.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_sensor.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_quit.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_gesture.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_touch.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_filesystem.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_haptic.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_hints.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_loadso.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_log.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_messagebox.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_metal.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_power.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_render.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_shape.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_system.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_timer.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_version.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_locale.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_misc.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ios \
@@ -285,7 +396,6 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/include/sys/types.h \
   C:/MinGW/include/stdlib.h \
   C:/MinGW/include/time.h \
-  C:/MinGW/include/sys/types.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/exception \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_ptr.h \
@@ -323,7 +433,6 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/atomicity.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/gthr.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/gthr-default.h \
-  C:/MinGW/include/errno.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/atomic_word.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/locale_classes.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string \
@@ -524,6 +633,7 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj: ../sdl_wrapper/SDL_Loa
   C:/MinGW/include/sdkddkver.h \
   C:/MinGW/include/features.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
+  ../sdl_wrapper/Image_Handler.h \
   ../sdl_wrapper/Window.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h \
@@ -601,7 +711,6 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj: ../sdl_wrapper/SDL_Loa
   C:/MinGW/include/stdio.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc \
-  ../sdl_wrapper/Image_Handler.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ios \
@@ -965,12 +1074,40 @@ CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj: ../utils/thread/Thre
   C:/MinGW/include/oaidl.h \
   C:/MinGW/include/oleidl.h
 
+CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj: ../utils/time_measurement/Time.cpp \
+  ../utils/time_measurement/Time.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdint \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++config.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/cpu_defines.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/pstl_config.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdint.h \
+  C:/MinGW/include/stdint.h \
+  C:/MinGW/include/_mingw.h \
+  C:/MinGW/include/msvcrtver.h \
+  C:/MinGW/include/w32api.h \
+  C:/MinGW/include/sdkddkver.h \
+  C:/MinGW/include/features.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/chrono \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ratio \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/type_traits \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ctime \
+  C:/MinGW/include/time.h \
+  C:/MinGW/include/sys/types.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h
+
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_algobase.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdint:
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ratio:
+
 ../engine/Engine.cpp:
+
+C:/mingw_dev_libs/include/SDL2/SDL_image.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++config.h:
 
@@ -983,6 +1120,8 @@ C:/MinGW/include/stdlib.h:
 C:/mingw_dev_libs/include/SDL2/SDL_shape.h:
 
 ../utils/drawing/Point.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/chrono:
 
 C:/mingw_dev_libs/include/SDL2/SDL_config.h:
 
@@ -1006,6 +1145,10 @@ C:/MinGW/include/sys/bsdtypes.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/pstl_config.h:
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512bitalgintrin.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdint.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iosfwd:
@@ -1014,9 +1157,9 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/bmi2intrin.h:
 
 C:/MinGW/include/stdint.h:
 
-C:/mingw_dev_libs/include/SDL2/SDL_thread.h:
-
 C:/mingw_dev_libs/include/SDL2/SDL_scancode.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_thread.h:
 
 C:/MinGW/include/_mingw.h:
 
@@ -1054,7 +1197,23 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_types.h:
 
 ../sdl_wrapper/SDL_Loader.h:
 
+../sdl_wrapper/Image_Handler.h:
+
+../utils/time_measurement/Time.h:
+
 ../utils/thread/ThreadUtils.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/type_traits:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ctime:
+
+C:/MinGW/include/time.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h:
+
+C:/MinGW/include/sys/types.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdlib:
 
@@ -1068,11 +1227,9 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/std_abs.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/pmmintrin.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/predefined_ops.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/debug/assertions.h:
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h:
 
@@ -1090,15 +1247,9 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/postypes.h:
 
 C:/MinGW/include/stdio.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h:
-
-C:/MinGW/include/sys/types.h:
-
 C:/mingw_dev_libs/include/SDL2/SDL_blendmode.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdarg.h:
-
-C:/MinGW/include/time.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/immintrin.h:
 
@@ -1118,17 +1269,17 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_init_exception.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/typeinfo:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hash_bytes.h:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_funcs.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/type_traits:
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hash_bytes.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/functexcept.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cpp_type_traits.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/numeric_traits.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/debug/assertions.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string_view:
 
@@ -1202,10 +1353,6 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/alloc_traits.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512bitalgintrin.h:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/limits:
-
 C:/MinGW/include/rpcnsip.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/streambuf:
@@ -1260,13 +1407,11 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/adxintrin.h:
 
 ../sdl_wrapper/Image_Handler.cpp:
 
-../sdl_wrapper/Image_Handler.h:
+C:/mingw_dev_libs/include/SDL2/SDL.h:
 
-C:/MinGW/include/wincon.h:
+C:/MinGW/include/wingdi.h:
 
-C:/mingw_dev_libs/include/SDL2/SDL_mutex.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_surface.h:
+C:/mingw_dev_libs/include/SDL2/SDL_main.h:
 
 C:/mingw_dev_libs/include/SDL2/SDL_metal.h:
 
@@ -1288,59 +1433,21 @@ C:/mingw_dev_libs/include/SDL2/close_code.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdlib.h:
 
-C:/mingw_dev_libs/include/SDL2/SDL_pixels.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_endian.h:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/emmintrin.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_rect.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_rwops.h:
-
-../sdl_wrapper/Input_Events.cpp:
-
-C:/mingw_dev_libs/include/SDL2/SDL_quit.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_video.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_keyboard.h:
-
-../sdl_wrapper/Window.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_keycode.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_mouse.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_locale.h:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/lzcntintrin.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_joystick.h:
-
-C:/MinGW/include/winuser.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_gamecontroller.h:
-
-../sdl_wrapper/SDL_Loader.cpp:
-
-C:/mingw_dev_libs/include/SDL2/SDL_sensor.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_gesture.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_touch.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL.h:
-
-C:/MinGW/include/wingdi.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_main.h:
-
 C:/mingw_dev_libs/include/SDL2/SDL_assert.h:
 
 C:/MinGW/include/objidl.h:
 
 C:/mingw_dev_libs/include/SDL2/SDL_atomic.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_endian.h:
+
+C:/MinGW/include/wincon.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_surface.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_mutex.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_rwops.h:
 
 C:/mingw_dev_libs/include/SDL2/SDL_clipboard.h:
 
@@ -1353,6 +1460,10 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/mmintrin.h:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/xmmintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/mm_malloc.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_rect.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/emmintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/tmmintrin.h:
 
@@ -1390,6 +1501,8 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512cdintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vlintrin.h:
 
+../utils/time_measurement/Time.cpp:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512bwintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512dqintrin.h:
@@ -1421,6 +1534,12 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vnnivlintrin.h:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vpopcntdqvlintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/shaintrin.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_locale.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_joystick.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/lzcntintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/bmiintrin.h:
 
@@ -1456,6 +1575,32 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/clwbintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/wbnoinvdintrin.h:
 
+C:/mingw_dev_libs/include/SDL2/SDL_quit.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_video.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_pixels.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_keyboard.h:
+
+../sdl_wrapper/Window.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_keycode.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_mouse.h:
+
+C:/MinGW/include/winuser.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_gamecontroller.h:
+
+../sdl_wrapper/SDL_Loader.cpp:
+
+C:/mingw_dev_libs/include/SDL2/SDL_sensor.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_gesture.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_touch.h:
+
 C:/mingw_dev_libs/include/SDL2/SDL_filesystem.h:
 
 C:/mingw_dev_libs/include/SDL2/SDL_haptic.h:
@@ -1471,6 +1616,8 @@ C:/mingw_dev_libs/include/SDL2/SDL_system.h:
 C:/mingw_dev_libs/include/SDL2/SDL_timer.h:
 
 C:/mingw_dev_libs/include/SDL2/SDL_misc.h:
+
+../sdl_wrapper/Input_Events.cpp:
 
 ../sdl_wrapper/Window.cpp:
 

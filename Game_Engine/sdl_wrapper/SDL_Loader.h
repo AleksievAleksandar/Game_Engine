@@ -3,6 +3,8 @@
 
 #include <cstdint>
 
+#include "Image_Handler.h"
+
 //Forword Declarations
 struct SDL_Window;
 struct SDL_Surface;
@@ -14,15 +16,14 @@ public:
 	void deinit();
 	int32_t draw() const;
 
+	Image_Handler imageHandler;
+
 private:
 	//The window we'll be rendering(drawing) to
 	SDL_Window* _window = nullptr;
 
 	//The surface(data structure) contained by the window
 	SDL_Surface* _surface = nullptr;
-
-	//The image that will be loaded from disk and shown on the screen
-	SDL_Surface* _image = nullptr;
 };
 
 #endif // !SDL_LOADER_H

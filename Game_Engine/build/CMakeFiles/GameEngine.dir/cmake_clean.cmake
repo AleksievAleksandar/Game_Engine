@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj"
   "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj"
+  "CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj.d"
   "GameEngine.exe"
   "GameEngine.exe.manifest"
   "GameEngine.pdb"

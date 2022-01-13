@@ -6,13 +6,26 @@
 //Forword Declarations
 struct SDL_Surface;
 
+enum ImageType
+{
+	PRESS_KEYS,
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT,
+
+	COUNT
+};
+
 class Image_Handler
 {
 public:
-	Image_Handler() = delete;
+	int32_t loadImage();
+	void deinit();
 
-	static int32_t loadImage(SDL_Surface*& outImage);
-	static void deinit(SDL_Surface*& outImage);
+	//The image that will be loaded from disk and shown on the screen
+	SDL_Surface* _currentImage = nullptr;	
+	SDL_Surface* _images[COUNT]{};
 };
 
 #endif // !IMAGE_HANDLER_H
