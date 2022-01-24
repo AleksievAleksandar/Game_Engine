@@ -45,3 +45,41 @@ void Image_Handler::deinit()
         this->_currentImage = nullptr;
     }
 }
+
+std::vector<SDL_Surface*> Image_Handler::imagesForDrawing() const
+{
+    std::vector<SDL_Surface*> images;
+    images.push_back(this->_currentImage);
+
+    return images;
+}
+
+void Image_Handler::setCurrentImage(const ImageType& type)
+{
+    switch (type)
+    {
+    case ImageType::UP:
+        this->_currentImage = this->_images[UP];
+        break;
+
+    case ImageType::DOWN:
+        this->_currentImage = this->_images[DOWN];
+        break;
+
+    case ImageType::LEFT:
+        this->_currentImage = this->_images[LEFT];
+        break;
+
+    case ImageType::RIGHT:
+        this->_currentImage = this->_images[RIGHT];
+        break;
+
+    case ImageType::PRESS_KEYS:
+        this->_currentImage = this->_images[PRESS_KEYS];
+        break;
+
+    default:
+        std::cerr << "ERROR -> Image_Handler::setCurrentImage() unknown image type provided." << std::endl;
+        break;
+    }
+}

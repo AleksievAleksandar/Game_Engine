@@ -56,7 +56,11 @@ void SDL_Loader::deinit()
 int32_t SDL_Loader::draw() const
 {
 	//Apply(update) the image
-	SDL_BlitSurface(this->imageHandler._currentImage, nullptr, this->_surface, nullptr);
+	std::vector<SDL_Surface*> images = this->imageHandler.imagesForDrawing();
+	for (size_t i = 0; i < images.size(); i++)
+	{
+		SDL_BlitSurface(images[i], nullptr, this->_surface, nullptr);
+	}
 
 	//Update the window surface
 	if (EXIT_SUCCESS != SDL_UpdateWindowSurface(this->_window))

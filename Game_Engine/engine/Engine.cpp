@@ -71,23 +71,23 @@ bool Engine::handleEvent()
 	{
 		if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_UP)
 		{
-			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::UP];
+			this->sdl_loader->imageHandler.setCurrentImage(ImageType::UP);
 		}
 		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_DOWN)
 		{
-			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::DOWN];
+			this->sdl_loader->imageHandler.setCurrentImage(ImageType::DOWN);
 		}
 		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_LEFT)
 		{
-			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::LEFT];
+			this->sdl_loader->imageHandler.setCurrentImage(ImageType::LEFT);
 		}
 		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_RIGHT)
 		{
-			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::RIGHT];
+			this->sdl_loader->imageHandler.setCurrentImage(ImageType::RIGHT);
 		}
 		else if (this->event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
 		{
-			this->sdl_loader->imageHandler._currentImage = this->sdl_loader->imageHandler._images[ImageType::PRESS_KEYS];
+			this->sdl_loader->imageHandler.setCurrentImage(ImageType::PRESS_KEYS);
 		}
 
 		if (this->event.checkForExitRequestEvent())
