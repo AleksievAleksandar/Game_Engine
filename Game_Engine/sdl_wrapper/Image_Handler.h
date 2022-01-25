@@ -14,6 +14,7 @@ enum ImageType
 	DOWN,
 	LEFT,
 	RIGHT,
+	LAYER_2,
 
 	COUNT
 };
