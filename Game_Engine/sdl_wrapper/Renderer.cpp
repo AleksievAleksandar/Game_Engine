@@ -3,6 +3,8 @@
 #include <iostream>
 #include <SDL_render.h>
 
+#include "Window.h"
+
 
 int32_t Renderer::init(SDL_Window* window)
 {
@@ -19,6 +21,8 @@ int32_t Renderer::init(SDL_Window* window)
 		std::cerr << "ERROR -> SDL_SetRenderDrawColor()" << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 	}
+
+	Window::copy_SDL_Renderer_ptr(this->_sdlRenderer);
 
 	return EXIT_SUCCESS;
 }

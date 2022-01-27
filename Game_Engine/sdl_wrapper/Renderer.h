@@ -18,8 +18,8 @@ public:
 	void updateScreen();
 	void drawTexture(std::vector<SDL_Texture*>& images) const;
 
-	SDL_Renderer* _sdlRenderer = nullptr;
 private:
+	SDL_Renderer* _sdlRenderer = nullptr;
 };
 
 #endif // !RENDERER_H

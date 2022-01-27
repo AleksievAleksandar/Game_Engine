@@ -76,23 +76,23 @@ void Image_Handler::setCurrentImage(const ImageType& type)
 	switch (type)
 	{
 	case ImageType::UP:
-		this->_currentImage = this->_images[UP];
+		this->_currentTextureImage = this->_texturesImages[UP];
 		break;
 
 	case ImageType::DOWN:
-		this->_currentImage = this->_images[DOWN];
+		this->_currentTextureImage = this->_texturesImages[DOWN];
 		break;
 
 	case ImageType::LEFT:
-		this->_currentImage = this->_images[LEFT];
+		this->_currentTextureImage = this->_texturesImages[LEFT];
 		break;
 
 	case ImageType::RIGHT:
-		this->_currentImage = this->_images[RIGHT];
+		this->_currentTextureImage = this->_texturesImages[RIGHT];
 		break;
 
 	case ImageType::PRESS_KEYS:
-		this->_currentImage = this->_images[PRESS_KEYS];
+		this->_currentTextureImage = this->_texturesImages[PRESS_KEYS];
 		break;
 
 	default:

@@ -3,7 +3,6 @@
 #include "../sdl_wrapper/SDL_Loader.h"
 #include "../utils/thread/ThreadUtils.h"
 #include "../utils/time_measurement/Time.h"
-#include "../sdl_wrapper/Window.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -23,8 +22,6 @@ int32_t Engine::init()
 		std::cerr << "ERROR -> this->_renderer.init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
-
-	Window::copy_SDL_Renderer_ptr(this->_renderer._sdlRenderer);
 
 	if (EXIT_SUCCESS != this->_imageHandler.loadImage())
 	{
@@ -94,26 +91,26 @@ bool Engine::handleEvent()
 {
 	while (this->_event.pollEvent())
 	{
-		//if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_UP)
-		//{
-		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::UP);
-		//}
-		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_DOWN)
-		//{
-		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::DOWN);
-		//}
-		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_LEFT)
-		//{
-		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::LEFT);
-		//}
-		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_RIGHT)
-		//{
-		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::RIGHT);
-		//}
-		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
-		//{
-		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::PRESS_KEYS);
-		//}
+		if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_UP)
+		{
+			this->_imageHandler.setCurrentImage(ImageType::UP);
+		}
+		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_DOWN)
+		{
+			this->_imageHandler.setCurrentImage(ImageType::DOWN);
+		}
+		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_LEFT)
+		{
+			this->_imageHandler.setCurrentImage(ImageType::LEFT);
+		}
+		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_RIGHT)
+		{
+			this->_imageHandler.setCurrentImage(ImageType::RIGHT);
+		}
+		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
+		{
+			this->_imageHandler.setCurrentImage(ImageType::PRESS_KEYS);
+		}
 
 		if (this->_event.checkForExitRequestEvent())
 		{
