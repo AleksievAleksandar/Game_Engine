@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.obj"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj"

@@ -2,6 +2,8 @@
 #define ENGINE_H
 
 #include "../sdl_wrapper/Input_Events.h"
+#include "../sdl_wrapper/Renderer.h"
+#include "../sdl_wrapper/Image_Handler.h"
 #include <cstdint>
 
 //Forword Declarations
@@ -20,8 +22,10 @@ private:
 	bool handleEvent();
 	void limitFPS(int64_t elapsedMicroseconds) const;
 
-	SDL_Loader* sdl_loader = nullptr;
-	InputEvent event;
+	Image_Handler _imageHandler;
+	SDL_Loader* _sdl_loader = nullptr;
+	InputEvent _event;
+	Renderer _renderer;
 };
 
 #endif // !ENGINE_H

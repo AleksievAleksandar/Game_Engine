@@ -15,9 +15,8 @@ class SDL_Loader
 public:
 	int32_t init();
 	void deinit();
-	int32_t draw() const;
-
-	Image_Handler imageHandler;
+	//int32_t draw() const;
+	SDL_Window* getWindow() const;
 
 private:
 	//The window we'll be rendering(drawing) to

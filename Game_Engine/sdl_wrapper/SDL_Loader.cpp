@@ -32,20 +32,11 @@ int32_t SDL_Loader::init()
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != this->imageHandler.loadImage())
-	{
-		std::cerr << "ERROR -> _imageHandler.loadImage()" << std::endl;
-		return EXIT_FAILURE;
-	}
-
 	return EXIT_SUCCESS;
 }
 
 void SDL_Loader::deinit()
 {
-	//Deallocate surface
-	this->imageHandler.deinit();
-
 	//Destroy window
 	Window::destroyWindow(this->_window);
 
@@ -53,20 +44,25 @@ void SDL_Loader::deinit()
 	SDL_Quit();
 }
 
-int32_t SDL_Loader::draw() const
-{
-	//Apply(update) the image
-	std::vector<SDL_Surface*> images = this->imageHandler.imagesForDrawing();
-	for (size_t i = 0; i < images.size(); i++)
-	{
-		SDL_BlitSurface(images[i], nullptr, this->_surface, nullptr);
-	}
+//int32_t SDL_Loader::draw() const
+//{
+//	//Apply(update) the image
+//	std::vector<SDL_Surface*> images = this->imageHandler.imagesForDrawing();
+//	for (size_t i = 0; i < images.size(); i++)
+//	{
+//		SDL_BlitSurface(images[i], nullptr, this->_surface, nullptr);
+//	}
+//
+//	//Update the window surface
+//	if (EXIT_SUCCESS != SDL_UpdateWindowSurface(this->_window))
+//	{
+//		std::cerr << "ERROR -> SDL_UpdateWindowSurface() failed. SDL_Error: " << SDL_GetError() << std::endl;
+//		return EXIT_FAILURE;
+//	}
+//	return EXIT_SUCCESS;
+//}
 
-	//Update the window surface
-	if (EXIT_SUCCESS != SDL_UpdateWindowSurface(this->_window))
-	{
-		std::cerr << "ERROR -> SDL_UpdateWindowSurface() failed. SDL_Error: " << SDL_GetError() << std::endl;
-		return EXIT_FAILURE;
-	}
-	return EXIT_SUCCESS;
+SDL_Window* SDL_Loader::getWindow() const
+{
+	return this->_window;
 }

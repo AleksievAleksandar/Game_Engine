@@ -37,6 +37,8 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/Image_Handler.cpp
         ${_BASE_DIR}/sdl_wrapper/Input_Events.h
         ${_BASE_DIR}/sdl_wrapper/Input_Events.cpp
+        ${_BASE_DIR}/sdl_wrapper/Renderer.h
+        ${_BASE_DIR}/sdl_wrapper/Renderer.cpp
 
         ${_BASE_DIR}/utils/EventDefines.h
         ${_BASE_DIR}/utils/drawing/Point.h

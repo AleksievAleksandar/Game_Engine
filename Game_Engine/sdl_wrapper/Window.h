@@ -7,6 +7,8 @@
 //Forword Declarations
 struct SDL_Window;
 struct SDL_Surface;
+struct SDL_Texture;
+struct SDL_Renderer;
 
 struct WindowCfg
 {
@@ -30,6 +32,9 @@ public:
 	static void destroyWindow(SDL_Window*& outWindow);
 
 	static SDL_Surface* getSurfaceFromWindow(SDL_Window* window);
+	static SDL_Texture* getTextureFromSurface(SDL_Surface* surface);
+	
+	static void copy_SDL_Renderer_ptr(SDL_Renderer* renderer);
 };
 
 #endif // !WINDOW_H

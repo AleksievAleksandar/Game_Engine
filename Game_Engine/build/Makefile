@@ -224,6 +224,30 @@ sdl_wrapper/Input_Events.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.s
 .PHONY : sdl_wrapper/Input_Events.cpp.s
 
+sdl_wrapper/Renderer.obj: sdl_wrapper/Renderer.cpp.obj
+.PHONY : sdl_wrapper/Renderer.obj
+
+# target to build an object file
+sdl_wrapper/Renderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj
+.PHONY : sdl_wrapper/Renderer.cpp.obj
+
+sdl_wrapper/Renderer.i: sdl_wrapper/Renderer.cpp.i
+.PHONY : sdl_wrapper/Renderer.i
+
+# target to preprocess a source file
+sdl_wrapper/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.i
+.PHONY : sdl_wrapper/Renderer.cpp.i
+
+sdl_wrapper/Renderer.s: sdl_wrapper/Renderer.cpp.s
+.PHONY : sdl_wrapper/Renderer.s
+
+# target to generate assembly for a file
+sdl_wrapper/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.s
+.PHONY : sdl_wrapper/Renderer.cpp.s
+
 sdl_wrapper/SDL_Loader.obj: sdl_wrapper/SDL_Loader.cpp.obj
 .PHONY : sdl_wrapper/SDL_Loader.obj
 
@@ -365,6 +389,9 @@ help:
 	@echo ... sdl_wrapper/Input_Events.obj
 	@echo ... sdl_wrapper/Input_Events.i
 	@echo ... sdl_wrapper/Input_Events.s
+	@echo ... sdl_wrapper/Renderer.obj
+	@echo ... sdl_wrapper/Renderer.i
+	@echo ... sdl_wrapper/Renderer.s
 	@echo ... sdl_wrapper/SDL_Loader.obj
 	@echo ... sdl_wrapper/SDL_Loader.i
 	@echo ... sdl_wrapper/SDL_Loader.s

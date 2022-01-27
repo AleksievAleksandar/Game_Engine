@@ -3,20 +3,36 @@
 #include "../sdl_wrapper/SDL_Loader.h"
 #include "../utils/thread/ThreadUtils.h"
 #include "../utils/time_measurement/Time.h"
+#include "../sdl_wrapper/Window.h"
 
 #include <cstdlib>
 #include <iostream>
+#include <vector>
 
 int32_t Engine::init()
 {
-	this->sdl_loader = new SDL_Loader();
-	if (EXIT_SUCCESS != this->sdl_loader->init())
+	this->_sdl_loader = new SDL_Loader();
+	if (EXIT_SUCCESS != this->_sdl_loader->init())
 	{
 		std::cerr << "ERROR -> this->sdl_loader->init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != this->event.init())
+	if (EXIT_SUCCESS != this->_renderer.init(this->_sdl_loader->getWindow()))
+	{
+		std::cerr << "ERROR -> this->_renderer.init() failed. " << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	Window::copy_SDL_Renderer_ptr(this->_renderer._sdlRenderer);
+
+	if (EXIT_SUCCESS != this->_imageHandler.loadImage())
+	{
+		std::cerr << "ERROR -> _imageHandler.loadImage()" << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	if (EXIT_SUCCESS != this->_event.init())
 	{
 		std::cerr << "ERROR -> this->event->init() failed. " << std::endl;
 		return EXIT_FAILURE;
@@ -27,18 +43,24 @@ int32_t Engine::init()
 
 void Engine::deinit()
 {
-	this->event.deinit();
+	this->_event.deinit();
 
-	if (nullptr != this->sdl_loader)
+	this->_imageHandler.deinit();
+
+	this->_renderer.deinit();
+
+	if (nullptr != this->_sdl_loader)
 	{
-		delete this->sdl_loader;
-		this->sdl_loader = nullptr;
+		delete this->_sdl_loader;
+		this->_sdl_loader = nullptr;
 	}
 }
 
 int32_t Engine::draw() const
 {
-	return this->sdl_loader->draw();
+	std::vector<SDL_Texture*> images = this->_imageHandler.imagesForDrawing();
+	this->_renderer.drawTexture(images);
+	return EXIT_SUCCESS;
 }
 
 void Engine::mainLoop()
@@ -54,11 +76,14 @@ void Engine::mainLoop()
 			break;
 		}
 
+		this->_renderer.clearScreen();
+
 		if (EXIT_SUCCESS != this->draw())
 		{
 			std::cerr << "ERROR -> Engine::draw() failed." << std::endl;
 			break;
 		}
+		this->_renderer.updateScreen();
 
 		this->limitFPS(time.getElapsed().toMicroseconds());
 
@@ -67,30 +92,30 @@ void Engine::mainLoop()
 
 bool Engine::handleEvent()
 {
-	while (this->event.pollEvent())
+	while (this->_event.pollEvent())
 	{
-		if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_UP)
-		{
-			this->sdl_loader->imageHandler.setCurrentImage(ImageType::UP);
-		}
-		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_DOWN)
-		{
-			this->sdl_loader->imageHandler.setCurrentImage(ImageType::DOWN);
-		}
-		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_LEFT)
-		{
-			this->sdl_loader->imageHandler.setCurrentImage(ImageType::LEFT);
-		}
-		else if (this->event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->event.key == Keyboard::Key::KEY_RIGHT)
-		{
-			this->sdl_loader->imageHandler.setCurrentImage(ImageType::RIGHT);
-		}
-		else if (this->event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
-		{
-			this->sdl_loader->imageHandler.setCurrentImage(ImageType::PRESS_KEYS);
-		}
+		//if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_UP)
+		//{
+		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::UP);
+		//}
+		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_DOWN)
+		//{
+		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::DOWN);
+		//}
+		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_LEFT)
+		//{
+		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::LEFT);
+		//}
+		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_RIGHT)
+		//{
+		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::RIGHT);
+		//}
+		//else if (this->_event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
+		//{
+		//	this->_sdl_loader->imageHandler.setCurrentImage(ImageType::PRESS_KEYS);
+		//}
 
-		if (this->event.checkForExitRequestEvent())
+		if (this->_event.checkForExitRequestEvent())
 		{
 			return true;
 		}
