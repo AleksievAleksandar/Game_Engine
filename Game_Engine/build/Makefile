@@ -248,6 +248,30 @@ sdl_wrapper/Renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.s
 .PHONY : sdl_wrapper/Renderer.cpp.s
 
+sdl_wrapper/SDL_Helpers.obj: sdl_wrapper/SDL_Helpers.cpp.obj
+.PHONY : sdl_wrapper/SDL_Helpers.obj
+
+# target to build an object file
+sdl_wrapper/SDL_Helpers.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.obj
+.PHONY : sdl_wrapper/SDL_Helpers.cpp.obj
+
+sdl_wrapper/SDL_Helpers.i: sdl_wrapper/SDL_Helpers.cpp.i
+.PHONY : sdl_wrapper/SDL_Helpers.i
+
+# target to preprocess a source file
+sdl_wrapper/SDL_Helpers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.i
+.PHONY : sdl_wrapper/SDL_Helpers.cpp.i
+
+sdl_wrapper/SDL_Helpers.s: sdl_wrapper/SDL_Helpers.cpp.s
+.PHONY : sdl_wrapper/SDL_Helpers.s
+
+# target to generate assembly for a file
+sdl_wrapper/SDL_Helpers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.s
+.PHONY : sdl_wrapper/SDL_Helpers.cpp.s
+
 sdl_wrapper/SDL_Loader.obj: sdl_wrapper/SDL_Loader.cpp.obj
 .PHONY : sdl_wrapper/SDL_Loader.obj
 
@@ -272,29 +296,29 @@ sdl_wrapper/SDL_Loader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.s
 .PHONY : sdl_wrapper/SDL_Loader.cpp.s
 
-sdl_wrapper/Window.obj: sdl_wrapper/Window.cpp.obj
-.PHONY : sdl_wrapper/Window.obj
+sdl_wrapper/config/ImagePathCfg.obj: sdl_wrapper/config/ImagePathCfg.cpp.obj
+.PHONY : sdl_wrapper/config/ImagePathCfg.obj
 
 # target to build an object file
-sdl_wrapper/Window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj
-.PHONY : sdl_wrapper/Window.cpp.obj
+sdl_wrapper/config/ImagePathCfg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj
+.PHONY : sdl_wrapper/config/ImagePathCfg.cpp.obj
 
-sdl_wrapper/Window.i: sdl_wrapper/Window.cpp.i
-.PHONY : sdl_wrapper/Window.i
+sdl_wrapper/config/ImagePathCfg.i: sdl_wrapper/config/ImagePathCfg.cpp.i
+.PHONY : sdl_wrapper/config/ImagePathCfg.i
 
 # target to preprocess a source file
-sdl_wrapper/Window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.i
-.PHONY : sdl_wrapper/Window.cpp.i
+sdl_wrapper/config/ImagePathCfg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.i
+.PHONY : sdl_wrapper/config/ImagePathCfg.cpp.i
 
-sdl_wrapper/Window.s: sdl_wrapper/Window.cpp.s
-.PHONY : sdl_wrapper/Window.s
+sdl_wrapper/config/ImagePathCfg.s: sdl_wrapper/config/ImagePathCfg.cpp.s
+.PHONY : sdl_wrapper/config/ImagePathCfg.s
 
 # target to generate assembly for a file
-sdl_wrapper/Window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.s
-.PHONY : sdl_wrapper/Window.cpp.s
+sdl_wrapper/config/ImagePathCfg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.s
+.PHONY : sdl_wrapper/config/ImagePathCfg.cpp.s
 
 utils/drawing/Point.obj: utils/drawing/Point.cpp.obj
 .PHONY : utils/drawing/Point.obj
@@ -392,12 +416,15 @@ help:
 	@echo ... sdl_wrapper/Renderer.obj
 	@echo ... sdl_wrapper/Renderer.i
 	@echo ... sdl_wrapper/Renderer.s
+	@echo ... sdl_wrapper/SDL_Helpers.obj
+	@echo ... sdl_wrapper/SDL_Helpers.i
+	@echo ... sdl_wrapper/SDL_Helpers.s
 	@echo ... sdl_wrapper/SDL_Loader.obj
 	@echo ... sdl_wrapper/SDL_Loader.i
 	@echo ... sdl_wrapper/SDL_Loader.s
-	@echo ... sdl_wrapper/Window.obj
-	@echo ... sdl_wrapper/Window.i
-	@echo ... sdl_wrapper/Window.s
+	@echo ... sdl_wrapper/config/ImagePathCfg.obj
+	@echo ... sdl_wrapper/config/ImagePathCfg.i
+	@echo ... sdl_wrapper/config/ImagePathCfg.s
 	@echo ... utils/drawing/Point.obj
 	@echo ... utils/drawing/Point.i
 	@echo ... utils/drawing/Point.s

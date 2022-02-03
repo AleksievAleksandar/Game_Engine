@@ -3,7 +3,7 @@
 #include <iostream>
 #include <SDL_render.h>
 
-#include "Window.h"
+#include "SDL_Helpers.h"
 
 
 int32_t Renderer::init(SDL_Window* window)
@@ -22,7 +22,7 @@ int32_t Renderer::init(SDL_Window* window)
 		return EXIT_FAILURE;
 	}
 
-	Window::copy_SDL_Renderer_ptr(this->_sdlRenderer);
+	SDL_Helpers::copy_SDL_Renderer_ptr(this->_sdlRenderer);
 
 	return EXIT_SUCCESS;
 }
@@ -50,7 +50,7 @@ void Renderer::updateScreen()
 	SDL_RenderPresent(this->_sdlRenderer);
 }
 
-void Renderer::drawTexture(std::vector<SDL_Texture*>& images) const
+void Renderer::drawTexture(const std::vector<SDL_Texture*>& images) const
 {	
 	for (size_t i = 0; i < images.size(); i++)
 	{

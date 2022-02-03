@@ -57,6 +57,7 @@ int32_t Engine::draw() const
 {
 	std::vector<SDL_Texture*> images = this->_imageHandler.imagesForDrawing();
 	this->_renderer.drawTexture(images);
+
 	return EXIT_SUCCESS;
 }
 

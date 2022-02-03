@@ -16,7 +16,7 @@ public:
 	void deinit();
 	void clearScreen();
 	void updateScreen();
-	void drawTexture(std::vector<SDL_Texture*>& images) const;
+	void drawTexture(const std::vector<SDL_Texture*>& images) const;
 
 private:
 	SDL_Renderer* _sdlRenderer = nullptr;

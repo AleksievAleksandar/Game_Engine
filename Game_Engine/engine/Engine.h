@@ -22,8 +22,8 @@ private:
 	bool handleEvent();
 	void limitFPS(int64_t elapsedMicroseconds) const;
 
-	Image_Handler _imageHandler;
 	SDL_Loader* _sdl_loader = nullptr;
+	Image_Handler _imageHandler;
 	InputEvent _event;
 	Renderer _renderer;
 };

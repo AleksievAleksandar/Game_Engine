@@ -4,21 +4,12 @@
 #include <cstdint>
 #include <vector>
 
+#include "config/ImagePathCfg.h"
+
 //Forword Declarations
 struct SDL_Surface;
 struct SDL_Texture;
 
-enum ImageType
-{
-	PRESS_KEYS,
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT,
-	LAYER_2,
-
-	COUNT
-};
 
 class Image_Handler
 {
@@ -28,16 +19,13 @@ public:
 	std::vector<SDL_Texture*> imagesForDrawing() const;
 	void setCurrentImage(const ImageType& type);
 
+private:
 	SDL_Texture* _currentTextureImage = nullptr;
 	SDL_Texture* _texturesImages[COUNT]{};
 
 	//The image that will be loaded from disk and shown on the screen
-	SDL_Surface* _currentImage = nullptr;
-	SDL_Surface* _images[COUNT]{};
-private:
-
-
-	
+	//SDL_Surface* _currentImage = nullptr;
+	//SDL_Surface* _images[COUNT]{};
 };
 
 #endif // !IMAGE_HANDLER_H

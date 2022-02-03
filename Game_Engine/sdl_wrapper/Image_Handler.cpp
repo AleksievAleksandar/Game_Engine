@@ -1,5 +1,5 @@
 #include "Image_Handler.h"
-#include "Window.h"
+#include "SDL_Helpers.h"
 #include "SDL_Render.h"
 
 #include <SDL_image.h>
@@ -8,15 +8,7 @@
 
 int32_t Image_Handler::loadImage()
 {
-	//Load image from disk
-	std::string imagePaths[ImageType::COUNT] = {
-		"../resources/press_keys.png",
-		"../resources/up.png",
-		"../resources/down.png",
-		"../resources/left.png",
-		"../resources/right.png",
-		"../resources/layer_2.png"
-	};
+	std::vector<std::string> imagePaths = ImagePathCfg::getImageParhs();
 
 	for (int32_t i = 0; i < ImageType::COUNT; i++)
 	{
@@ -27,8 +19,8 @@ int32_t Image_Handler::loadImage()
 			std::cerr << "ERROR -> Unable to load image " << imagePaths[i] << ". SDL_Error: " << SDL_GetError() << std::endl;
 			return EXIT_FAILURE;
 		}
-		
-		this->_texturesImages[i] = Window::getTextureFromSurface(tempImg);
+
+		this->_texturesImages[i] = SDL_Helpers::getTextureFromSurface(tempImg);
 		SDL_FreeSurface(tempImg);
 	}
 	//this->_currentImage = this->_images[ImageType::PRESS_KEYS];
@@ -58,7 +50,12 @@ void Image_Handler::deinit()
 	{
 		SDL_DestroyTexture(this->_texturesImages[i]);
 		this->_texturesImages[i] = nullptr;
-	}	
+	}
+
+	if (nullptr != this->_currentTextureImage)
+	{
+		this->_currentTextureImage = nullptr;
+	}
 }
 
 std::vector<SDL_Texture*> Image_Handler::imagesForDrawing() const

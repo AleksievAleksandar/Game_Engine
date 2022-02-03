@@ -118,4 +118,5 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_vector.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_bvector.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\vector.tcc \
- d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\sdl_wrapper\image_handler.h
+ d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\sdl_wrapper\image_handler.h \
+ d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\sdl_wrapper\config/ImagePathCfg.h
