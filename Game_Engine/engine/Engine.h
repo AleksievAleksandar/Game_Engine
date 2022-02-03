@@ -4,10 +4,14 @@
 #include "../sdl_wrapper/Input_Events.h"
 #include "../sdl_wrapper/Renderer.h"
 #include "../sdl_wrapper/Image_Handler.h"
+
 #include <cstdint>
 
 //Forword Declarations
-struct SDL_Loader;
+class SDL_Loader;
+class Renderer;
+class Image_Handler;
+class InputEvent;
 
 class Engine
 {
@@ -17,15 +21,15 @@ public:
 	void start();
 
 private:
-	int32_t draw() const;
+	void draw() const;
 	void mainLoop();
 	bool handleEvent();
 	void limitFPS(int64_t elapsedMicroseconds) const;
 
 	SDL_Loader* _sdl_loader = nullptr;
+	Renderer _renderer;
 	Image_Handler _imageHandler;
 	InputEvent _event;
-	Renderer _renderer;
 };
 
 #endif // !ENGINE_H

@@ -31,7 +31,7 @@ int32_t Engine::init()
 
 	if (EXIT_SUCCESS != this->_event.init())
 	{
-		std::cerr << "ERROR -> this->event->init() failed. " << std::endl;
+		std::cerr << "ERROR -> this->_event->init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 
@@ -53,12 +53,10 @@ void Engine::deinit()
 	}
 }
 
-int32_t Engine::draw() const
+void Engine::draw() const
 {
 	std::vector<SDL_Texture*> images = this->_imageHandler.imagesForDrawing();
 	this->_renderer.drawTexture(images);
-
-	return EXIT_SUCCESS;
 }
 
 void Engine::mainLoop()
@@ -75,16 +73,10 @@ void Engine::mainLoop()
 		}
 
 		this->_renderer.clearScreen();
-
-		if (EXIT_SUCCESS != this->draw())
-		{
-			std::cerr << "ERROR -> Engine::draw() failed." << std::endl;
-			break;
-		}
+		this->draw();
 		this->_renderer.updateScreen();
 
 		this->limitFPS(time.getElapsed().toMicroseconds());
-
 	}
 }
 

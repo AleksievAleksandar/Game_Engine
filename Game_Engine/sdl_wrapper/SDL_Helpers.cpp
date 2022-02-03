@@ -13,7 +13,7 @@ int32_t SDL_Helpers::createWindow(SDL_Window*& outWindow)
 	outWindow = SDL_CreateWindow(winCfg.windowName.c_str(), winCfg.windowPosX, winCfg.windowPosY, winCfg.SCREEN_WIDTH, winCfg.SCREEN_HEIGHT, winCfg.windowShown);
 	if (nullptr == outWindow)
 	{
-		std::cerr << "ERROR -> Windows creation failed. SDL_Error: " << SDL_GetError() << std::endl;
+		std::cerr << "ERROR -> SDL_CreateWindow() failed. SDL_Error: " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 	}
 
@@ -55,6 +55,13 @@ SDL_Texture* SDL_Helpers::getTextureFromSurface(SDL_Surface* surface)
 
 void SDL_Helpers::copy_SDL_Renderer_ptr(SDL_Renderer* renderer)
 {
-	gRenderer = renderer;
+	if (nullptr == renderer)
+	{
+		std::cerr << "ERROR -> You trying to copy SDL_Renderer* as a nullptr." << std::endl;
+	}
+	else
+	{
+		gRenderer = renderer;
+	}
 }
 
