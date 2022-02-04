@@ -49,3 +49,21 @@ SDL_Window* Window::getWindow() const
 {
 	return this->_window;
 }
+
+//int32_t Window::draw() const
+//{
+//	//Apply(update) the image
+//	std::vector<SDL_Surface*> images = this->imageHandler.imagesForDrawing();
+//	for (size_t i = 0; i < images.size(); i++)
+//	{
+//		SDL_BlitSurface(images[i], nullptr, this->_windowSurface, nullptr);
+//	}
+//
+//	//Update the window surface
+//	if (EXIT_SUCCESS != SDL_UpdateWindowSurface(this->_window))
+//	{
+//		std::cerr << "ERROR -> SDL_UpdateWindowSurface() failed. SDL_Error: " << SDL_GetError() << std::endl;
+//		return EXIT_FAILURE;
+//	}
+//	return EXIT_SUCCESS;
+//}

@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj"
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj"
+  "CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj"
   "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj"

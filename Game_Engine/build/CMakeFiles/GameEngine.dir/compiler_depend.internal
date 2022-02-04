@@ -18,10 +18,6 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj
  C:/MinGW/include/sdkddkver.h
  C:/MinGW/include/features.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h
- D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/SDL_Loader.h
- D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Input_Events.h
- D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
- D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/EventDefines.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Renderer.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/vector
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_algobase.h
@@ -109,6 +105,9 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj
  C:/MinGW/include/stdio.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Input_Events.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/EventDefines.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/thread/ThreadUtils.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/time_measurement/Time.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/chrono
@@ -255,6 +254,21 @@ CMakeFiles/GameEngine.dir/main.cpp.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/istream
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/istream.tcc
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/engine/Engine.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Window.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Renderer.h
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/vector
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_construct.h
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_uninitialized.h
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/utility
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_relops.h
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_vector.h
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h
+ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Image_Handler.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/config/ImagePathCfg.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Input_Events.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/EventDefines.h
 
 CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Image_Handler.cpp

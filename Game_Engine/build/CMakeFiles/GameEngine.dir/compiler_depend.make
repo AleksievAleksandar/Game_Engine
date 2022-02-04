@@ -17,10 +17,6 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/include/sdkddkver.h \
   C:/MinGW/include/features.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h \
-  ../sdl_wrapper/SDL_Loader.h \
-  ../sdl_wrapper/Input_Events.h \
-  ../utils/drawing/Point.h \
-  ../utils/EventDefines.h \
   ../sdl_wrapper/Renderer.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/vector \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_algobase.h \
@@ -108,6 +104,9 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/include/stdio.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc \
+  ../sdl_wrapper/Input_Events.h \
+  ../utils/drawing/Point.h \
+  ../utils/EventDefines.h \
   ../utils/thread/ThreadUtils.h \
   ../utils/time_measurement/Time.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/chrono \
@@ -252,7 +251,22 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/istream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/istream.tcc \
-  ../engine/Engine.h
+  ../engine/Engine.h \
+  ../sdl_wrapper/Window.h \
+  ../sdl_wrapper/Renderer.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/vector \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_construct.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_uninitialized.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/utility \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_relops.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_vector.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
+  ../sdl_wrapper/Image_Handler.h \
+  ../sdl_wrapper/config/ImagePathCfg.h \
+  ../sdl_wrapper/Input_Events.h \
+  ../utils/drawing/Point.h \
+  ../utils/EventDefines.h
 
 CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Image_Handler.cpp \
   ../sdl_wrapper/Image_Handler.h \
@@ -1557,22 +1571,6 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_construct.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h:
 
-../sdl_wrapper/SDL_Loader.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_config.h:
-
-../sdl_wrapper/Input_Events.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_shape.h:
-
-../utils/drawing/Point.h:
-
-C:/MinGW/include/winver.h:
-
-../utils/EventDefines.h:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_types.h:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/pmmintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream:
@@ -1605,9 +1603,17 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/concept_check.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/type_traits:
 
+C:/MinGW/include/winver.h:
+
+../utils/EventDefines.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_types.h:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_funcs.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hash_bytes.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h:
 
 C:/MinGW/include/rpcnsip.h:
 
@@ -1627,11 +1633,15 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_uninitialized.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/allocator.h:
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++allocator.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/immintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/exception:
+
+../sdl_wrapper/config/ImagePathCfg.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception.h:
 
@@ -1659,15 +1669,9 @@ C:/MinGW/include/shellapi.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h:
 
-../sdl_wrapper/Image_Handler.h:
-
-../sdl_wrapper/config/ImagePathCfg.h:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h:
+../sdl_wrapper/Image_Handler.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdexcept:
 
@@ -1754,6 +1758,14 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdio:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc:
+
+C:/mingw_dev_libs/include/SDL2/SDL_config.h:
+
+../sdl_wrapper/Input_Events.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_shape.h:
+
+../utils/drawing/Point.h:
 
 ../utils/thread/ThreadUtils.h:
 
@@ -2026,6 +2038,8 @@ C:/mingw_dev_libs/include/SDL2/SDL_misc.h:
 ../sdl_wrapper/Input_Events.cpp:
 
 ../sdl_wrapper/Renderer.cpp:
+
+../sdl_wrapper/SDL_Loader.h:
 
 ../sdl_wrapper/Window.cpp:
 

@@ -49,6 +49,8 @@ add_executable(
         ${_BASE_DIR}/utils/EventDefines.h
         ${_BASE_DIR}/utils/drawing/Point.h
         ${_BASE_DIR}/utils/drawing/Point.cpp
+        ${_BASE_DIR}/utils/drawing/Rectangle.h
+        ${_BASE_DIR}/utils/drawing/Rectangle.cpp
         ${_BASE_DIR}/utils/thread/ThreadUtils.h
         ${_BASE_DIR}/utils/thread/ThreadUtils.cpp
         ${_BASE_DIR}/utils/time_measurement/Time.h

@@ -368,6 +368,30 @@ utils/drawing/Point.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.s
 .PHONY : utils/drawing/Point.cpp.s
 
+utils/drawing/Rectangle.obj: utils/drawing/Rectangle.cpp.obj
+.PHONY : utils/drawing/Rectangle.obj
+
+# target to build an object file
+utils/drawing/Rectangle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj
+.PHONY : utils/drawing/Rectangle.cpp.obj
+
+utils/drawing/Rectangle.i: utils/drawing/Rectangle.cpp.i
+.PHONY : utils/drawing/Rectangle.i
+
+# target to preprocess a source file
+utils/drawing/Rectangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.i
+.PHONY : utils/drawing/Rectangle.cpp.i
+
+utils/drawing/Rectangle.s: utils/drawing/Rectangle.cpp.s
+.PHONY : utils/drawing/Rectangle.s
+
+# target to generate assembly for a file
+utils/drawing/Rectangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.s
+.PHONY : utils/drawing/Rectangle.cpp.s
+
 utils/thread/ThreadUtils.obj: utils/thread/ThreadUtils.cpp.obj
 .PHONY : utils/thread/ThreadUtils.obj
 
@@ -455,6 +479,9 @@ help:
 	@echo ... utils/drawing/Point.obj
 	@echo ... utils/drawing/Point.i
 	@echo ... utils/drawing/Point.s
+	@echo ... utils/drawing/Rectangle.obj
+	@echo ... utils/drawing/Rectangle.i
+	@echo ... utils/drawing/Rectangle.s
 	@echo ... utils/thread/ThreadUtils.obj
 	@echo ... utils/thread/ThreadUtils.i
 	@echo ... utils/thread/ThreadUtils.s
