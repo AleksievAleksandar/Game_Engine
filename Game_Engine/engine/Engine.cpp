@@ -1,6 +1,9 @@
 #include "Engine.h"
 
 #include "../sdl_wrapper/SDL_Loader.h"
+#include "../sdl_wrapper/Input_Events.h"
+#include "../sdl_wrapper/Renderer.h"
+#include "../sdl_wrapper/Image_Handler.h"
 #include "../utils/thread/ThreadUtils.h"
 #include "../utils/time_measurement/Time.h"
 
@@ -17,19 +20,22 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != this->_renderer.init(this->_sdl_loader->getWindow()))
+	this->_renderer = new Renderer();
+	if (EXIT_SUCCESS != this->_renderer->init(this->_sdl_loader->getWindow()))
 	{
 		std::cerr << "ERROR -> this->_renderer.init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != this->_imageHandler.loadImage())
+	this->_imageHandler = new Image_Handler();
+	if (EXIT_SUCCESS != this->_imageHandler->loadImage())
 	{
 		std::cerr << "ERROR -> _imageHandler.loadImage()" << std::endl;
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != this->_event.init())
+	this->_event = new InputEvent();
+	if (EXIT_SUCCESS != this->_event->init())
 	{
 		std::cerr << "ERROR -> this->_event->init() failed. " << std::endl;
 		return EXIT_FAILURE;
@@ -40,11 +46,31 @@ int32_t Engine::init()
 
 void Engine::deinit()
 {
-	this->_event.deinit();
+	this->_event->deinit();
 
-	this->_imageHandler.deinit();
+	this->_imageHandler->deinit();
 
-	this->_renderer.deinit();
+	this->_renderer->deinit();
+
+	this->_sdl_loader->deinit();
+
+	if (nullptr != this->_event)
+	{
+		delete this->_event;
+		this->_event = nullptr;
+	}
+
+	if (nullptr != this->_imageHandler)
+	{
+		delete this->_imageHandler;
+		this->_imageHandler = nullptr;
+	}
+
+	if (nullptr != this->_renderer)
+	{
+		delete this->_renderer;
+		this->_renderer = nullptr;
+	}
 
 	if (nullptr != this->_sdl_loader)
 	{
@@ -55,8 +81,8 @@ void Engine::deinit()
 
 void Engine::draw() const
 {
-	std::vector<SDL_Texture*> images = this->_imageHandler.imagesForDrawing();
-	this->_renderer.drawTexture(images);
+	std::vector<SDL_Texture*> images = this->_imageHandler->imagesForDrawing();
+	this->_renderer->drawTexture(images);
 }
 
 void Engine::mainLoop()
@@ -72,9 +98,9 @@ void Engine::mainLoop()
 			break;
 		}
 
-		this->_renderer.clearScreen();
+		this->_renderer->clearScreen();
 		this->draw();
-		this->_renderer.updateScreen();
+		this->_renderer->updateScreen();
 
 		this->limitFPS(time.getElapsed().toMicroseconds());
 	}
@@ -82,30 +108,30 @@ void Engine::mainLoop()
 
 bool Engine::handleEvent()
 {
-	while (this->_event.pollEvent())
+	while (this->_event->pollEvent())
 	{
-		if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_UP)
+		if (this->_event->touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event->key == Keyboard::Key::KEY_UP)
 		{
-			this->_imageHandler.setCurrentImage(ImageType::UP);
+			this->_imageHandler->setCurrentImage(ImageType::UP);
 		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_DOWN)
+		else if (this->_event->touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event->key == Keyboard::Key::KEY_DOWN)
 		{
-			this->_imageHandler.setCurrentImage(ImageType::DOWN);
+			this->_imageHandler->setCurrentImage(ImageType::DOWN);
 		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_LEFT)
+		else if (this->_event->touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event->key == Keyboard::Key::KEY_LEFT)
 		{
-			this->_imageHandler.setCurrentImage(ImageType::LEFT);
+			this->_imageHandler->setCurrentImage(ImageType::LEFT);
 		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_RIGHT)
+		else if (this->_event->touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event->key == Keyboard::Key::KEY_RIGHT)
 		{
-			this->_imageHandler.setCurrentImage(ImageType::RIGHT);
+			this->_imageHandler->setCurrentImage(ImageType::RIGHT);
 		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
+		else if (this->_event->touchEvent == TouchEvent::KEYBOARD_RELEASE)
 		{
-			this->_imageHandler.setCurrentImage(ImageType::PRESS_KEYS);
+			this->_imageHandler->setCurrentImage(ImageType::PRESS_KEYS);
 		}
 
-		if (this->_event.checkForExitRequestEvent())
+		if (this->_event->checkForExitRequestEvent())
 		{
 			return true;
 		}

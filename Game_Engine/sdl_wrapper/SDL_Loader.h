@@ -3,9 +3,6 @@
 
 #include <cstdint>
 
-
-#include "Image_Handler.h"
-
 //Forword Declarations
 struct SDL_Window;
 struct SDL_Surface;
