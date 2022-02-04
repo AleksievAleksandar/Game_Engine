@@ -296,6 +296,30 @@ sdl_wrapper/SDL_Loader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.s
 .PHONY : sdl_wrapper/SDL_Loader.cpp.s
 
+sdl_wrapper/Window.obj: sdl_wrapper/Window.cpp.obj
+.PHONY : sdl_wrapper/Window.obj
+
+# target to build an object file
+sdl_wrapper/Window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj
+.PHONY : sdl_wrapper/Window.cpp.obj
+
+sdl_wrapper/Window.i: sdl_wrapper/Window.cpp.i
+.PHONY : sdl_wrapper/Window.i
+
+# target to preprocess a source file
+sdl_wrapper/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.i
+.PHONY : sdl_wrapper/Window.cpp.i
+
+sdl_wrapper/Window.s: sdl_wrapper/Window.cpp.s
+.PHONY : sdl_wrapper/Window.s
+
+# target to generate assembly for a file
+sdl_wrapper/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.s
+.PHONY : sdl_wrapper/Window.cpp.s
+
 sdl_wrapper/config/ImagePathCfg.obj: sdl_wrapper/config/ImagePathCfg.cpp.obj
 .PHONY : sdl_wrapper/config/ImagePathCfg.obj
 
@@ -422,6 +446,9 @@ help:
 	@echo ... sdl_wrapper/SDL_Loader.obj
 	@echo ... sdl_wrapper/SDL_Loader.i
 	@echo ... sdl_wrapper/SDL_Loader.s
+	@echo ... sdl_wrapper/Window.obj
+	@echo ... sdl_wrapper/Window.i
+	@echo ... sdl_wrapper/Window.s
 	@echo ... sdl_wrapper/config/ImagePathCfg.obj
 	@echo ... sdl_wrapper/config/ImagePathCfg.i
 	@echo ... sdl_wrapper/config/ImagePathCfg.s

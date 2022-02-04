@@ -1,6 +1,4 @@
 #include "SDL_Loader.h"
-#include "SDL_Helpers.h"
-#include "Image_Handler.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -15,30 +13,11 @@ int32_t SDL_Loader::init()
 		return EXIT_FAILURE;
 	}
 
-	//Create an Operation System window
-	SDL_Helpers::createWindow(this->_window);
-	if (nullptr == this->_window)
-	{
-		std::cerr << "ERROR -> Window::createWindow()" << std::endl;
-		return EXIT_FAILURE;
-	}
-
-	//Get window surface
-	this->_surface = SDL_Helpers::getSurfaceFromWindow(this->_window);
-	if (nullptr == this->_surface)
-	{
-		std::cerr << "ERROR -> Window::getSurfaceFromWindow()" << std::endl;
-		return EXIT_FAILURE;
-	}
-
 	return EXIT_SUCCESS;
 }
 
 void SDL_Loader::deinit()
 {
-	//Destroy window
-	SDL_Helpers::destroyWindow(this->_window);
-
 	//Quit SDL subsystems
 	SDL_Quit();
 }
@@ -60,8 +39,3 @@ void SDL_Loader::deinit()
 //	}
 //	return EXIT_SUCCESS;
 //}
-
-SDL_Window* SDL_Loader::getWindow() const
-{
-	return this->_window;
-}

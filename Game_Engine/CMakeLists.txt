@@ -39,6 +39,8 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/Input_Events.cpp
         ${_BASE_DIR}/sdl_wrapper/Renderer.h
         ${_BASE_DIR}/sdl_wrapper/Renderer.cpp
+        ${_BASE_DIR}/sdl_wrapper/Window.h
+        ${_BASE_DIR}/sdl_wrapper/Window.cpp
 
         ${_BASE_DIR}/sdl_wrapper/config/WindowCfg.h
         ${_BASE_DIR}/sdl_wrapper/config/ImagePathCfg.h

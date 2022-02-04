@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Loader.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj"
+  "CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj"

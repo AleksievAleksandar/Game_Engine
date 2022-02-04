@@ -1,13 +1,12 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-#include <cstdint>
+#include "../sdl_wrapper/Window.h"
+#include "../sdl_wrapper/Renderer.h"
+#include "../sdl_wrapper/Image_Handler.h"
+#include "../sdl_wrapper/Input_Events.h"
 
-//Forword Declarations
-struct SDL_Loader;
-struct Renderer;
-struct Image_Handler;
-struct InputEvent;
+#include <cstdint>
 
 class Engine
 {
@@ -22,10 +21,10 @@ private:
 	bool handleEvent();
 	void limitFPS(int64_t elapsedMicroseconds) const;
 
-	SDL_Loader* _sdl_loader = nullptr;
-	Renderer* _renderer;
-	Image_Handler* _imageHandler;
-	InputEvent* _event;
+	Window _window;
+	Renderer _renderer;
+	Image_Handler _imageHandler;
+	InputEvent _event;
 };
 
 #endif // !ENGINE_H
