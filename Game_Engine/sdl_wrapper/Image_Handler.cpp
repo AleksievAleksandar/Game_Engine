@@ -1,6 +1,7 @@
 #include "Image_Handler.h"
 #include "SDL_Helpers.h"
 #include "SDL_Render.h"
+#include "config/ImageCfg.h"
 
 #include <SDL_image.h>
 #include <iostream>
@@ -8,12 +9,12 @@
 
 int32_t Image_Handler::loadImage()
 {
-	std::vector<std::string> imagePaths = ImagePathCfg::getImageParhs();
+	std::vector<std::string> imagePaths = ImageCfg::getImageParhs();
+	this->_textureDimensions = ImageCfg::getImageSizes();
 
 	for (int32_t i = 0; i < ImageType::COUNT; i++)
 	{
 		SDL_Surface* tempImg = IMG_Load(imagePaths[i].c_str());
-		//this->_images[i] = IMG_Load(imagePaths[i].c_str());
 		if (nullptr == tempImg)
 		{
 			std::cerr << "ERROR -> Unable to load image " << imagePaths[i] << ". SDL_Error: " << SDL_GetError() << std::endl;
@@ -23,9 +24,8 @@ int32_t Image_Handler::loadImage()
 		this->_texturesImages[i] = SDL_Helpers::getTextureFromSurface(tempImg);
 		SDL_FreeSurface(tempImg);
 	}
-	//this->_currentImage = this->_images[ImageType::PRESS_KEYS];
 	this->_currentTextureImage = this->_texturesImages[ImageType::PRESS_KEYS];
-
+	
 	return EXIT_SUCCESS;
 }
 
@@ -96,4 +96,19 @@ void Image_Handler::setCurrentImage(const ImageType& type)
 		std::cerr << "ERROR -> Image_Handler::setCurrentImage() unknown image type provided." << std::endl;
 		break;
 	}
+}
+
+std::pair<SDL_Texture*, Rectangle> Image_Handler::getImage(const int32_t rsrcId) const
+{
+	auto it = this->_texturesImages.find(rsrcId);
+
+	if (it == this->_texturesImages.end())
+	{
+		std::cerr << "ERROR -> you're providing non existing rsrcId: " << rsrcId << " to Image_Handler::getImage()." << std::endl;
+		return std::pair<SDL_Texture*, Rectangle>(nullptr, Rectangle::UNKNOWN);
+	}
+
+	auto itDimen = this->_textureDimensions.find(rsrcId);
+
+	return std::pair<SDL_Texture*, Rectangle>(it->second, itDimen->second);
 }

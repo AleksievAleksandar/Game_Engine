@@ -320,29 +320,29 @@ sdl_wrapper/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.s
 .PHONY : sdl_wrapper/Window.cpp.s
 
-sdl_wrapper/config/ImagePathCfg.obj: sdl_wrapper/config/ImagePathCfg.cpp.obj
-.PHONY : sdl_wrapper/config/ImagePathCfg.obj
+sdl_wrapper/config/ImageCfg.obj: sdl_wrapper/config/ImageCfg.cpp.obj
+.PHONY : sdl_wrapper/config/ImageCfg.obj
 
 # target to build an object file
-sdl_wrapper/config/ImagePathCfg.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj
-.PHONY : sdl_wrapper/config/ImagePathCfg.cpp.obj
+sdl_wrapper/config/ImageCfg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj
+.PHONY : sdl_wrapper/config/ImageCfg.cpp.obj
 
-sdl_wrapper/config/ImagePathCfg.i: sdl_wrapper/config/ImagePathCfg.cpp.i
-.PHONY : sdl_wrapper/config/ImagePathCfg.i
+sdl_wrapper/config/ImageCfg.i: sdl_wrapper/config/ImageCfg.cpp.i
+.PHONY : sdl_wrapper/config/ImageCfg.i
 
 # target to preprocess a source file
-sdl_wrapper/config/ImagePathCfg.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.i
-.PHONY : sdl_wrapper/config/ImagePathCfg.cpp.i
+sdl_wrapper/config/ImageCfg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.i
+.PHONY : sdl_wrapper/config/ImageCfg.cpp.i
 
-sdl_wrapper/config/ImagePathCfg.s: sdl_wrapper/config/ImagePathCfg.cpp.s
-.PHONY : sdl_wrapper/config/ImagePathCfg.s
+sdl_wrapper/config/ImageCfg.s: sdl_wrapper/config/ImageCfg.cpp.s
+.PHONY : sdl_wrapper/config/ImageCfg.s
 
 # target to generate assembly for a file
-sdl_wrapper/config/ImagePathCfg.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.s
-.PHONY : sdl_wrapper/config/ImagePathCfg.cpp.s
+sdl_wrapper/config/ImageCfg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.s
+.PHONY : sdl_wrapper/config/ImageCfg.cpp.s
 
 utils/drawing/Point.obj: utils/drawing/Point.cpp.obj
 .PHONY : utils/drawing/Point.obj
@@ -473,9 +473,9 @@ help:
 	@echo ... sdl_wrapper/Window.obj
 	@echo ... sdl_wrapper/Window.i
 	@echo ... sdl_wrapper/Window.s
-	@echo ... sdl_wrapper/config/ImagePathCfg.obj
-	@echo ... sdl_wrapper/config/ImagePathCfg.i
-	@echo ... sdl_wrapper/config/ImagePathCfg.s
+	@echo ... sdl_wrapper/config/ImageCfg.obj
+	@echo ... sdl_wrapper/config/ImageCfg.i
+	@echo ... sdl_wrapper/config/ImageCfg.s
 	@echo ... utils/drawing/Point.obj
 	@echo ... utils/drawing/Point.i
 	@echo ... utils/drawing/Point.s

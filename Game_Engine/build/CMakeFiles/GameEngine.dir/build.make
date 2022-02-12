@@ -158,20 +158,20 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper\Window.cpp" -o CMakeFiles\GameEngine.dir\sdl_wrapper\Window.cpp.s
 
-CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj: CMakeFiles/GameEngine.dir/flags.make
-CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
-CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj: ../sdl_wrapper/config/ImagePathCfg.cpp
-CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj -MF CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImagePathCfg.cpp.obj.d -o CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImagePathCfg.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper\config\ImagePathCfg.cpp"
+CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj: CMakeFiles/GameEngine.dir/flags.make
+CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
+CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj: ../sdl_wrapper/config/ImageCfg.cpp
+CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj -MF CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImageCfg.cpp.obj.d -o CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImageCfg.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper\config\ImageCfg.cpp"
 
-CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper\config\ImagePathCfg.cpp" > CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImagePathCfg.cpp.i
+CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper\config\ImageCfg.cpp" > CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImageCfg.cpp.i
 
-CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper\config\ImagePathCfg.cpp" -o CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImagePathCfg.cpp.s
+CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\sdl_wrapper\config\ImageCfg.cpp" -o CMakeFiles\GameEngine.dir\sdl_wrapper\config\ImageCfg.cpp.s
 
 CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj: CMakeFiles/GameEngine.dir/flags.make
 CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
@@ -271,7 +271,7 @@ GameEngine_OBJECTS = \
 "CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.obj" \
 "CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj" \
 "CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj" \
-"CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj" \
+"CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj" \
 "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj" \
 "CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj" \
 "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj" \
@@ -288,7 +288,7 @@ GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj
-GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj
+GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj

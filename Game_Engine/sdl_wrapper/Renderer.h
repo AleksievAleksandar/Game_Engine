@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <vector>
 
+#include "../utils/drawing/Rectangle.h"
+
 //Forward declarations
 struct SDL_Renderer;
 struct SDL_Texture; //cross-platform GPU primitive
@@ -17,6 +19,7 @@ public:
 	void clearScreen();
 	void updateScreen();
 	void drawTexture(const std::vector<SDL_Texture*>& images) const;
+	void drawTexture(const std::vector<std::pair<SDL_Texture*, Rectangle> >& images) const;
 
 private:
 	SDL_Renderer* _sdlRenderer = nullptr;

@@ -116,8 +116,23 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_vector.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\stl_bvector.h \
  c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\vector.tcc \
+ d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\utils\drawing\rectangle.h \
  d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\sdl_wrapper\image_handler.h \
- d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\sdl_wrapper\config/ImagePathCfg.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\unordered_map \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\ext\aligned_buffer.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\hashtable.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\hashtable_policy.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\tuple \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\array \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\uses_allocator.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\invoke.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\node_handle.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\optional \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\enable_special_members.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\unordered_map.h \
+ c:\mingw\lib\gcc\mingw32\9.2.0\include\c++\bits\erase_if.h \
+ d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\sdl_wrapper\config/ImageCfg.h \
+ d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\utils\drawing\rectangle.h \
  d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\sdl_wrapper\input_events.h \
  d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\utils\drawing\point.h \
  d:\aleksandar\projects\cpp\ projects\softuni\cpp_master_class\my_first_game\game_engine\game_engine\utils\eventdefines.h

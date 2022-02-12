@@ -61,7 +61,15 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/range_access.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
   ../sdl_wrapper/Image_Handler.h \
-  ../sdl_wrapper/config/ImagePathCfg.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_function.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/backward/binders.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable_policy.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tuple \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/array \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdexcept \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h \
@@ -84,8 +92,6 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/include/wctype.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream_insert.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_forced.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_function.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/backward/binders.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/atomicity.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/gthr.h \
@@ -104,6 +110,16 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/include/stdio.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/uses_allocator.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/invoke.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
+  ../sdl_wrapper/config/ImageCfg.h \
+  ../utils/drawing/Rectangle.h \
+  ../utils/drawing/Rectangle.h \
   ../sdl_wrapper/Input_Events.h \
   ../utils/drawing/Point.h \
   ../utils/EventDefines.h \
@@ -122,7 +138,6 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/locale_classes.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/system_error \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/error_constants.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdexcept \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/streambuf \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/streambuf.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_ios.h \
@@ -263,7 +278,22 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
   ../sdl_wrapper/Image_Handler.h \
-  ../sdl_wrapper/config/ImagePathCfg.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable_policy.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tuple \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/array \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/uses_allocator.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/invoke.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
+  ../sdl_wrapper/config/ImageCfg.h \
+  ../utils/drawing/Rectangle.h \
+  ../utils/drawing/Rectangle.h \
   ../sdl_wrapper/Input_Events.h \
   ../utils/drawing/Point.h \
   ../utils/EventDefines.h
@@ -325,7 +355,15 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/functional_hash.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/range_access.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
-  ../sdl_wrapper/config/ImagePathCfg.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_function.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/backward/binders.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable_policy.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tuple \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/array \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdexcept \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h \
@@ -348,8 +386,6 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/include/wctype.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream_insert.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_forced.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_function.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/backward/binders.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/atomicity.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/gthr.h \
@@ -368,6 +404,16 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/include/stdio.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/uses_allocator.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/invoke.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
+  ../sdl_wrapper/config/ImageCfg.h \
+  ../utils/drawing/Rectangle.h \
+  ../utils/drawing/Rectangle.h \
   ../sdl_wrapper/SDL_Helpers.h \
   C:/mingw_dev_libs/include/SDL2/SDL_render.h \
   C:/mingw_dev_libs/include/SDL2/SDL_stdinc.h \
@@ -493,7 +539,6 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Imag
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/locale_classes.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/system_error \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/error_constants.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdexcept \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/streambuf \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/streambuf.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_ios.h \
@@ -708,6 +753,7 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj: ../sdl_wrapper/Renderer.
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/functional_hash.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/range_access.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
+  ../utils/drawing/Rectangle.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ios \
@@ -1268,8 +1314,8 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj: ../sdl_wrapper/Window.cpp 
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/istream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/istream.tcc
 
-CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj: ../sdl_wrapper/config/ImagePathCfg.cpp \
-  ../sdl_wrapper/config/ImagePathCfg.h \
+CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj: ../sdl_wrapper/config/ImageCfg.cpp \
+  ../sdl_wrapper/config/ImageCfg.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++config.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
@@ -1366,10 +1412,41 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImagePathCfg.cpp.obj: ../sdl_wrappe
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_relops.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_vector.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h \
-  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable_policy.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tuple \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/array \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdexcept \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/uses_allocator.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/invoke.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
+  ../utils/drawing/Rectangle.h
 
 CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj: ../utils/drawing/Point.cpp \
   ../utils/drawing/Point.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdint \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++config.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/cpu_defines.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/pstl_config.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdint.h \
+  C:/MinGW/include/stdint.h \
+  C:/MinGW/include/_mingw.h \
+  C:/MinGW/include/msvcrtver.h \
+  C:/MinGW/include/w32api.h \
+  C:/MinGW/include/sdkddkver.h \
+  C:/MinGW/include/features.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h
+
+CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj: ../utils/drawing/Rectangle.cpp \
+  ../utils/drawing/Rectangle.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdint \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++config.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
@@ -1489,6 +1566,8 @@ CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj: ../utils/time_mea
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h
 
 
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/backward/binders.h:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_algobase.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdint:
@@ -1547,6 +1626,8 @@ C:/MinGW/include/_mingw.h:
 
 C:/MinGW/include/winsvc.h:
 
+../sdl_wrapper/config/ImageCfg.cpp:
+
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/type_traits.h:
 
 C:/MinGW/include/msvcrtver.h:
@@ -1574,6 +1655,8 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/pmmintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/tuple:
 
 ../sdl_wrapper/Renderer.h:
 
@@ -1613,8 +1696,6 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_iterator_base_funcs.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hash_bytes.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h:
-
 C:/MinGW/include/rpcnsip.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/streambuf:
@@ -1633,17 +1714,15 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_uninitialized.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/allocator.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++allocator.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/immintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/exception:
 
-../sdl_wrapper/config/ImagePathCfg.h:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/exception_ptr.h:
 
@@ -1669,13 +1748,31 @@ C:/MinGW/include/shellapi.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string:
-
 ../sdl_wrapper/Image_Handler.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_function.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h:
+
+C:/MinGW/include/string.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable_policy.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/array:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/postypes.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/stdexcept:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/postypes.h:
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stringfwd.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/char_traits.h:
 
 C:/MinGW/include/wchar.h:
 
@@ -1715,12 +1812,6 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream_insert.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/cxxabi_forced.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_function.h:
-
-../sdl_wrapper/config/ImagePathCfg.cpp:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/backward/binders.h:
-
 C:/mingw_dev_libs/include/SDL2/SDL_audio.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.h:
@@ -1758,6 +1849,32 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdio:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc:
+
+C:/mingw_dev_libs/include/SDL2/SDL_locale.h:
+
+C:/mingw_dev_libs/include/SDL2/SDL_joystick.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/lzcntintrin.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/uses_allocator.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx2intrin.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/invoke.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/node_handle.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/optional:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/bmiintrin.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/enable_special_members.h:
+
+C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h:
+
+../sdl_wrapper/config/ImageCfg.h:
+
+../utils/drawing/Rectangle.h:
 
 C:/mingw_dev_libs/include/SDL2/SDL_config.h:
 
@@ -1921,8 +2038,6 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/xsavecintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avxintrin.h:
 
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx2intrin.h:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512fintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512erintrin.h:
@@ -1966,14 +2081,6 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vnnivlintrin.h:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/avx512vpopcntdqvlintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/shaintrin.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_locale.h:
-
-C:/mingw_dev_libs/include/SDL2/SDL_joystick.h:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/lzcntintrin.h:
-
-C:/MinGW/lib/gcc/mingw32/9.2.0/include/bmiintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/fmaintrin.h:
 
@@ -2045,6 +2152,8 @@ C:/mingw_dev_libs/include/SDL2/SDL_misc.h:
 
 ../utils/drawing/Point.cpp:
 
+../utils/drawing/Rectangle.cpp:
+
 ../utils/thread/ThreadUtils.cpp:
 
 C:/MinGW/include/windows.h:
@@ -2054,8 +2163,6 @@ C:/MinGW/include/windef.h:
 C:/MinGW/include/winnt.h:
 
 C:/MinGW/include/winerror.h:
-
-C:/MinGW/include/string.h:
 
 C:/MinGW/include/basetsd.h:
 

@@ -43,10 +43,11 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/Window.cpp
 
         ${_BASE_DIR}/sdl_wrapper/config/WindowCfg.h
-        ${_BASE_DIR}/sdl_wrapper/config/ImagePathCfg.h
-         ${_BASE_DIR}/sdl_wrapper/config/ImagePathCfg.cpp
+        ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.h
+        ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.cpp
 
         ${_BASE_DIR}/utils/EventDefines.h
+        ${_BASE_DIR}/utils/drawing/DrawParams.h
         ${_BASE_DIR}/utils/drawing/Point.h
         ${_BASE_DIR}/utils/drawing/Point.cpp
         ${_BASE_DIR}/utils/drawing/Rectangle.h

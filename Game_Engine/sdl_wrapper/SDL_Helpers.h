@@ -10,7 +10,6 @@ struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
 
-
 class SDL_Helpers
 {
 public:
