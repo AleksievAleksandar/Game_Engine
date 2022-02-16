@@ -21,7 +21,7 @@ public:
 	void setCurrentImage(const ImageType& type);
 
 	std::pair<SDL_Texture*, Rectangle> getImage(const int32_t rsrcId) const;
-
+	int dummy = -1;
 private:
 	SDL_Texture* _currentTextureImage = nullptr;
 	//SDL_Texture* _texturesImages[COUNT]{};
