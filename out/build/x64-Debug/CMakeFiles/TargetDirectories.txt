@@ -1,0 +1,3 @@
+D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/out/build/x64-Debug/CMakeFiles/GameEngine.dir
+D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
