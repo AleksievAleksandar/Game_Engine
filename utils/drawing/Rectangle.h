@@ -2,6 +2,7 @@
 #define RECTANGLE_H
 
 #include <cstdint>
+#include <sstream>
 
 class Rectangle
 {
@@ -18,10 +19,13 @@ public:
 
 	bool operator==(const Rectangle& other);
 	bool operator!=(const Rectangle& other);
+	friend std::ostream& operator<<(std::ostream& out, const Rectangle& rect);
 
 	static const Rectangle UNKNOWN;
 	static const Rectangle ZERO;
 };
+
+std::ostream& operator<<(std::ostream& out, const Rectangle& rect);
 
 #endif // !RECTANGLE_H
 

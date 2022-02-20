@@ -33,3 +33,10 @@ bool Rectangle::operator!=(const Rectangle& other)
 {
 	return !this->operator==(other);
 }
+
+std::ostream& operator<<(std::ostream& out, const Rectangle& rect)
+{
+	out << "X = " << rect.x << "; Y = " << rect.y << "; W = " << rect.w << "; H = " << rect.h << ";";
+
+	return out;
+}
