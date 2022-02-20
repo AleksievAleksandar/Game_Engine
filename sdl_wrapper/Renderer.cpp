@@ -4,10 +4,16 @@
 #include <SDL_render.h>
 
 #include "SDL_Helpers.h"
-
+#include <SDL_hints.h>
 
 int32_t Renderer::init(SDL_Window* window)
 {
+	if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")) 
+	{
+		std::cerr << "Warning: Linear texture filtering not enabled! SDL_SetHint() failed. SDL Error: " << SDL_GetError() << std::endl;
+		return EXIT_FAILURE;
+	}
+
 	constexpr auto unspecifiedDriverID = -1;
 	this->_sdlRenderer = SDL_CreateRenderer(window, unspecifiedDriverID, SDL_RENDERER_ACCELERATED);
 	if (nullptr == this->_sdlRenderer)
