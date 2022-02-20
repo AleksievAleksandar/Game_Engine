@@ -29,6 +29,8 @@ set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 message(${_BASE_DIR})
 add_executable(
     ${PROJECT_NAME}  
+        ${_BASE_DIR}/common_defines/Common_Defines.h
+
         ${_BASE_DIR}/sdl_wrapper/SDL_Loader.h
         ${_BASE_DIR}/sdl_wrapper/SDL_Loader.cpp
         ${_BASE_DIR}/sdl_wrapper/SDL_Helpers.h
@@ -59,6 +61,9 @@ add_executable(
 
         ${_BASE_DIR}/engine/Engine.h
         ${_BASE_DIR}/engine/Engine.cpp
+
+        ${_BASE_DIR}/game/Game.h
+        ${_BASE_DIR}/game/Game.cpp
 
         ${_BASE_DIR}/main.cpp
 )

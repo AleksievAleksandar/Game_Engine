@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/engine/Engine.cpp" "CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj" "gcc" "CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj.d"
+  "D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/game/Game.cpp" "CMakeFiles/GameEngine.dir/game/Game.cpp.obj" "gcc" "CMakeFiles/GameEngine.dir/game/Game.cpp.obj.d"
   "D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/main.cpp" "CMakeFiles/GameEngine.dir/main.cpp.obj" "gcc" "CMakeFiles/GameEngine.dir/main.cpp.obj.d"
   "D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Image_Handler.cpp" "CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj" "gcc" "CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj.d"
   "D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Input_Events.cpp" "CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.obj" "gcc" "CMakeFiles/GameEngine.dir/sdl_wrapper/Input_Events.cpp.obj.d"

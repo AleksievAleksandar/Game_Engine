@@ -152,6 +152,30 @@ engine/Engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/engine/Engine.cpp.s
 .PHONY : engine/Engine.cpp.s
 
+game/Game.obj: game/Game.cpp.obj
+.PHONY : game/Game.obj
+
+# target to build an object file
+game/Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/game/Game.cpp.obj
+.PHONY : game/Game.cpp.obj
+
+game/Game.i: game/Game.cpp.i
+.PHONY : game/Game.i
+
+# target to preprocess a source file
+game/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/game/Game.cpp.i
+.PHONY : game/Game.cpp.i
+
+game/Game.s: game/Game.cpp.s
+.PHONY : game/Game.s
+
+# target to generate assembly for a file
+game/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/game/Game.cpp.s
+.PHONY : game/Game.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -452,6 +476,9 @@ help:
 	@echo ... engine/Engine.obj
 	@echo ... engine/Engine.i
 	@echo ... engine/Engine.s
+	@echo ... game/Game.obj
+	@echo ... game/Game.i
+	@echo ... game/Game.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

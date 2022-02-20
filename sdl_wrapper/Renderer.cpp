@@ -63,13 +63,15 @@ void Renderer::drawTexture(const std::vector<SDL_Texture*>& images) const
 
 void Renderer::drawTexture(const std::vector<std::pair<SDL_Texture*, Rectangle> >& images) const
 {
+	SDL_Rect rect;
 	for (size_t i = 0; i < images.size(); i++)
-	{
-		SDL_Rect rect;
+	{	
 		rect.x = images[i].second.x;
 		rect.y = images[i].second.y;
 		rect.w = images[i].second.w;
 		rect.h = images[i].second.h;
+
+		//std::cout << "X = " << rect.x << "; Y = " << rect.y << "; W = " << rect.w << "; H = " << rect.h << std::endl;
 
 		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i].first, nullptr, &rect))
 		{

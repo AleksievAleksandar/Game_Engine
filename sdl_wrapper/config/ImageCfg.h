@@ -7,17 +7,7 @@
 
 #include "../../utils/drawing/Rectangle.h"
 
-enum ImageType
-{
-	PRESS_KEYS,
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT,
-	LAYER_2,
 
-	COUNT
-};
 
 class ImageCfg
 {

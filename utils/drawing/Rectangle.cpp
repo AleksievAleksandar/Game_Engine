@@ -8,7 +8,7 @@ Rectangle::Rectangle(int32_t inputX, int32_t inputY, int32_t inputW, int32_t inp
 {}
 
 Rectangle::Rectangle(const Rectangle& other):
-	x(other.h), y(other.y), w(other.w), h(other.h)
+	x(other.x), y(other.y), w(other.w), h(other.h)
 {}
 
 Rectangle& Rectangle::operator=(const Rectangle& other)

@@ -12,7 +12,7 @@ int32_t Image_Handler::loadImage()
 	std::vector<std::string> imagePaths = ImageCfg::getImageParhs();
 	this->_textureDimensions = ImageCfg::getImageSizes();
 
-	for (int32_t i = 0; i < ImageType::COUNT; i++)
+	for (int32_t i = 0; i < Textures::COUNT; i++)
 	{
 		SDL_Surface* tempImg = IMG_Load(imagePaths[i].c_str());
 		if (nullptr == tempImg)
@@ -24,29 +24,15 @@ int32_t Image_Handler::loadImage()
 		this->_texturesImages[i] = SDL_Helpers::getTextureFromSurface(tempImg);
 		SDL_FreeSurface(tempImg);
 	}
-	this->_currentTextureImage = this->_texturesImages[ImageType::PRESS_KEYS];
+	this->_currentTextureImage = this->_texturesImages[Textures::PRESS_KEYS];
 	
 	return EXIT_SUCCESS;
 }
 
 void Image_Handler::deinit()
 {
-	////Deallocate surface
-	//for (int32_t i = 0; i < ImageType::COUNT; i++)
-	//{
-	//	if (nullptr != this->_images[i])
-	//	{
-	//		SDL_FreeSurface(this->_images[i]);
-	//		this->_images[i] = nullptr;
-	//	}
-	//}
-
-	//if (nullptr != this->_currentImage)
-	//{
-	//	this->_currentImage = nullptr;
-	//}
-
-	for (size_t i = 0; i < COUNT; i++)
+	//Deallocate texture
+	for (size_t i = 0; i < Textures::COUNT; i++)
 	{
 		SDL_DestroyTexture(this->_texturesImages[i]);
 		this->_texturesImages[i] = nullptr;
@@ -58,38 +44,51 @@ void Image_Handler::deinit()
 	}
 }
 
-std::vector<SDL_Texture*> Image_Handler::imagesForDrawing() const
-{
-	std::vector<SDL_Texture*> images;
+//std::vector<SDL_Texture*> Image_Handler::imagesForDrawing() const
+//{
+//	std::vector<SDL_Texture*> images;
+//
+//	//images.push_back(this->_texturesImages[LAYER_2]);
+//	images.push_back(this->_currentTextureImage);
+//
+//	return images;
+//}
 
-	//images.push_back(this->_texturesImages[LAYER_2]);
-	images.push_back(this->_currentTextureImage);
+std::vector<std::pair<SDL_Texture*, Rectangle> > Image_Handler::imagesForDrawing(const std::vector<int32_t>& drawParamsIDs) const
+{
+	std::vector<std::pair<SDL_Texture*, Rectangle> > images;
+
+	for (size_t i = 0; i < drawParamsIDs.size(); i++)
+	{
+		images.push_back(std::make_pair(this->_texturesImages.find(drawParamsIDs[i])->second, this->_textureDimensions.find(drawParamsIDs[i])->second));
+		//std::cout << this->_textureDimensions.find(drawParamsIDs[i])->second.x << " " << this->_textureDimensions.find(drawParamsIDs[i])->second.y << std::endl;
+	}
 
 	return images;
 }
 
-void Image_Handler::setCurrentImage(const ImageType& type)
+void Image_Handler::setCurrentImage(const Textures::ImageType& type)
 {
 	switch (type)
 	{
-	case ImageType::UP:
-		this->_currentTextureImage = this->_texturesImages[UP];
+	case Textures::UP:
+		this->_currentTextureImage = this->_texturesImages[Textures::UP];
 		break;
 
-	case ImageType::DOWN:
-		this->_currentTextureImage = this->_texturesImages[DOWN];
+	case Textures::DOWN:
+		this->_currentTextureImage = this->_texturesImages[Textures::DOWN];
 		break;
 
-	case ImageType::LEFT:
-		this->_currentTextureImage = this->_texturesImages[LEFT];
+	case Textures::LEFT:
+		this->_currentTextureImage = this->_texturesImages[Textures::LEFT];
 		break;
 
-	case ImageType::RIGHT:
-		this->_currentTextureImage = this->_texturesImages[RIGHT];
+	case Textures::RIGHT:
+		this->_currentTextureImage = this->_texturesImages[Textures::RIGHT];
 		break;
 
-	case ImageType::PRESS_KEYS:
-		this->_currentTextureImage = this->_texturesImages[PRESS_KEYS];
+	case Textures::PRESS_KEYS:
+		this->_currentTextureImage = this->_texturesImages[Textures::PRESS_KEYS];
 		break;
 
 	default:
@@ -111,4 +110,9 @@ std::pair<SDL_Texture*, Rectangle> Image_Handler::getImage(const int32_t rsrcId)
 	auto itDimen = this->_textureDimensions.find(rsrcId);
 
 	return std::pair<SDL_Texture*, Rectangle>(it->second, itDimen->second);
+}
+
+std::unordered_map<int32_t, Rectangle> Image_Handler::getImagesDimensions() const
+{
+	return this->_textureDimensions;
 }
