@@ -303,6 +303,9 @@ CMakeFiles/GameEngine.dir/game/Game.cpp.obj: ../game/Game.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
   ../common_defines/Common_Defines.h \
+  ../sdl_wrapper/Input_Events.h \
+  ../utils/drawing/Point.h \
+  ../utils/EventDefines.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream
 
 CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp \
@@ -430,6 +433,8 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc \
   ../utils/drawing/Rectangle.h \
+  ../utils/drawing/DrawParams.h \
+  ../utils/drawing/Point.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/sstream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/sstream.tcc \
   ../sdl_wrapper/Image_Handler.h \
@@ -449,12 +454,12 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp \
   ../sdl_wrapper/config/ImageCfg.h \
   ../utils/drawing/Rectangle.h \
   ../common_defines/Common_Defines.h \
+  ../utils/drawing/DrawParams.h \
   ../sdl_wrapper/Input_Events.h \
   ../utils/drawing/Point.h \
   ../utils/EventDefines.h \
   ../game/Game.h \
   ../utils/drawing/DrawParams.h \
-  ../utils/drawing/Point.h \
   ../utils/drawing/Rectangle.h
 
 CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj: ../sdl_wrapper/Image_Handler.cpp \
@@ -1003,7 +1008,8 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj: ../sdl_wrapper/Renderer.
   C:/mingw_dev_libs/include/SDL2/SDL_video.h \
   C:/mingw_dev_libs/include/SDL2/SDL_surface.h \
   C:/mingw_dev_libs/include/SDL2/SDL_blendmode.h \
-  ../sdl_wrapper/SDL_Helpers.h
+  ../sdl_wrapper/SDL_Helpers.h \
+  C:/mingw_dev_libs/include/SDL2/SDL_hints.h
 
 CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.obj: ../sdl_wrapper/SDL_Helpers.cpp \
   ../sdl_wrapper/SDL_Helpers.h \

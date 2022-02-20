@@ -1,6 +1,7 @@
 #include "Game.h"
 
 #include "../common_defines/Common_Defines.h"
+#include "../sdl_wrapper/Input_Events.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -38,6 +39,35 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 
 void Game::deinit()
 {
+}
+
+bool Game::handleEvent(InputEvent& event)
+{
+	while (event.pollEvent())
+	{
+		if (event.key == Keyboard::Key::KEY_UP)
+		{
+			this->_press_keys_image.pos.y--;
+		}
+		else if (event.key == Keyboard::Key::KEY_DOWN)
+		{
+			this->_press_keys_image.pos.y++;
+		}
+		else if (event.key == Keyboard::Key::KEY_LEFT)
+		{
+			this->_press_keys_image.pos.x--;
+		}
+		else if (event.key == Keyboard::Key::KEY_RIGHT)
+		{
+			this->_press_keys_image.pos.x++;
+		}
+
+		if (event.checkForExitRequestEvent())
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 std::vector<DrawParams> Game::imagesForDrawing() const

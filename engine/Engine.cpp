@@ -85,36 +85,7 @@ void Engine::mainLoop()
 
 bool Engine::handleEvent()
 {
-	while (this->_event.pollEvent())
-	{
-		if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_UP)
-		{
-			this->_imageHandler.setCurrentImage(Textures::UP);
-		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_DOWN)
-		{
-			this->_imageHandler.setCurrentImage(Textures::DOWN);
-		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_LEFT)
-		{
-			this->_imageHandler.setCurrentImage(Textures::LEFT);
-		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_PRESS && this->_event.key == Keyboard::Key::KEY_RIGHT)
-		{
-			this->_imageHandler.setCurrentImage(Textures::RIGHT);
-		}
-		else if (this->_event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
-		{
-			this->_imageHandler.setCurrentImage(Textures::PRESS_KEYS);
-		}
-
-		if (this->_event.checkForExitRequestEvent())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return this->_game.handleEvent(this->_event);
 }
 
 void Engine::limitFPS(int64_t elapsedMicroseconds) const

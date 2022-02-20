@@ -305,6 +305,9 @@ CMakeFiles/GameEngine.dir/game/Game.cpp.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/common_defines/Common_Defines.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Input_Events.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/EventDefines.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream
 
 CMakeFiles/GameEngine.dir/main.cpp.obj
@@ -433,6 +436,8 @@ CMakeFiles/GameEngine.dir/main.cpp.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_bvector.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/vector.tcc
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Rectangle.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/DrawParams.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/sstream
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/sstream.tcc
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Image_Handler.h
@@ -452,12 +457,12 @@ CMakeFiles/GameEngine.dir/main.cpp.obj
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/config/ImageCfg.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Rectangle.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/common_defines/Common_Defines.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/DrawParams.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/Input_Events.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/EventDefines.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/game/Game.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/DrawParams.h
- D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Rectangle.h
 
 CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj
@@ -1010,6 +1015,7 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj
  C:/mingw_dev_libs/include/SDL2/SDL_surface.h
  C:/mingw_dev_libs/include/SDL2/SDL_blendmode.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/SDL_Helpers.h
+ C:/mingw_dev_libs/include/SDL2/SDL_hints.h
 
 CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.obj
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/SDL_Helpers.cpp

@@ -8,11 +8,15 @@
 #include <unordered_map>
 #include <vector>
 
+//Forword Declarations
+struct InputEvent;
+
 class Game
 {
 public:
 	int32_t init(const std::unordered_map<int32_t, Rectangle>& _textureDimensions);
 	void deinit();
+	bool handleEvent(InputEvent& event);
 	std::vector<DrawParams> imagesForDrawing() const;
 
 private:
