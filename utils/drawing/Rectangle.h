@@ -1,6 +1,8 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
+#include "DrawParams.h"
+
 #include <cstdint>
 #include <sstream>
 
@@ -16,6 +18,7 @@ public:
 	Rectangle(const Rectangle& other);
 
 	Rectangle& operator=(const Rectangle& other);
+	Rectangle& operator=(const DrawParams& drawParams);
 
 	bool operator==(const Rectangle& other);
 	bool operator!=(const Rectangle& other);

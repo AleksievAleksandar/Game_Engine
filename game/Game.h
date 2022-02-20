@@ -13,7 +13,7 @@ class Game
 public:
 	int32_t init(const std::unordered_map<int32_t, Rectangle>& _textureDimensions);
 	void deinit();
-	std::vector<int32_t> imagesForDrawing() const;
+	std::vector<DrawParams> imagesForDrawing() const;
 
 private:
 	DrawParams _layer_2_image;

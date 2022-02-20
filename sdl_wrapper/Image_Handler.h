@@ -8,6 +8,7 @@
 #include "config/ImageCfg.h"
 #include "../utils/drawing/Rectangle.h"
 #include "../common_defines/Common_Defines.h"
+#include "../utils/drawing/DrawParams.h"
 
 //Forword Declarations
 struct SDL_Surface;
@@ -19,7 +20,7 @@ public:
 	int32_t loadImage();
 	void deinit();
 	//std::vector<SDL_Texture*> imagesForDrawing() const;
-	std::vector<std::pair<SDL_Texture*, Rectangle> > imagesForDrawing(const std::vector<int32_t>& drawParamsIDs) const;
+	std::vector<std::pair<SDL_Texture*, Rectangle> > imagesForDrawing(const std::vector<DrawParams>& drawParamsIDs) const;
 	void setCurrentImage(const Textures::ImageType& type);
 
 	std::pair<SDL_Texture*, Rectangle> getImage(const int32_t rsrcId) const;

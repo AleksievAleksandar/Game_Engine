@@ -71,7 +71,7 @@ void Renderer::drawTexture(const std::vector<std::pair<SDL_Texture*, Rectangle> 
 		rect.w = images[i].second.w;
 		rect.h = images[i].second.h;
 
-		//std::cout << "X = " << rect.x << "; Y = " << rect.y << "; W = " << rect.w << "; H = " << rect.h << std::endl;
+		//std::cout << images[i].second << std::endl;
 
 		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i].first, nullptr, &rect))
 		{

@@ -40,11 +40,11 @@ void Game::deinit()
 {
 }
 
-std::vector<int32_t> Game::imagesForDrawing() const
+std::vector<DrawParams> Game::imagesForDrawing() const
 {
-	std::vector<int32_t> drawParamsIDs;
-	drawParamsIDs.push_back(this->_press_keys_image.rsrcId);
-	drawParamsIDs.push_back(this->_layer_2_image.rsrcId);
+	std::vector<DrawParams> drawParamsIDs;
+	drawParamsIDs.push_back(this->_press_keys_image);
+	drawParamsIDs.push_back(this->_layer_2_image);
 
 	return drawParamsIDs;
 }

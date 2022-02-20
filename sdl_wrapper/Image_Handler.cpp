@@ -54,13 +54,16 @@ void Image_Handler::deinit()
 //	return images;
 //}
 
-std::vector<std::pair<SDL_Texture*, Rectangle> > Image_Handler::imagesForDrawing(const std::vector<int32_t>& drawParamsIDs) const
+std::vector<std::pair<SDL_Texture*, Rectangle> > Image_Handler::imagesForDrawing(const std::vector<DrawParams>& drawParamsIDs) const
 {
 	std::vector<std::pair<SDL_Texture*, Rectangle> > images;
+	Rectangle tempRect = Rectangle::UNKNOWN;
 
 	for (size_t i = 0; i < drawParamsIDs.size(); i++)
 	{
-		images.push_back(std::make_pair(this->_texturesImages.find(drawParamsIDs[i])->second, this->_textureDimensions.find(drawParamsIDs[i])->second));
+		tempRect = drawParamsIDs[i];
+
+		images.push_back(std::make_pair(this->_texturesImages.find(drawParamsIDs[i].rsrcId)->second, tempRect));
 		//std::cout << this->_textureDimensions.find(drawParamsIDs[i])->second.x << " " << this->_textureDimensions.find(drawParamsIDs[i])->second.y << std::endl;
 	}
 
