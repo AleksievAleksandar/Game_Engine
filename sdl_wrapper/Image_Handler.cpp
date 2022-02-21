@@ -44,27 +44,24 @@ void Image_Handler::deinit()
 	}
 }
 
-//std::vector<SDL_Texture*> Image_Handler::imagesForDrawing() const
-//{
-//	std::vector<SDL_Texture*> images;
-//
-//	//images.push_back(this->_texturesImages[LAYER_2]);
-//	images.push_back(this->_currentTextureImage);
-//
-//	return images;
-//}
-
-std::vector<std::pair<SDL_Texture*, Rectangle> > Image_Handler::imagesForDrawing(const std::vector<DrawParams>& drawParamsIDs) const
+std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::imagesForDrawing(const std::vector<DrawParams>& drawParamsIDs) const
 {
-	std::vector<std::pair<SDL_Texture*, Rectangle> > images;
-	Rectangle tempRect = Rectangle::UNKNOWN;
+	std::vector<std::pair<SDL_Texture*, DrawParams> > images;
 
 	for (size_t i = 0; i < drawParamsIDs.size(); i++)
 	{
-		tempRect = drawParamsIDs[i];
+		auto it = this->_texturesImages.find(drawParamsIDs[i].rsrcId);
 
-		images.push_back(std::make_pair(this->_texturesImages.find(drawParamsIDs[i].rsrcId)->second, tempRect));
-		//std::cout << this->_textureDimensions.find(drawParamsIDs[i])->second.x << " " << this->_textureDimensions.find(drawParamsIDs[i])->second.y << std::endl;
+		if (it == this->_texturesImages.end())
+		{
+			std::cerr << "ERROR -> Wrong Rsrc ID: " << drawParamsIDs[i].rsrcId << " is provided." << std::endl;
+		}
+		else
+		{
+			images.push_back(std::make_pair(it->second, drawParamsIDs[i]));
+			//std::cout << this->_textureDimensions.find(drawParamsIDs[i])->second.x << " " << this->_textureDimensions.find(drawParamsIDs[i])->second.y << std::endl;
+		}
+
 	}
 
 	return images;

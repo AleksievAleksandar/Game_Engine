@@ -58,7 +58,7 @@ void Engine::deinit()
 void Engine::draw() const
 {
 	std::vector<DrawParams> drawParamsIDs = this->_game.imagesForDrawing();
-	std::vector<std::pair<SDL_Texture*, Rectangle> > images = this->_imageHandler.imagesForDrawing(drawParamsIDs);
+	std::vector<std::pair<SDL_Texture*, DrawParams> > images = this->_imageHandler.imagesForDrawing(drawParamsIDs);
 	this->_renderer.drawTexture(images);
 }
 

@@ -19,7 +19,7 @@ public:
 	void clearScreen();
 	void updateScreen();
 	void drawTexture(const std::vector<SDL_Texture*>& images) const;
-	void drawTexture(const std::vector<std::pair<SDL_Texture*, Rectangle> >& images) const;
+	void drawTexture(const std::vector<std::pair<SDL_Texture*, DrawParams> >& images) const;
 
 private:
 	SDL_Renderer* _sdlRenderer = nullptr;
