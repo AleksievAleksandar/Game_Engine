@@ -31,7 +31,7 @@ int32_t Image_Handler::loadImage()
 void Image_Handler::deinit()
 {
 	//Deallocate texture
-	for (auto it : this->_textures)
+	for (auto& it : this->_textures)
 	{
 		SDL_DestroyTexture(it.second);
 		it.second = nullptr;
@@ -55,7 +55,6 @@ std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::collectImagesFo
 			//std::cout << this->_textureDimensions.find(drawParamsIDs[i])->second.x << " " << this->_textureDimensions.find(drawParamsIDs[i])->second.y << std::endl;
 		}
 	}
-
 	return images;
 }
 
