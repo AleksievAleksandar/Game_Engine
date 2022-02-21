@@ -19,16 +19,13 @@ class Image_Handler
 public:
 	int32_t loadImage();
 	void deinit();
-	std::vector<std::pair<SDL_Texture*, DrawParams> > imagesForDrawing(const std::vector<DrawParams>& drawParamsIDs) const;
-	void setCurrentImage(const Textures::ImageType& type);
 
+	std::vector<std::pair<SDL_Texture*, DrawParams> > collectImagesForDrawing(const std::vector<DrawParams>& drawParams) const;	
 	std::pair<SDL_Texture*, Rectangle> getImage(const int32_t rsrcId) const;
 	std::unordered_map<int32_t, Rectangle> getImagesDimensions() const;
 
 private:
-	SDL_Texture* _currentTextureImage = nullptr;
-
-	std::unordered_map<int32_t, SDL_Texture*> _texturesImages;
+	std::unordered_map<int32_t, SDL_Texture*> _textures;
 	std::unordered_map<int32_t, Rectangle> _textureDimensions;
 };
 

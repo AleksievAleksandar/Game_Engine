@@ -21,10 +21,9 @@ int32_t Image_Handler::loadImage()
 			return EXIT_FAILURE;
 		}
 
-		this->_texturesImages[i] = SDL_Helpers::getTextureFromSurface(tempImg);
+		this->_textures[i] = SDL_Helpers::getTextureFromSurface(tempImg);
 		SDL_FreeSurface(tempImg);
 	}
-	this->_currentTextureImage = this->_texturesImages[Textures::PRESS_KEYS];
 	
 	return EXIT_SUCCESS;
 }
@@ -32,76 +31,39 @@ int32_t Image_Handler::loadImage()
 void Image_Handler::deinit()
 {
 	//Deallocate texture
-	for (size_t i = 0; i < Textures::COUNT; i++)
+	for (auto it : this->_textures)
 	{
-		SDL_DestroyTexture(this->_texturesImages[i]);
-		this->_texturesImages[i] = nullptr;
-	}
-
-	if (nullptr != this->_currentTextureImage)
-	{
-		this->_currentTextureImage = nullptr;
+		SDL_DestroyTexture(it.second);
+		it.second = nullptr;
 	}
 }
 
-std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::imagesForDrawing(const std::vector<DrawParams>& drawParamsIDs) const
+std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::collectImagesForDrawing(const std::vector<DrawParams>& drawParams) const
 {
 	std::vector<std::pair<SDL_Texture*, DrawParams> > images;
 
-	for (size_t i = 0; i < drawParamsIDs.size(); i++)
+	for (size_t i = 0; i < drawParams.size(); i++)
 	{
-		auto it = this->_texturesImages.find(drawParamsIDs[i].rsrcId);
-
-		if (it == this->_texturesImages.end())
+		auto it = this->_textures.find(drawParams[i].rsrcId);
+		if (it == this->_textures.end())
 		{
-			std::cerr << "ERROR -> Wrong Rsrc ID: " << drawParamsIDs[i].rsrcId << " is provided." << std::endl;
+			std::cerr << "ERROR -> Wrong Rsrc ID: " << drawParams[i].rsrcId << " is provided." << std::endl;
 		}
 		else
 		{
-			images.push_back(std::make_pair(it->second, drawParamsIDs[i]));
+			images.push_back(std::make_pair(it->second, drawParams[i]));
 			//std::cout << this->_textureDimensions.find(drawParamsIDs[i])->second.x << " " << this->_textureDimensions.find(drawParamsIDs[i])->second.y << std::endl;
 		}
-
 	}
 
 	return images;
 }
 
-void Image_Handler::setCurrentImage(const Textures::ImageType& type)
-{
-	switch (type)
-	{
-	case Textures::UP:
-		this->_currentTextureImage = this->_texturesImages[Textures::UP];
-		break;
-
-	case Textures::DOWN:
-		this->_currentTextureImage = this->_texturesImages[Textures::DOWN];
-		break;
-
-	case Textures::LEFT:
-		this->_currentTextureImage = this->_texturesImages[Textures::LEFT];
-		break;
-
-	case Textures::RIGHT:
-		this->_currentTextureImage = this->_texturesImages[Textures::RIGHT];
-		break;
-
-	case Textures::PRESS_KEYS:
-		this->_currentTextureImage = this->_texturesImages[Textures::PRESS_KEYS];
-		break;
-
-	default:
-		std::cerr << "ERROR -> Image_Handler::setCurrentImage() unknown image type provided." << std::endl;
-		break;
-	}
-}
-
 std::pair<SDL_Texture*, Rectangle> Image_Handler::getImage(const int32_t rsrcId) const
 {
-	auto it = this->_texturesImages.find(rsrcId);
+	auto it = this->_textures.find(rsrcId);
 
-	if (it == this->_texturesImages.end())
+	if (it == this->_textures.end())
 	{
 		std::cerr << "ERROR -> you're providing non existing rsrcId: " << rsrcId << " to Image_Handler::getImage()." << std::endl;
 		return std::pair<SDL_Texture*, Rectangle>(nullptr, Rectangle::UNKNOWN);

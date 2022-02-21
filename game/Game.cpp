@@ -72,9 +72,9 @@ bool Game::handleEvent(InputEvent& event)
 
 std::vector<DrawParams> Game::imagesForDrawing() const
 {
-	std::vector<DrawParams> drawParamsIDs;
-	drawParamsIDs.push_back(this->_press_keys_image);
-	drawParamsIDs.push_back(this->_layer_2_image);
+	std::vector<DrawParams> drawParams;
+	drawParams.push_back(this->_press_keys_image);
+	drawParams.push_back(this->_layer_2_image);
 
-	return drawParamsIDs;
+	return drawParams;
 }
