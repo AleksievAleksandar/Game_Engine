@@ -61,14 +61,13 @@ std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::collectImagesFo
 std::pair<SDL_Texture*, Rectangle> Image_Handler::getImage(const int32_t rsrcId) const
 {
 	auto it = this->_textures.find(rsrcId);
+	auto itDimen = this->_textureDimensions.find(rsrcId);
 
-	if (it == this->_textures.end())
+	if (it == this->_textures.end() || itDimen == this->_textureDimensions.end())
 	{
 		std::cerr << "ERROR -> you're providing non existing rsrcId: " << rsrcId << " to Image_Handler::getImage()." << std::endl;
 		return std::pair<SDL_Texture*, Rectangle>(nullptr, Rectangle::UNKNOWN);
 	}
-
-	auto itDimen = this->_textureDimensions.find(rsrcId);
 
 	return std::pair<SDL_Texture*, Rectangle>(it->second, itDimen->second);
 }
