@@ -22,7 +22,7 @@ int32_t Renderer::init(SDL_Window* window)
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != SDL_SetRenderDrawColor(this->_sdlRenderer, 0, 255, 255, SDL_ALPHA_OPAQUE))
+	if (EXIT_SUCCESS != SDL_SetRenderDrawColor(this->_sdlRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE))
 	{
 		std::cerr << "ERROR -> SDL_SetRenderDrawColor()" << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
