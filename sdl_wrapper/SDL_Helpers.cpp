@@ -65,3 +65,31 @@ void SDL_Helpers::copy_SDL_Renderer_ptr(SDL_Renderer* renderer)
 	}
 }
 
+int32_t SDL_Helpers::setBlendModeToTexture(SDL_Texture* texture, BlendMode blendMode)
+{
+	if (EXIT_SUCCESS != SDL_SetTextureBlendMode(texture, static_cast<SDL_BlendMode>(blendMode)))
+	{
+		std::cerr << "ERROR -> SDL_SetTextureBlendMode(). SDL_Error: " << SDL_GetError() << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	return EXIT_SUCCESS;
+}
+
+int32_t SDL_Helpers::setAlphaToTexture(SDL_Texture* texture, int32_t alpha)
+{
+	if (ZERO_OPACITY > alpha || FULL_OPACITY < alpha)
+	{
+		std::cerr << "ERROR -> Providing wrong value: " << alpha << " for alpha." << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	if (EXIT_SUCCESS != SDL_SetTextureAlphaMod(texture, static_cast<uint8_t>(alpha)))
+	{
+		std::cerr << "ERROR -> SDL_SetTextureAlphaMod(). SDL_Error: " << SDL_GetError() << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	return EXIT_SUCCESS;
+}
+
