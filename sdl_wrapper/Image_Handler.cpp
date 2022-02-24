@@ -38,7 +38,7 @@ void Image_Handler::deinit()
 	}
 }
 
-std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::collectImagesForDrawing(const std::vector<DrawParams>& drawParams) const
+std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::collectTexturesForDrawing(const std::vector<DrawParams>& drawParams) const
 {
 	std::vector<std::pair<SDL_Texture*, DrawParams> > images;
 
@@ -58,7 +58,7 @@ std::vector<std::pair<SDL_Texture*, DrawParams> > Image_Handler::collectImagesFo
 	return images;
 }
 
-std::pair<SDL_Texture*, Rectangle> Image_Handler::getImage(const int32_t rsrcId) const
+std::pair<SDL_Texture*, Rectangle> Image_Handler::getTextures(const int32_t rsrcId) const
 {
 	auto it = this->_textures.find(rsrcId);
 	auto itDimen = this->_textureDimensions.find(rsrcId);
@@ -72,7 +72,7 @@ std::pair<SDL_Texture*, Rectangle> Image_Handler::getImage(const int32_t rsrcId)
 	return std::pair<SDL_Texture*, Rectangle>(it->second, itDimen->second);
 }
 
-std::unordered_map<int32_t, Rectangle> Image_Handler::getImagesDimensions() const
+std::unordered_map<int32_t, Rectangle> Image_Handler::getTexturesDimensions() const
 {
 	return this->_textureDimensions;
 }

@@ -20,9 +20,9 @@ public:
 	int32_t loadImage();
 	void deinit();
 
-	std::vector<std::pair<SDL_Texture*, DrawParams> > collectImagesForDrawing(const std::vector<DrawParams>& drawParams) const;	
-	std::pair<SDL_Texture*, Rectangle> getImage(const int32_t rsrcId) const;
-	std::unordered_map<int32_t, Rectangle> getImagesDimensions() const;
+	std::vector<std::pair<SDL_Texture*, DrawParams> > collectTexturesForDrawing(const std::vector<DrawParams>& drawParams) const;	
+	std::pair<SDL_Texture*, Rectangle> getTextures(const int32_t rsrcId) const;
+	std::unordered_map<int32_t, Rectangle> getTexturesDimensions() const;
 
 private:
 	std::unordered_map<int32_t, SDL_Texture*> _textures;

@@ -33,7 +33,7 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != this->_game.init(this->_imageHandler.getImagesDimensions()))
+	if (EXIT_SUCCESS != this->_game.init(this->_imageHandler.getTexturesDimensions()))
 	{
 		std::cerr << "ERROR -> this->_game->init() failed. " << std::endl;
 		return EXIT_FAILURE;
@@ -58,7 +58,7 @@ void Engine::deinit()
 void Engine::draw() const
 {
 	std::vector<DrawParams> drawParams = this->_game.imagesForDrawing();
-	std::vector<std::pair<SDL_Texture*, DrawParams> > images = this->_imageHandler.collectImagesForDrawing(drawParams);
+	std::vector<std::pair<SDL_Texture*, DrawParams> > images = this->_imageHandler.collectTexturesForDrawing(drawParams);
 	this->_renderer.drawTexture(images);
 }
 
