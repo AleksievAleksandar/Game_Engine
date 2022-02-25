@@ -79,9 +79,30 @@ void Renderer::drawTexture(const std::vector<std::pair<SDL_Texture*, DrawParams>
 
 		//std::cout << images[i].second << std::endl;
 
-		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i].first, nullptr, &rect))
+		if (FULL_OPACITY == images[i].second.opacity)
 		{
-			std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+			if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i].first, nullptr, &rect))
+			{
+				std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+			}
+		}
+		else
+		{
+			if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(images[i].first, images[i].second.opacity))
+			{
+				std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
+			}
+
+			if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i].first, nullptr, &rect))
+			{
+				std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+			}
+
+			//Return FULL_OPACITY state to texture 
+			if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(images[i].first, FULL_OPACITY))
+			{
+				std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
+			}
 		}
 	}
 }
