@@ -61,6 +61,14 @@ bool Game::handleEvent(InputEvent& event)
 		{
 			this->_press_keys_image.pos.x++;
 		}
+		else if (event.key == Keyboard::Key::KEY_Z)
+		{
+			this->_press_keys_image.opacity -= 10;
+		}
+		else if (event.key == Keyboard::Key::KEY_X)
+		{
+			this->_press_keys_image.opacity += 10;
+		}
 
 		if (event.checkForExitRequestEvent())
 		{
