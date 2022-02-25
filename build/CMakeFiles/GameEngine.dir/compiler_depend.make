@@ -1009,6 +1009,7 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Renderer.cpp.obj: ../sdl_wrapper/Renderer.
   C:/mingw_dev_libs/include/SDL2/SDL_surface.h \
   C:/mingw_dev_libs/include/SDL2/SDL_blendmode.h \
   ../sdl_wrapper/SDL_Helpers.h \
+  ../utils/drawing/DrawParams.h \
   C:/mingw_dev_libs/include/SDL2/SDL_hints.h
 
 CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.obj: ../sdl_wrapper/SDL_Helpers.cpp \
@@ -1102,6 +1103,8 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/SDL_Helpers.cpp.obj: ../sdl_wrapper/SDL_He
   C:/MinGW/include/stdio.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc \
+  ../utils/drawing/DrawParams.h \
+  ../utils/drawing/Point.h \
   ../sdl_wrapper/config/WindowCfg.h \
   C:/mingw_dev_libs/include/SDL2/SDL_video.h \
   C:/mingw_dev_libs/include/SDL2/SDL_stdinc.h \
@@ -1465,6 +1468,8 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj: ../sdl_wrapper/Window.cpp 
   C:/MinGW/include/stdio.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/basic_string.tcc \
+  ../utils/drawing/DrawParams.h \
+  ../utils/drawing/Point.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ostream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ios \

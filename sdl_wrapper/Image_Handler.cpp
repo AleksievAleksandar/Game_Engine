@@ -14,15 +14,25 @@ int32_t Image_Handler::loadImage()
 
 	for (int32_t i = 0; i < Textures::COUNT; i++)
 	{
-		SDL_Surface* tempImg = IMG_Load(imagePaths[i].c_str());
-		if (nullptr == tempImg)
+		SDL_Surface* tempSurface = IMG_Load(imagePaths[i].c_str());
+		if (nullptr == tempSurface)
 		{
 			std::cerr << "ERROR -> Unable to load image " << imagePaths[i] << ". SDL_Error: " << SDL_GetError() << std::endl;
 			return EXIT_FAILURE;
 		}
 
-		this->_textures[i] = SDL_Helpers::getTextureFromSurface(tempImg);
-		SDL_FreeSurface(tempImg);
+		SDL_Texture* texture = SDL_Helpers::getTextureFromSurface(tempSurface);
+
+		//Enable Blend Mode to textures
+		if (EXIT_SUCCESS != SDL_Helpers::setBlendModeToTexture(texture, BlendMode::BLEND))
+		{
+			std::cerr << "ERROR -> SDL_Helpers::setBlendModeToTexture() failed for file:  " << imagePaths[i] << ". SDL_Error: " << SDL_GetError() << std::endl;
+			return EXIT_FAILURE;
+		}
+
+		this->_textures[i] = texture;
+
+		SDL_FreeSurface(tempSurface);
 	}
 	
 	return EXIT_SUCCESS;
