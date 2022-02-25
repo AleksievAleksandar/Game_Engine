@@ -98,7 +98,7 @@ void Renderer::drawTexture(const std::vector<std::pair<SDL_Texture*, DrawParams>
 				std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
 			}
 
-			//Return FULL_OPACITY state to texture 
+			//Return FULL_OPACITY to texture 
 			if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(images[i].first, FULL_OPACITY))
 			{
 				std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
