@@ -53,6 +53,8 @@ add_executable(
         ${_BASE_DIR}/utils/drawing/DrawParams.h
         ${_BASE_DIR}/utils/drawing/Point.h
         ${_BASE_DIR}/utils/drawing/Point.cpp
+        ${_BASE_DIR}/utils/drawing/Color.h
+        ${_BASE_DIR}/utils/drawing/Color.cpp
         ${_BASE_DIR}/utils/drawing/Rectangle.h
         ${_BASE_DIR}/utils/drawing/Rectangle.cpp
         ${_BASE_DIR}/utils/thread/ThreadUtils.h

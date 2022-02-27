@@ -368,6 +368,30 @@ sdl_wrapper/containers/Image_Handler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.s
 .PHONY : sdl_wrapper/containers/Image_Handler.cpp.s
 
+utils/drawing/Color.obj: utils/drawing/Color.cpp.obj
+.PHONY : utils/drawing/Color.obj
+
+# target to build an object file
+utils/drawing/Color.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj
+.PHONY : utils/drawing/Color.cpp.obj
+
+utils/drawing/Color.i: utils/drawing/Color.cpp.i
+.PHONY : utils/drawing/Color.i
+
+# target to preprocess a source file
+utils/drawing/Color.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.i
+.PHONY : utils/drawing/Color.cpp.i
+
+utils/drawing/Color.s: utils/drawing/Color.cpp.s
+.PHONY : utils/drawing/Color.s
+
+# target to generate assembly for a file
+utils/drawing/Color.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.s
+.PHONY : utils/drawing/Color.cpp.s
+
 utils/drawing/Point.obj: utils/drawing/Point.cpp.obj
 .PHONY : utils/drawing/Point.obj
 
@@ -503,6 +527,9 @@ help:
 	@echo ... sdl_wrapper/containers/Image_Handler.obj
 	@echo ... sdl_wrapper/containers/Image_Handler.i
 	@echo ... sdl_wrapper/containers/Image_Handler.s
+	@echo ... utils/drawing/Color.obj
+	@echo ... utils/drawing/Color.i
+	@echo ... utils/drawing/Color.s
 	@echo ... utils/drawing/Point.obj
 	@echo ... utils/drawing/Point.i
 	@echo ... utils/drawing/Point.s

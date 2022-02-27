@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.obj"
   "CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.obj.d"
+  "CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj"
+  "CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj"
   "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj.d"
   "CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj"

@@ -188,11 +188,26 @@ CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\utils\drawing\Point.cpp" -o CMakeFiles\GameEngine.dir\utils\drawing\Point.cpp.s
 
+CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj: CMakeFiles/GameEngine.dir/flags.make
+CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
+CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj: ../utils/drawing/Color.cpp
+CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj -MF CMakeFiles\GameEngine.dir\utils\drawing\Color.cpp.obj.d -o CMakeFiles\GameEngine.dir\utils\drawing\Color.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\utils\drawing\Color.cpp"
+
+CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\utils\drawing\Color.cpp" > CMakeFiles\GameEngine.dir\utils\drawing\Color.cpp.i
+
+CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\utils\drawing\Color.cpp" -o CMakeFiles\GameEngine.dir\utils\drawing\Color.cpp.s
+
 CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj: CMakeFiles/GameEngine.dir/flags.make
 CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
 CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj: ../utils/drawing/Rectangle.cpp
 CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj -MF CMakeFiles\GameEngine.dir\utils\drawing\Rectangle.cpp.obj.d -o CMakeFiles\GameEngine.dir\utils\drawing\Rectangle.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\utils\drawing\Rectangle.cpp"
 
 CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.i: cmake_force
@@ -207,7 +222,7 @@ CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj: CMakeFiles/GameEngin
 CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
 CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj: ../utils/thread/ThreadUtils.cpp
 CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj -MF CMakeFiles\GameEngine.dir\utils\thread\ThreadUtils.cpp.obj.d -o CMakeFiles\GameEngine.dir\utils\thread\ThreadUtils.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\utils\thread\ThreadUtils.cpp"
 
 CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.i: cmake_force
@@ -222,7 +237,7 @@ CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj: CMakeFiles/GameEn
 CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
 CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj: ../utils/time_measurement/Time.cpp
 CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj -MF CMakeFiles\GameEngine.dir\utils\time_measurement\Time.cpp.obj.d -o CMakeFiles\GameEngine.dir\utils\time_measurement\Time.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\utils\time_measurement\Time.cpp"
 
 CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.i: cmake_force
@@ -237,7 +252,7 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: CMakeFiles/GameEngine.dir/flags
 CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
 CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp
 CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj -MF CMakeFiles\GameEngine.dir\engine\Engine.cpp.obj.d -o CMakeFiles\GameEngine.dir\engine\Engine.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\engine\Engine.cpp"
 
 CMakeFiles/GameEngine.dir/engine/Engine.cpp.i: cmake_force
@@ -252,7 +267,7 @@ CMakeFiles/GameEngine.dir/game/Game.cpp.obj: CMakeFiles/GameEngine.dir/flags.mak
 CMakeFiles/GameEngine.dir/game/Game.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
 CMakeFiles/GameEngine.dir/game/Game.cpp.obj: ../game/Game.cpp
 CMakeFiles/GameEngine.dir/game/Game.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GameEngine.dir/game/Game.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GameEngine.dir/game/Game.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/game/Game.cpp.obj -MF CMakeFiles\GameEngine.dir\game\Game.cpp.obj.d -o CMakeFiles\GameEngine.dir\game\Game.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\game\Game.cpp"
 
 CMakeFiles/GameEngine.dir/game/Game.cpp.i: cmake_force
@@ -267,7 +282,7 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: CMakeFiles/GameEngine.dir/flags.make
 CMakeFiles/GameEngine.dir/main.cpp.obj: CMakeFiles/GameEngine.dir/includes_CXX.rsp
 CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/GameEngine.dir/main.cpp.obj: CMakeFiles/GameEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GameEngine.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/GameEngine.dir/main.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameEngine.dir/main.cpp.obj -MF CMakeFiles\GameEngine.dir\main.cpp.obj.d -o CMakeFiles\GameEngine.dir\main.cpp.obj -c "D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\main.cpp"
 
 CMakeFiles/GameEngine.dir/main.cpp.i: cmake_force
@@ -288,6 +303,7 @@ GameEngine_OBJECTS = \
 "CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj" \
 "CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.obj" \
 "CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj" \
+"CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj" \
 "CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj" \
 "CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj" \
 "CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj" \
@@ -306,6 +322,7 @@ GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/Window.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj
+GameEngine.exe: CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/utils/drawing/Rectangle.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/utils/thread/ThreadUtils.cpp.obj
 GameEngine.exe: CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj
@@ -321,7 +338,7 @@ GameEngine.exe: C:/mingw_dev_libs/lib/libSDL2_mixer.dll.a
 GameEngine.exe: CMakeFiles/GameEngine.dir/linklibs.rsp
 GameEngine.exe: CMakeFiles/GameEngine.dir/objects1.rsp
 GameEngine.exe: CMakeFiles/GameEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable GameEngine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Aleksandar\Projects\Cpp Projects\SoftUni\Cpp_Master_Class\My_First_Game\Game_Engine\Game_Engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable GameEngine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GameEngine.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
