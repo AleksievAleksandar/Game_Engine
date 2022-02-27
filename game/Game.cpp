@@ -14,6 +14,7 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 		std::cerr << "ERROR -> Can not find Texture ID: " << Textures::LAYER_2 << " to init() Game." << std::endl;
 		return EXIT_FAILURE;
 	}
+	this->_layer_2_image.widgetType = WidgetType::IMAGE;
 	this->_layer_2_image.rsrcId = it->first;
 	this->_layer_2_image.h = it->second.h;
 	this->_layer_2_image.w = it->second.w;
@@ -27,6 +28,7 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 		std::cerr << "ERROR -> Can not find Texture ID: " << Textures::PRESS_KEYS << " to init() Game." << std::endl;
 		return EXIT_FAILURE;
 	}
+	this->_press_keys_image.widgetType = WidgetType::IMAGE;
 	this->_press_keys_image.rsrcId = it->first;
 	this->_press_keys_image.h = it->second.h;
 	this->_press_keys_image.w = it->second.w;
