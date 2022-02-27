@@ -200,30 +200,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-sdl_wrapper/Image_Handler.obj: sdl_wrapper/Image_Handler.cpp.obj
-.PHONY : sdl_wrapper/Image_Handler.obj
-
-# target to build an object file
-sdl_wrapper/Image_Handler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.obj
-.PHONY : sdl_wrapper/Image_Handler.cpp.obj
-
-sdl_wrapper/Image_Handler.i: sdl_wrapper/Image_Handler.cpp.i
-.PHONY : sdl_wrapper/Image_Handler.i
-
-# target to preprocess a source file
-sdl_wrapper/Image_Handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.i
-.PHONY : sdl_wrapper/Image_Handler.cpp.i
-
-sdl_wrapper/Image_Handler.s: sdl_wrapper/Image_Handler.cpp.s
-.PHONY : sdl_wrapper/Image_Handler.s
-
-# target to generate assembly for a file
-sdl_wrapper/Image_Handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/Image_Handler.cpp.s
-.PHONY : sdl_wrapper/Image_Handler.cpp.s
-
 sdl_wrapper/Input_Events.obj: sdl_wrapper/Input_Events.cpp.obj
 .PHONY : sdl_wrapper/Input_Events.obj
 
@@ -368,6 +344,30 @@ sdl_wrapper/config/ImageCfg.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/config/ImageCfg.cpp.s
 .PHONY : sdl_wrapper/config/ImageCfg.cpp.s
 
+sdl_wrapper/containers/Image_Handler.obj: sdl_wrapper/containers/Image_Handler.cpp.obj
+.PHONY : sdl_wrapper/containers/Image_Handler.obj
+
+# target to build an object file
+sdl_wrapper/containers/Image_Handler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.obj
+.PHONY : sdl_wrapper/containers/Image_Handler.cpp.obj
+
+sdl_wrapper/containers/Image_Handler.i: sdl_wrapper/containers/Image_Handler.cpp.i
+.PHONY : sdl_wrapper/containers/Image_Handler.i
+
+# target to preprocess a source file
+sdl_wrapper/containers/Image_Handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.i
+.PHONY : sdl_wrapper/containers/Image_Handler.cpp.i
+
+sdl_wrapper/containers/Image_Handler.s: sdl_wrapper/containers/Image_Handler.cpp.s
+.PHONY : sdl_wrapper/containers/Image_Handler.s
+
+# target to generate assembly for a file
+sdl_wrapper/containers/Image_Handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngine.dir\build.make CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.s
+.PHONY : sdl_wrapper/containers/Image_Handler.cpp.s
+
 utils/drawing/Point.obj: utils/drawing/Point.cpp.obj
 .PHONY : utils/drawing/Point.obj
 
@@ -482,9 +482,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... sdl_wrapper/Image_Handler.obj
-	@echo ... sdl_wrapper/Image_Handler.i
-	@echo ... sdl_wrapper/Image_Handler.s
 	@echo ... sdl_wrapper/Input_Events.obj
 	@echo ... sdl_wrapper/Input_Events.i
 	@echo ... sdl_wrapper/Input_Events.s
@@ -503,6 +500,9 @@ help:
 	@echo ... sdl_wrapper/config/ImageCfg.obj
 	@echo ... sdl_wrapper/config/ImageCfg.i
 	@echo ... sdl_wrapper/config/ImageCfg.s
+	@echo ... sdl_wrapper/containers/Image_Handler.obj
+	@echo ... sdl_wrapper/containers/Image_Handler.i
+	@echo ... sdl_wrapper/containers/Image_Handler.s
 	@echo ... utils/drawing/Point.obj
 	@echo ... utils/drawing/Point.i
 	@echo ... utils/drawing/Point.s

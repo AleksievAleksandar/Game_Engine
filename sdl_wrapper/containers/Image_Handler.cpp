@@ -1,7 +1,7 @@
 #include "Image_Handler.h"
-#include "SDL_Helpers.h"
+#include "../SDL_Helpers.h"
 #include "SDL_Render.h"
-#include "config/ImageCfg.h"
+#include "../config/ImageCfg.h"
 
 #include <SDL_image.h>
 #include <iostream>

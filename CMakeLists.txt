@@ -35,8 +35,6 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/SDL_Loader.cpp
         ${_BASE_DIR}/sdl_wrapper/SDL_Helpers.h
         ${_BASE_DIR}/sdl_wrapper/SDL_Helpers.cpp
-        ${_BASE_DIR}/sdl_wrapper/Image_Handler.h
-        ${_BASE_DIR}/sdl_wrapper/Image_Handler.cpp
         ${_BASE_DIR}/sdl_wrapper/Input_Events.h
         ${_BASE_DIR}/sdl_wrapper/Input_Events.cpp
         ${_BASE_DIR}/sdl_wrapper/Renderer.h
@@ -47,6 +45,9 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/config/WindowCfg.h
         ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.h
         ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.cpp
+
+        ${_BASE_DIR}/sdl_wrapper/containers/Image_Handler.h
+        ${_BASE_DIR}/sdl_wrapper/containers/Image_Handler.cpp
 
         ${_BASE_DIR}/utils/EventDefines.h
         ${_BASE_DIR}/utils/drawing/DrawParams.h

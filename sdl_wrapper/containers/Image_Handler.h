@@ -5,10 +5,10 @@
 #include <vector>
 #include <unordered_map>
 
-#include "config/ImageCfg.h"
-#include "../utils/drawing/Rectangle.h"
-#include "../common_defines/Common_Defines.h"
-#include "../utils/drawing/DrawParams.h"
+#include "../config/ImageCfg.h"
+#include "../../utils/drawing/Rectangle.h"
+#include "../../common_defines/Common_Defines.h"
+#include "../../utils/drawing/DrawParams.h"
 
 //Forword Declarations
 struct SDL_Surface;

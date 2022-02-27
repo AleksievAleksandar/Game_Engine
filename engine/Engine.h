@@ -3,7 +3,7 @@
 
 #include "../sdl_wrapper/Window.h"
 #include "../sdl_wrapper/Renderer.h"
-#include "../sdl_wrapper/Image_Handler.h"
+#include "../sdl_wrapper/containers/Image_Handler.h"
 #include "../sdl_wrapper/Input_Events.h"
 #include "../game/Game.h"
 
