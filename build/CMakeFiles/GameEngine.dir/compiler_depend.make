@@ -1639,6 +1639,22 @@ CMakeFiles/GameEngine.dir/sdl_wrapper/containers/Image_Handler.cpp.obj: ../sdl_w
   C:/mingw_dev_libs/include/SDL2/SDL_misc.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/iostream
 
+CMakeFiles/GameEngine.dir/utils/drawing/Color.cpp.obj: ../utils/drawing/Color.cpp \
+  ../utils/drawing/Color.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdint \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/c++config.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/os_defines.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32/bits/cpu_defines.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/pstl/pstl_config.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stdint.h \
+  C:/MinGW/include/stdint.h \
+  C:/MinGW/include/_mingw.h \
+  C:/MinGW/include/msvcrtver.h \
+  C:/MinGW/include/w32api.h \
+  C:/MinGW/include/sdkddkver.h \
+  C:/MinGW/include/features.h \
+  C:/MinGW/lib/gcc/mingw32/9.2.0/include/stddef.h
+
 CMakeFiles/GameEngine.dir/utils/drawing/Point.cpp.obj: ../utils/drawing/Point.cpp \
   ../utils/drawing/Point.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/cstdint \
@@ -1877,6 +1893,8 @@ CMakeFiles/GameEngine.dir/utils/time_measurement/Time.cpp.obj: ../utils/time_mea
   C:/MinGW/include/sys/types.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/parse_numbers.h
 
+
+../utils/drawing/Color.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/stl_algobase.h:
 
@@ -2473,6 +2491,8 @@ C:/mingw_dev_libs/include/SDL2/SDL_timer.h:
 C:/mingw_dev_libs/include/SDL2/SDL_misc.h:
 
 ../sdl_wrapper/Window.cpp:
+
+../utils/drawing/Color.cpp:
 
 ../utils/drawing/Point.cpp:
 
