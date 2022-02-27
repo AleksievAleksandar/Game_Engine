@@ -33,6 +33,7 @@ struct DrawParams
 
 	int32_t rsrcId = UNKNOWN_RSRC_ID;
 	WidgetType widgetType = WidgetType::UNKNOWN;
+	int dummy = 0;
 };
 
 #endif // !DRAW_PARAMS_H
