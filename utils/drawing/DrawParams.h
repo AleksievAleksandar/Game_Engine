@@ -15,6 +15,13 @@ enum class BlendMode : uint8_t
 	MOD = 4  //value for SDL_BLENDMODE_MODE
 };
 
+enum class WidgetType : uint8_t 
+{
+	IMAGE,
+	TEXT,
+	UNKNOWN
+};
+
 struct DrawParams
 {
 	Point pos = Point::UNKNOWN;
@@ -25,6 +32,7 @@ struct DrawParams
 	int32_t opacity = FULL_OPACITY;
 
 	int32_t rsrcId = UNKNOWN_RSRC_ID;
+	WidgetType widgetType = WidgetType::UNKNOWN;
 };
 
 #endif // !DRAW_PARAMS_H
