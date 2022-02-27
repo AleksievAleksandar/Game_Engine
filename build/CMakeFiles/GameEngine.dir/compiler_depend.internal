@@ -130,7 +130,7 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream.tcc
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/istream.tcc
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/sstream.tcc
- D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/image_handler.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/containers/Image_Handler.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h
@@ -145,6 +145,7 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/config/ImageCfg.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Rectangle.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Rectangle.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/common_defines/Common_Defines.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/DrawParams.h
@@ -440,7 +441,7 @@ CMakeFiles/GameEngine.dir/main.cpp.obj
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Point.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/sstream
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/sstream.tcc
- D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/image_handler.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/containers/Image_Handler.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h
@@ -455,6 +456,7 @@ CMakeFiles/GameEngine.dir/main.cpp.obj
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h
  C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/sdl_wrapper/config/ImageCfg.h
+ D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Rectangle.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/Rectangle.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/common_defines/Common_Defines.h
  D:/Aleksandar/Projects/Cpp Projects/SoftUni/Cpp_Master_Class/My_First_Game/Game_Engine/Game_Engine/utils/drawing/DrawParams.h

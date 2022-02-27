@@ -129,7 +129,7 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/istream.tcc \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/sstream.tcc \
-  ../sdl_wrapper/image_handler.h \
+  ../sdl_wrapper/containers/Image_Handler.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h \
@@ -144,6 +144,7 @@ CMakeFiles/GameEngine.dir/engine/Engine.cpp.obj: ../engine/Engine.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
   ../sdl_wrapper/config/ImageCfg.h \
+  ../utils/drawing/Rectangle.h \
   ../utils/drawing/Rectangle.h \
   ../common_defines/Common_Defines.h \
   ../utils/drawing/DrawParams.h \
@@ -437,7 +438,7 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp \
   ../utils/drawing/Point.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/sstream \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/sstream.tcc \
-  ../sdl_wrapper/image_handler.h \
+  ../sdl_wrapper/containers/Image_Handler.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/ext/aligned_buffer.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/hashtable.h \
@@ -452,6 +453,7 @@ CMakeFiles/GameEngine.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/unordered_map.h \
   C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/erase_if.h \
   ../sdl_wrapper/config/ImageCfg.h \
+  ../utils/drawing/Rectangle.h \
   ../utils/drawing/Rectangle.h \
   ../common_defines/Common_Defines.h \
   ../utils/drawing/DrawParams.h \
@@ -2132,8 +2134,6 @@ C:/MinGW/lib/gcc/mingw32/9.2.0/include/clflushoptintrin.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/locale_classes.h:
 
-../sdl_wrapper/image_handler.h:
-
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/string:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/ostream_insert.h:
@@ -2205,6 +2205,8 @@ C:/mingw_dev_libs/include/SDL2/SDL_power.h:
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/istream.tcc:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/bits/sstream.tcc:
+
+../sdl_wrapper/containers/Image_Handler.h:
 
 C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/unordered_map:
 
@@ -2471,8 +2473,6 @@ C:/mingw_dev_libs/include/SDL2/SDL_timer.h:
 C:/mingw_dev_libs/include/SDL2/SDL_misc.h:
 
 ../sdl_wrapper/Window.cpp:
-
-../sdl_wrapper/containers/Image_Handler.h:
 
 ../utils/drawing/Point.cpp:
 
