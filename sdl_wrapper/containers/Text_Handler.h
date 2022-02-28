@@ -4,12 +4,18 @@
 #include <vector>
 #include <unordered_map>
 
+#include "IHandler.h"
+
 //Forword Declarations
-struct TTF_Font;
+typedef struct _TTF_Font TTF_Font;;
 struct SDL_Texture;
 
-class Text_Handler
+class Text_Handler : public IHandler
 {
+public:
+	int32_t loadRsrc() override;
+	void deinit() override;
+	std::vector<std::pair<SDL_Texture*, DrawParams> > collectTexturesForDrawing(const std::vector<DrawParams>& drawParams) const override;
 
 private:
 	//the textures we'll be drawing

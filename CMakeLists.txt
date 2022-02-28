@@ -45,6 +45,8 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/config/WindowCfg.h
         ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.h
         ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.cpp
+        ${_BASE_DIR}/sdl_wrapper/config/TextCfg.h
+        ${_BASE_DIR}/sdl_wrapper/config/TextCfg.cpp
 
         ${_BASE_DIR}/sdl_wrapper/containers/IHandler.h
         ${_BASE_DIR}/sdl_wrapper/containers/Image_Handler.h
