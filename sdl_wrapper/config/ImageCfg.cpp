@@ -30,12 +30,12 @@ std::vector<std::string> ImageCfg::getImageParhs()
 	//Load image from disk
 	std::vector<std::string> imagePaths(Textures::COUNT);
 
-	imagePaths[Textures::PRESS_KEYS] = "../resources/press_keys.png";
-	imagePaths[Textures::UP] = "../resources/up.png";
-	imagePaths[Textures::DOWN] = "../resources/down.png";
-	imagePaths[Textures::LEFT] = "../resources/left.png";
-	imagePaths[Textures::RIGHT] = "../resources/right.png";
-	imagePaths[Textures::LAYER_2] = "../resources/layer_2.png";
+	imagePaths[Textures::PRESS_KEYS] = "../resources/pictures/press_keys.png";
+	imagePaths[Textures::UP] = "../resources/pictures/up.png";
+	imagePaths[Textures::DOWN] = "../resources/pictures/down.png";
+	imagePaths[Textures::LEFT] = "../resources/pictures/left.png";
+	imagePaths[Textures::RIGHT] = "../resources/pictures/right.png";
+	imagePaths[Textures::LAYER_2] = "../resources/pictures/layer_2.png";
 
 	return imagePaths;
 }

@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-int32_t Image_Handler::loadImage()
+int32_t Image_Handler::loadRsrc()
 {
 	std::vector<std::string> imagePaths = ImageCfg::getImageParhs();
 	this->_textureDimensions = ImageCfg::getImageSizes();

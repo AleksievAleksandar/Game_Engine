@@ -21,9 +21,9 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != this->_imageHandler.loadImage())
+	if (EXIT_SUCCESS != this->_imageHandler.loadRsrc())
 	{
-		std::cerr << "ERROR -> _imageHandler.loadImage()" << std::endl;
+		std::cerr << "ERROR -> _imageHandler.loadRsrc()" << std::endl;
 		return EXIT_FAILURE;
 	}
 

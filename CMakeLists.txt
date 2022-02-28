@@ -46,8 +46,11 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.h
         ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.cpp
 
+        ${_BASE_DIR}/sdl_wrapper/containers/IHandler.h
         ${_BASE_DIR}/sdl_wrapper/containers/Image_Handler.h
         ${_BASE_DIR}/sdl_wrapper/containers/Image_Handler.cpp
+        ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.h
+        ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.cpp
 
         ${_BASE_DIR}/utils/EventDefines.h
         ${_BASE_DIR}/utils/drawing/DrawParams.h
