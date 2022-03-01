@@ -38,7 +38,8 @@ void Text_Handler::deinit()
 
 std::vector<std::pair<SDL_Texture*, DrawParams>> Text_Handler::collectTexturesForDrawing(const std::vector<DrawParams>& drawParams) const
 {
-	return std::vector<std::pair<SDL_Texture*, DrawParams>>();
+	(void)drawParams;
+	return this->_textures;
 }
 
 void Text_Handler::createTexturesFromFonts()
