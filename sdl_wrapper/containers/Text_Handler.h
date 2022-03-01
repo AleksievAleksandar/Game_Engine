@@ -18,8 +18,10 @@ public:
 	std::vector<std::pair<SDL_Texture*, DrawParams> > collectTexturesForDrawing(const std::vector<DrawParams>& drawParams) const override;
 
 private:
+	void createTexturesFromFonts();
+
 	//the textures we'll be drawing
-	std::vector<SDL_Texture*> _textures;
+	std::vector<std::pair<SDL_Texture*, DrawParams> > _textures;
 
 	std::unordered_map<int32_t, TTF_Font*> _fonts;
 };
