@@ -2,13 +2,14 @@
 
 #include <iostream>
 #include <SDL_render.h>
+#include <SDL_hints.h>
 
 #include "SDL_Helpers.h"
-#include <SDL_hints.h>
+#include "../utils/drawing/DrawParams.h"
 
 int32_t Renderer::init(SDL_Window* window)
 {
-	if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")) 
+	if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1"))
 	{
 		std::cerr << "Warning: Linear texture filtering not enabled! SDL_SetHint() failed. SDL Error: " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
@@ -56,64 +57,49 @@ void Renderer::updateScreen()
 	SDL_RenderPresent(this->_sdlRenderer);
 }
 
-void Renderer::drawTexture(const std::vector<SDL_Texture*>& images) const
-{	
-	for (size_t i = 0; i < images.size(); i++)
-	{
-		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i], nullptr, nullptr))
-		{
-			std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
-		}
-	}
-}
-
-void Renderer::drawTexture(const std::vector<std::pair<SDL_Texture*, DrawParams> >& images) const
+void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) const
 {
 	SDL_Rect rect;
-	for (size_t i = 0; i < images.size(); i++)
-	{	
-		rect.x = images[i].second.pos.x;
-		rect.y = images[i].second.pos.y;
-		rect.w = images[i].second.w;
-		rect.h = images[i].second.h;
+	rect.x = drawParam.pos.x;
+	rect.y = drawParam.pos.y;
+	rect.w = drawParam.w;
+	rect.h = drawParam.h;
 
-		//std::cout << images[i].second << std::endl;
-
-		if (WidgetType::IMAGE == images[i].second.widgetType)
+	if (WidgetType::IMAGE == drawParam.widgetType)
+	{
+		if (FULL_OPACITY == drawParam.opacity)
 		{
-			if (FULL_OPACITY == images[i].second.opacity)
+			if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
 			{
-				if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i].first, nullptr, &rect))
-				{
-					std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
-				}
+				std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
 			}
-			else
-			{
-				if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(images[i].first, images[i].second.opacity))
-				{
-					std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
-				}
-
-				if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, images[i].first, nullptr, &rect))
-				{
-					std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
-				}
-
-				//Return FULL_OPACITY to texture 
-				if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(images[i].first, FULL_OPACITY))
-				{
-					std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
-				}
-			}
-		}
-		else if (WidgetType::TEXT == images[i].second.widgetType)
-		{
-
 		}
 		else
 		{
-			std::cerr << "ERROR -> Unsupported WidgetType is provided to Renderer::drawTexture()" << std::endl;
+			if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(texture, drawParam.opacity))
+			{
+				std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
+			}
+
+			if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
+			{
+				std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+			}
+
+			//Return FULL_OPACITY to texture 
+			if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(texture, FULL_OPACITY))
+			{
+				std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
+			}
 		}
 	}
+	else if (WidgetType::TEXT == drawParam.widgetType)
+	{
+
+	}
+	else
+	{
+		std::cerr << "ERROR -> Unsupported WidgetType is provided to Renderer::drawTexture()" << std::endl;
+	}
+
 }

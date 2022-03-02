@@ -88,3 +88,13 @@ std::vector<DrawParams> Game::imagesForDrawing() const
 
 	return drawParams;
 }
+
+std::vector<int32_t> Game::imagesForDrawingByRcrsId() const
+{
+	std::vector<int32_t> drawParamsIds;
+
+	drawParamsIds.push_back(this->_press_keys_image.rsrcId);
+	drawParamsIds.push_back(this->_layer_2_image.rsrcId);
+
+	return drawParamsIds;
+}

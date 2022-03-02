@@ -2,14 +2,12 @@
 #define RENDERER_H
 
 #include <cstdint>
-#include <vector>
-
-#include "../utils/drawing/Rectangle.h"
 
 //Forward declarations
 struct SDL_Renderer;
 struct SDL_Texture; //cross-platform GPU primitive
 struct SDL_Window;
+struct DrawParams;
 
 class Renderer
 {
@@ -18,8 +16,7 @@ public:
 	void deinit();
 	void clearScreen();
 	void updateScreen();
-	void drawTexture(const std::vector<SDL_Texture*>& images) const;
-	void drawTexture(const std::vector<std::pair<SDL_Texture*, DrawParams> >& images) const;
+	void drawTexture(SDL_Texture* texture, const DrawParams& drawParam) const;
 
 private:
 	SDL_Renderer* _sdlRenderer = nullptr;

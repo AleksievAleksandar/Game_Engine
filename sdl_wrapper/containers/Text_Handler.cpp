@@ -36,39 +36,12 @@ void Text_Handler::deinit()
 	}
 }
 
-std::vector<std::pair<SDL_Texture*, DrawParams>> Text_Handler::collectTexturesForDrawing(const std::vector<DrawParams>& drawParams) const
+std::vector<SDL_Texture*> Text_Handler::collectTexturesForDrawing(const std::vector<int32_t>& rsrcId) const
 {
-	(void)drawParams;
+	(void)rsrcId;
 	return this->_textures;
 }
 
 void Text_Handler::createTexturesFromFonts()
 {
-	SDL_Color color;
-	color.r = 127;
-	color.g = 127;
-	color.b = 127;
-	color.a = 255;
-
-	for (size_t i = 0; i < this->_fonts.size(); i++)
-	{
-		std::string text = "Aleksandar";
-		SDL_Surface* textSurface = TTF_RenderText_Solid(this->_fonts[i], text.c_str(), color);
-
-		if (nullptr == textSurface)
-		{
-			std::cerr << "ERROR -> Text_Handler::createTexturesFromFonts() failed. Reason: textSurface is nullptr." << std::endl;
-		}
-
-		DrawParams drawParams;
-		drawParams.h = textSurface->h;
-		drawParams.w = textSurface->w;
-		drawParams.pos.x = 20;
-		drawParams.pos.y = 30;
-		drawParams.widgetType = WidgetType::TEXT;
-
-		this->_textures.push_back(std::make_pair(SDL_Helpers::getTextureFromSurface(textSurface), drawParams));
-
-		SDL_FreeSurface(textSurface);
-	}
 }

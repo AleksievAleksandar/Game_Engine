@@ -58,8 +58,14 @@ void Engine::deinit()
 void Engine::draw() const
 {
 	std::vector<DrawParams> drawParams = this->_game.imagesForDrawing();
-	std::vector<std::pair<SDL_Texture*, DrawParams> > images = this->_imageHandler.collectTexturesForDrawing(drawParams);
-	this->_renderer.drawTexture(images);
+	std::vector<int32_t> drawParamsIds = this->_game.imagesForDrawingByRcrsId();
+
+	std::vector<SDL_Texture*> images = this->_imageHandler.collectTexturesForDrawing(drawParamsIds);
+
+	for (size_t i = 0; i < images.size(); i++)
+	{
+		this->_renderer.drawTexture(images[i], drawParams[i]);
+	}
 }
 
 void Engine::mainLoop()

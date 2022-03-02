@@ -18,6 +18,7 @@ public:
 	void deinit();
 	bool handleEvent(InputEvent& event);
 	std::vector<DrawParams> imagesForDrawing() const;
+	std::vector<int32_t> imagesForDrawingByRcrsId() const;
 
 private:
 	DrawParams _layer_2_image;

@@ -15,13 +15,13 @@ class Text_Handler : public IHandler
 public:
 	int32_t loadRsrc() override;
 	void deinit() override;
-	std::vector<std::pair<SDL_Texture*, DrawParams> > collectTexturesForDrawing(const std::vector<DrawParams>& drawParams) const override;
+	std::vector<SDL_Texture*> collectTexturesForDrawing(const std::vector<int32_t>& rsrcId) const override;
 
 private:
 	void createTexturesFromFonts();
 
 	//the textures we'll be drawing
-	std::vector<std::pair<SDL_Texture*, DrawParams> > _textures;
+	std::vector<SDL_Texture*> _textures;
 
 	std::unordered_map<int32_t, TTF_Font*> _fonts;
 };
