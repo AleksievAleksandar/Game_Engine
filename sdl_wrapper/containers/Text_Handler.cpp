@@ -68,7 +68,7 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 		std::cerr << "ERROR -> Text_Handler::createText() failed. Invalid fontTypeIdx: " << fontTypeIdx << " provided." << std::endl;
 		return;
 	}
-	SDL_Surface* textSurface = this->createTexturesFromFonts(it->second, text, color);
+	SDL_Surface* textSurface = this->createTextureFromFonts(it->second, text, color);
 
 	SDL_Texture* textTexture = SDL_Helpers::getTextureFromSurface(textSurface);
 	if (nullptr == textTexture)
