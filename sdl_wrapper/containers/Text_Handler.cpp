@@ -60,7 +60,7 @@ std::vector<SDL_Texture*> Text_Handler::collectTexturesForDrawing(const std::vec
 	return textures;
 }
 
-void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text, const Color& color)
+void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight)
 {
 	auto it = this->_fonts.find(fontTypeIdx);
 	if (it == this->_fonts.end())
@@ -69,6 +69,8 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 		return;
 	}
 	SDL_Surface* textSurface = this->createTextureFromFonts(it->second, text, color);
+	outTextHeight = textSurface->h;
+	outTextWidth = textSurface->w;
 
 	SDL_Texture* textTexture = SDL_Helpers::getTextureFromSurface(textSurface);
 	if (nullptr == textTexture)
@@ -77,6 +79,8 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 		return;
 	}
 	this->_textures.push_back(textTexture);
+
+	SDL_FreeSurface(textSurface);
 }
 
 SDL_Surface* Text_Handler::createTextureFromFonts(TTF_Font* font, const std::string& text, const Color& color)

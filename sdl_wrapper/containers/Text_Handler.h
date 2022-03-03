@@ -18,7 +18,7 @@ public:
 	int32_t loadRsrc() override;
 	void deinit() override;
 	std::vector<SDL_Texture*> collectTexturesForDrawing(const std::vector<int32_t>& rsrcId) const override;
-	void createText(const int32_t fontTypeIdx, const std::string& text, const Color& color);
+	void createText(const int32_t fontTypeIdx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);
 
 private:
 	SDL_Surface* createTextureFromFonts(TTF_Font* font, const std::string& text, const Color& color);
