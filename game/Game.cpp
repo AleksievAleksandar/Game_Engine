@@ -36,6 +36,10 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 	
 	//std::cout << "PRESS_KEYS: X = " << _press_keys_image.pos.x << "; Y = " << _press_keys_image.pos.y << "; W = " << _press_keys_image.w << "; H = " << _press_keys_image.h << " RsrcID = " << this->_press_keys_image.rsrcId << std::endl;
 
+	this->_text.widgetType = WidgetType::TEXT;
+	this->_text.rsrcId = 0;
+	this->_text.pos = Point::ZERO;
+
 	return EXIT_SUCCESS;
 }
 
