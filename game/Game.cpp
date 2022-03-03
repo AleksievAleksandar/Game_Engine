@@ -102,3 +102,21 @@ std::vector<int32_t> Game::imagesForDrawingByRcrsId() const
 
 	return drawParamsIds;
 }
+
+std::vector<DrawParams> Game::textForDrawing() const
+{
+	std::vector<DrawParams> drawParams;
+
+	drawParams.push_back(this->_text);
+
+	return drawParams;
+}
+
+std::vector<int32_t> Game::textForDrawingByRcrsId() const
+{
+	std::vector<int32_t> drawParamsIds;
+
+	drawParamsIds.push_back(this->_text.rsrcId);
+
+	return drawParamsIds;
+}

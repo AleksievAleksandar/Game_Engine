@@ -7,6 +7,9 @@
 #include <iostream>
 #include <vector>
 
+// TODO remove me
+#include "../utils/drawing/Color.h"
+
 int32_t Engine::init()
 {
 	if (EXIT_SUCCESS != this->_window.init())
@@ -45,6 +48,9 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 
+	//TODO remove me
+	this->_textHandler.createText(0, "Hello World!", Colors::GREEN, this->_game._text.w, this->_game._text.h);
+
 	return EXIT_SUCCESS;
 }
 
@@ -73,6 +79,15 @@ void Engine::draw() const
 	for (size_t i = 0; i < images.size(); i++)
 	{
 		this->_renderer.drawTexture(images[i], drawParams[i]);
+	}
+
+	std::vector<DrawParams> drawParamsText = this->_game.textForDrawing();
+	std::vector<int32_t> drawParamsTextIds = this->_game.textForDrawingByRcrsId();
+	std::vector<SDL_Texture*> text = this->_textHandler.collectTexturesForDrawing(drawParamsTextIds);
+
+	for (size_t i = 0; i < text.size(); i++)
+	{
+		this->_renderer.drawTexture(text[i], drawParamsText[i]);
 	}
 }
 

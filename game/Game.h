@@ -20,10 +20,15 @@ public:
 	std::vector<DrawParams> imagesForDrawing() const;
 	std::vector<int32_t> imagesForDrawingByRcrsId() const;
 
+	std::vector<DrawParams> textForDrawing() const;
+	std::vector<int32_t> textForDrawingByRcrsId() const;
+
+	DrawParams _text;
+
 private:
 	DrawParams _layer_2_image;
 	DrawParams _press_keys_image;
-	DrawParams _text;
+	
 };
 
 #endif // !GAME_H

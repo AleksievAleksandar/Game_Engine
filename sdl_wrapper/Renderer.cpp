@@ -95,7 +95,10 @@ void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) co
 	}
 	else if (WidgetType::TEXT == drawParam.widgetType)
 	{
-
+		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
+		{
+			std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+		}
 	}
 	else
 	{
