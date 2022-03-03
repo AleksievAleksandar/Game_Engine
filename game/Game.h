@@ -23,6 +23,7 @@ public:
 private:
 	DrawParams _layer_2_image;
 	DrawParams _press_keys_image;
+	DrawParams _text;
 };
 
 #endif // !GAME_H

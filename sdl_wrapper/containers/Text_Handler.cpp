@@ -17,7 +17,7 @@ int32_t Text_Handler::loadRsrc()
 
 		if (nullptr == font)
 		{
-			std::cerr << "ERROR -> TTF_OpenFont() failed for path location: " << pathLocations[i] << "Reason: " << SDL_GetError() << std::endl;
+			std::cerr << "ERROR -> TTF_OpenFont() failed for path location: " << pathLocations[i] << ". Reason: " << SDL_GetError() << std::endl;
 			return EXIT_FAILURE;
 		}
 		this->_fonts[i] = font;

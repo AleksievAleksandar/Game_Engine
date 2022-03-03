@@ -27,6 +27,12 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 
+	if (EXIT_SUCCESS != this->_textHandler.loadRsrc())
+	{
+		std::cerr << "ERROR -> _textHandler.loadRsrc()" << std::endl;
+		return EXIT_FAILURE;
+	}
+
 	if (EXIT_SUCCESS != this->_event.init())
 	{
 		std::cerr << "ERROR -> this->_event->init() failed. " << std::endl;
@@ -47,6 +53,8 @@ void Engine::deinit()
 	this->_game.deinit();
 
 	this->_event.deinit();
+
+	this->_textHandler.deinit();
 
 	this->_imageHandler.deinit();
 
