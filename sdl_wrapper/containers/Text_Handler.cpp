@@ -48,14 +48,14 @@ void Text_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outColle
 {
 	for (size_t i = 0; i < drawParams.size(); i++)
 	{
-		//if (0 > drawParams[i].rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams[i].rsrcId)
-		//{
-		//	std::cerr << "ERROR -> ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << " to Text_Handler::collectTexturesForDrawing()" << std::endl;
-		//	outCollection.push_back(nullptr);
-		//	break;
-		//}
 		if (drawParams[i].widgetType == WidgetType::TEXT)
 		{
+			if (0 > drawParams[i].rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams[i].rsrcId)
+			{
+				std::cerr << "ERROR -> ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << " to Text_Handler::collectTexturesForDrawing()" << std::endl;
+				outCollection.push_back(nullptr);
+				break;
+			}
 			outCollection.push_back(this->_textures[drawParams[i].rsrcId]);
 		}
 	}

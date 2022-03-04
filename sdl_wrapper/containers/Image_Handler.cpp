@@ -34,7 +34,7 @@ int32_t Image_Handler::loadRsrc()
 
 		SDL_FreeSurface(tempSurface);
 	}
-	
+
 	return EXIT_SUCCESS;
 }
 
@@ -52,18 +52,18 @@ void Image_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outColl
 {
 	for (size_t i = 0; i < drawParams.size(); i++)
 	{
-		auto it = this->_textures.find(drawParams[i].rsrcId);
-		if (it != this->_textures.end())
+		if (drawParams[i].widgetType == WidgetType::IMAGE)
 		{
-			if (drawParams[i].widgetType == WidgetType::IMAGE)
+			auto it = this->_textures.find(drawParams[i].rsrcId);
+			if (it != this->_textures.end())
 			{
 				outCollection.push_back(it->second);
-			}			
-		}
-		else
-		{
-			std::cerr << "ERROR -> Image_Handler::collectTexturesForDrawing() failed. Wrong Rsrc ID: " << drawParams[i].rsrcId << " is provided." << std::endl;
-			break;
+			}
+			else
+			{
+				std::cerr << "ERROR -> Image_Handler::collectTexturesForDrawing() failed. Wrong Rsrc ID: " << drawParams[i].rsrcId << " is provided." << std::endl;
+				break;
+			}
 		}
 	}
 }
