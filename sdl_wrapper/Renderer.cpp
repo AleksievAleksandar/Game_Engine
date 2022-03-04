@@ -7,6 +7,17 @@
 #include "SDL_Helpers.h"
 #include "../utils/drawing/DrawParams.h"
 
+SDL_Rect createSDL_RectfromDrawParams(const DrawParams& drawParam)
+{
+	SDL_Rect rect;
+	rect.x = drawParam.pos.x;
+	rect.y = drawParam.pos.y;
+	rect.w = drawParam.w;
+	rect.h = drawParam.h;
+
+	return rect;
+}
+
 int32_t Renderer::init(SDL_Window* window)
 {
 	if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1"))
@@ -59,41 +70,26 @@ void Renderer::updateScreen()
 
 void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) const
 {
-	SDL_Rect rect;
-	rect.x = drawParam.pos.x;
-	rect.y = drawParam.pos.y;
-	rect.w = drawParam.w;
-	rect.h = drawParam.h;
-
 	if (WidgetType::IMAGE == drawParam.widgetType)
 	{
-		if (FULL_OPACITY == drawParam.opacity)
-		{
-			if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
-			{
-				std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
-			}
-		}
-		else
-		{
-			if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(texture, drawParam.opacity))
-			{
-				std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
-			}
-
-			if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
-			{
-				std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
-			}
-
-			//Return FULL_OPACITY to texture 
-			if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(texture, FULL_OPACITY))
-			{
-				std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
-			}
-		}
+		this->drawImages(texture, drawParam);
 	}
 	else if (WidgetType::TEXT == drawParam.widgetType)
+	{
+		this->drawTexts(texture, drawParam);
+	}
+	else
+	{
+		std::cerr << "ERROR -> Unsupported WidgetType is provided to Renderer::drawTexture()" << std::endl;
+	}
+
+}
+
+void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) const
+{
+	SDL_Rect rect = createSDL_RectfromDrawParams(drawParam);
+
+	if (FULL_OPACITY == drawParam.opacity)
 	{
 		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
 		{
@@ -102,7 +98,30 @@ void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) co
 	}
 	else
 	{
-		std::cerr << "ERROR -> Unsupported WidgetType is provided to Renderer::drawTexture()" << std::endl;
-	}
+		if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(texture, drawParam.opacity))
+		{
+			std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
+		}
 
+		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
+		{
+			std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+		}
+
+		//Return FULL_OPACITY to texture 
+		if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(texture, FULL_OPACITY))
+		{
+			std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
+		}
+	}
+}
+
+void Renderer::drawTexts(SDL_Texture* texture, const DrawParams& drawParam) const
+{
+	SDL_Rect rect = createSDL_RectfromDrawParams(drawParam);
+
+	if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
+	{
+		std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+	}
 }

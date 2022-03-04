@@ -19,6 +19,9 @@ public:
 	void drawTexture(SDL_Texture* texture, const DrawParams& drawParam) const;
 
 private:
+	void drawImages(SDL_Texture* texture, const DrawParams& drawParam) const;
+	void drawTexts(SDL_Texture* texture, const DrawParams& drawParam) const;
+
 	SDL_Renderer* _sdlRenderer = nullptr;
 };
 
