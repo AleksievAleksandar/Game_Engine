@@ -52,7 +52,7 @@ void Text_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outColle
 		{
 			if (0 > drawParams[i].rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams[i].rsrcId)
 			{
-				std::cerr << "ERROR -> ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << " to Text_Handler::collectTexturesForDrawing()" << std::endl;
+				std::cerr << "ERROR -> ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << std::endl;
 				outCollection.push_back(nullptr);
 				break;
 			}
