@@ -18,10 +18,6 @@ public:
 	void deinit();
 	bool handleEvent(InputEvent& event);
 	std::vector<DrawParams> imagesForDrawing() const;
-	std::vector<int32_t> imagesForDrawingByRcrsId() const;
-
-	std::vector<DrawParams> textForDrawing() const;
-	std::vector<int32_t> textForDrawingByRcrsId() const;
 
 	DrawParams _text;
 

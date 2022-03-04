@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <vector>
 
+#include "../../utils/drawing/DrawParams.h"
+
 //Forword Declarations
 struct SDL_Texture;
 
@@ -12,7 +14,7 @@ class IHandler
 public:
 	virtual int32_t loadRsrc() = 0;
 	virtual void deinit() = 0;
-	virtual std::vector<SDL_Texture*> collectTexturesForDrawing(const std::vector<int32_t>& rsrcId) const = 0;
+	virtual void collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const = 0;
 
 	virtual ~IHandler() {};
 };

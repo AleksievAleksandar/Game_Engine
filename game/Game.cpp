@@ -89,34 +89,8 @@ std::vector<DrawParams> Game::imagesForDrawing() const
 	std::vector<DrawParams> drawParams;
 	drawParams.push_back(this->_press_keys_image);
 	drawParams.push_back(this->_layer_2_image);
-
-	return drawParams;
-}
-
-std::vector<int32_t> Game::imagesForDrawingByRcrsId() const
-{
-	std::vector<int32_t> drawParamsIds;
-
-	drawParamsIds.push_back(this->_press_keys_image.rsrcId);
-	drawParamsIds.push_back(this->_layer_2_image.rsrcId);
-
-	return drawParamsIds;
-}
-
-std::vector<DrawParams> Game::textForDrawing() const
-{
-	std::vector<DrawParams> drawParams;
-
 	drawParams.push_back(this->_text);
 
 	return drawParams;
 }
 
-std::vector<int32_t> Game::textForDrawingByRcrsId() const
-{
-	std::vector<int32_t> drawParamsIds;
-
-	drawParamsIds.push_back(this->_text.rsrcId);
-
-	return drawParamsIds;
-}

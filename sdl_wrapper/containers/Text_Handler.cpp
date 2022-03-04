@@ -44,20 +44,21 @@ void Text_Handler::deinit()
 	}
 }
 
-std::vector<SDL_Texture*> Text_Handler::collectTexturesForDrawing(const std::vector<int32_t>& rsrcId) const
+void Text_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const
 {
-	std::vector<SDL_Texture*> textures;
-	for (size_t i = 0; i < rsrcId.size(); i++)
+	for (size_t i = 0; i < drawParams.size(); i++)
 	{
-		if (0 > rsrcId[i] || static_cast<int32_t>(this->_textures.size()) <= rsrcId[i])
+		//if (0 > drawParams[i].rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams[i].rsrcId)
+		//{
+		//	std::cerr << "ERROR -> ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << " to Text_Handler::collectTexturesForDrawing()" << std::endl;
+		//	outCollection.push_back(nullptr);
+		//	break;
+		//}
+		if (drawParams[i].widgetType == WidgetType::TEXT)
 		{
-			std::cerr << "ERROR -> providing invalid rsrcId: " << rsrcId[i] << " to Text_Handler::collectTexturesForDrawing()" << std::endl;
-			textures.push_back(nullptr);
-			break;
+			outCollection.push_back(this->_textures[drawParams[i].rsrcId]);
 		}
-		textures.push_back(this->_textures[rsrcId[i]]);
 	}
-	return textures;
 }
 
 void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight)

@@ -17,7 +17,7 @@ int32_t Engine::init()
 		std::cerr << "ERROR -> this->_window->init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
-	
+
 	if (EXIT_SUCCESS != this->_renderer.init(this->_window.getWindow()))
 	{
 		std::cerr << "ERROR -> this->_renderer.init() failed. " << std::endl;
@@ -72,22 +72,14 @@ void Engine::deinit()
 void Engine::draw() const
 {
 	std::vector<DrawParams> drawParams = this->_game.imagesForDrawing();
-	std::vector<int32_t> drawParamsIds = this->_game.imagesForDrawingByRcrsId();
 
-	std::vector<SDL_Texture*> images = this->_imageHandler.collectTexturesForDrawing(drawParamsIds);
+	std::vector<SDL_Texture*> textures;
+	this->_imageHandler.collectTexturesForDrawing(textures, drawParams);
+	this->_textHandler.collectTexturesForDrawing(textures, drawParams);
 
-	for (size_t i = 0; i < images.size(); i++)
+	for (size_t i = 0; i < textures.size(); i++)
 	{
-		this->_renderer.drawTexture(images[i], drawParams[i]);
-	}
-
-	std::vector<DrawParams> drawParamsText = this->_game.textForDrawing();
-	std::vector<int32_t> drawParamsTextIds = this->_game.textForDrawingByRcrsId();
-	std::vector<SDL_Texture*> text = this->_textHandler.collectTexturesForDrawing(drawParamsTextIds);
-
-	for (size_t i = 0; i < text.size(); i++)
-	{
-		this->_renderer.drawTexture(text[i], drawParamsText[i]);
+		this->_renderer.drawTexture(textures[i], drawParams[i]);
 	}
 }
 

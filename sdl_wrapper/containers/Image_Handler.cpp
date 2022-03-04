@@ -48,24 +48,24 @@ void Image_Handler::deinit()
 	}
 }
 
-std::vector<SDL_Texture*> Image_Handler::collectTexturesForDrawing(const std::vector<int32_t>& rsrcId) const
+void Image_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const
 {
-	std::vector<SDL_Texture*> images;
-
-	for (size_t i = 0; i < rsrcId.size(); i++)
+	for (size_t i = 0; i < drawParams.size(); i++)
 	{
-		auto it = this->_textures.find(rsrcId[i]);
+		auto it = this->_textures.find(drawParams[i].rsrcId);
 		if (it != this->_textures.end())
 		{
-			images.push_back(it->second);
+			if (drawParams[i].widgetType == WidgetType::IMAGE)
+			{
+				outCollection.push_back(it->second);
+			}			
 		}
 		else
 		{
-			std::cerr << "ERROR -> Wrong Rsrc ID: " << rsrcId[i] << " is provided." << std::endl;
+			std::cerr << "ERROR -> Image_Handler::collectTexturesForDrawing() failed. Wrong Rsrc ID: " << drawParams[i].rsrcId << " is provided." << std::endl;
 			break;
 		}
 	}
-	return images;
 }
 
 std::unordered_map<int32_t, Rectangle> Image_Handler::getTexturesDimensions() const
