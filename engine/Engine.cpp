@@ -49,7 +49,7 @@ int32_t Engine::init()
 	}
 
 	//TODO remove me
-	this->_textHandler.createText(0, "Hello World!", Colors::GREEN, this->_game._text.w, this->_game._text.h);
+	this->_textHandler.createText(Fonts::YAGORA_FONT, "Hello World!", Colors::GREEN, this->_game._text.w, this->_game._text.h);
 
 	return EXIT_SUCCESS;
 }

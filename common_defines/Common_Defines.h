@@ -16,5 +16,16 @@ namespace Textures
 	};
 }
 
+namespace Fonts
+{
+	enum FontType
+	{
+		ANGELINE_VINTAGE_FONT,
+		YAGORA_FONT,
+
+		COUNT
+	};
+}
+
 #endif // !COMMON_DEFINES_H
 
