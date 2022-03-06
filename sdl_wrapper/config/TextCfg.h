@@ -6,8 +6,7 @@
 
 struct TextCfg
 {
-	static std::vector<std::string> getTextPaths();
-	static int32_t getTextSize();
+	static std::vector<std::pair<std::string, int32_t> > getTextPaths();
 };
 
 #endif // !TEXT_CFG_H

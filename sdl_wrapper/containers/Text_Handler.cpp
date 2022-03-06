@@ -10,14 +10,14 @@
 
 int32_t Text_Handler::loadRsrc()
 {
-	std::vector<std::string> pathLocations = TextCfg::getTextPaths();
+	std::vector<std::pair<std::string, int32_t> > pathLocations = TextCfg::getTextPaths();
 	for (size_t i = 0; i < pathLocations.size(); i++)
 	{
-		TTF_Font* font = TTF_OpenFont(pathLocations[i].c_str(), TextCfg::getTextSize());
+		TTF_Font* font = TTF_OpenFont(pathLocations[i].first.c_str(), pathLocations[i].second);
 
 		if (nullptr == font)
 		{
-			std::cerr << "ERROR -> TTF_OpenFont() failed for path location: " << pathLocations[i] << ". Reason: " << SDL_GetError() << std::endl;
+			std::cerr << "ERROR -> TTF_OpenFont() failed for path location: " << pathLocations[i].first << ". Reason: " << SDL_GetError() << std::endl;
 			return EXIT_FAILURE;
 		}
 		this->_fonts[i] = font;
