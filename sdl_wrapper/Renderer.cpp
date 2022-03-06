@@ -40,8 +40,12 @@ int32_t Renderer::init(SDL_Window* window)
 		return EXIT_FAILURE;
 	}
 
-	SDL_Helpers::copy_SDL_Renderer_ptr(this->_sdlRenderer);
-
+	if (EXIT_SUCCESS != SDL_Helpers::copy_SDL_Renderer_ptr(this->_sdlRenderer))
+	{
+		std::cerr << "ERROR -> SDL_Helpers::copy_SDL_Renderer_ptr()" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
 	return EXIT_SUCCESS;
 }
 

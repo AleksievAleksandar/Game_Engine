@@ -53,16 +53,17 @@ SDL_Texture* SDL_Helpers::getTextureFromSurface(SDL_Surface* surface)
 	return texture;
 }
 
-void SDL_Helpers::copy_SDL_Renderer_ptr(SDL_Renderer* renderer)
+int32_t SDL_Helpers::copy_SDL_Renderer_ptr(SDL_Renderer* renderer)
 {
 	if (nullptr == renderer)
 	{
 		std::cerr << "ERROR -> You trying to copy SDL_Renderer* as a nullptr." << std::endl;
+		return EXIT_FAILURE;
 	}
-	else
-	{
-		gRenderer = renderer;
-	}
+
+	gRenderer = renderer;
+	
+	return EXIT_SUCCESS;
 }
 
 int32_t SDL_Helpers::setBlendModeToTexture(SDL_Texture* texture, BlendMode blendMode)

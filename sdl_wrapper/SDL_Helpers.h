@@ -25,7 +25,7 @@ public:
 	static SDL_Surface* getSurfaceFromWindow(SDL_Window* window);
 	static SDL_Texture* getTextureFromSurface(SDL_Surface* surface);
 	
-	static void copy_SDL_Renderer_ptr(SDL_Renderer* renderer);
+	static int32_t copy_SDL_Renderer_ptr(SDL_Renderer* renderer);
 
 	static int32_t setBlendModeToTexture(SDL_Texture* texture, BlendMode blendMode);
 	static int32_t setAlphaToTexture(SDL_Texture* texture, int32_t alpha);
