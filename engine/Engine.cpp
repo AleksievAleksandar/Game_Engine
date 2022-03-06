@@ -9,6 +9,7 @@
 
 // TODO remove me
 #include "../utils/drawing/Color.h"
+#include "../common_defines/Common_Defines.h"
 
 int32_t Engine::init()
 {

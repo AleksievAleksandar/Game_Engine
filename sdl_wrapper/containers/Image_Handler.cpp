@@ -2,6 +2,7 @@
 #include "../SDL_Helpers.h"
 #include "SDL_Render.h"
 #include "../config/ImageCfg.h"
+#include "../../common_defines/Common_Defines.h"
 
 #include <SDL_image.h>
 #include <iostream>

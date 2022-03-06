@@ -7,7 +7,6 @@
 
 #include "../config/ImageCfg.h"
 #include "../../utils/drawing/Rectangle.h"
-#include "../../common_defines/Common_Defines.h"
 #include "IHandler.h"
 
 //Forword Declarations
