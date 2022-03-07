@@ -2,7 +2,7 @@
 #define INPUT_EVENTS_H
 
 #include "../utils/drawing/Point.h"
-#include "../utils/EventDefines.h"
+#include "../utils/input/EventDefines.h"
 
 //Forword Declarations
 union SDL_Event;

@@ -54,7 +54,7 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.h
         ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.cpp
 
-        ${_BASE_DIR}/utils/EventDefines.h
+        ${_BASE_DIR}/utils/input/EventDefines.h
         ${_BASE_DIR}/utils/drawing/DrawParams.h
         ${_BASE_DIR}/utils/drawing/Point.h
         ${_BASE_DIR}/utils/drawing/Point.cpp
