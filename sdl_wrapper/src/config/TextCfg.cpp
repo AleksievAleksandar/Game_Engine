@@ -1,4 +1,4 @@
-#include "TextCfg.h"
+#include "sdl_wrapper/config/TextCfg.h"
 
 namespace
 {

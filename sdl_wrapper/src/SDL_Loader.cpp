@@ -1,4 +1,4 @@
-#include "SDL_Loader.h"
+#include "sdl_wrapper/SDL_Loader.h"
 
 #include <cstdlib>
 #include <iostream>

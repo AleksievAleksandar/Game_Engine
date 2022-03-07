@@ -1,4 +1,4 @@
-#include "ImageCfg.h"
+#include "sdl_wrapper/config/ImageCfg.h"
 
 #include "../../common_defines/Common_Defines.h"
 

@@ -1,31 +1,13 @@
 ﻿cmake_minimum_required(VERSION 3.10.2)
 
-project(GameEngine LANGUAGES CXX)
-
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers/helpers.cmake)
 
 set(CMAKE_MODULE_PATH 
     ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers/find_modules)
-  
-if(UNIX)
-    set(SDL_IMAGE_PKG_NAME SDL2_image)
-    set(SDL_TTF_PKG_NAME SDL2_ttf)
-    set(SDL_MIXER_PKG_NAME SDL2_mixer)
-elseif(WIN32)
-    set(SDL_IMAGE_PKG_NAME SDL2_IMAGE)
-    set(SDL_TTF_PKG_NAME SDL2_TTF)
-    set(SDL_MIXER_PKG_NAME SDL2_MIXER)
-else()
-    message("Error: Unsupported OS")
-endif()
-  
-find_package(SDL2 REQUIRED)
-find_package(${SDL_IMAGE_PKG_NAME} REQUIRED)
-find_package(${SDL_TTF_PKG_NAME} REQUIRED)
-find_package(${SDL_MIXER_PKG_NAME} REQUIRED)
+
+project(GameEngine LANGUAGES CXX)
 
 set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
-
 
 message("base dir is: " ${_BASE_DIR})
 
@@ -33,29 +15,6 @@ message("base dir is: " ${_BASE_DIR})
 add_executable(
     ${PROJECT_NAME}  
         ${_BASE_DIR}/common_defines/Common_Defines.h
-
-        ${_BASE_DIR}/sdl_wrapper/SDL_Loader.h
-        ${_BASE_DIR}/sdl_wrapper/SDL_Loader.cpp
-        ${_BASE_DIR}/sdl_wrapper/SDL_Helpers.h
-        ${_BASE_DIR}/sdl_wrapper/SDL_Helpers.cpp
-        ${_BASE_DIR}/sdl_wrapper/Input_Events.h
-        ${_BASE_DIR}/sdl_wrapper/Input_Events.cpp
-        ${_BASE_DIR}/sdl_wrapper/Renderer.h
-        ${_BASE_DIR}/sdl_wrapper/Renderer.cpp
-        ${_BASE_DIR}/sdl_wrapper/Window.h
-        ${_BASE_DIR}/sdl_wrapper/Window.cpp
-
-        ${_BASE_DIR}/sdl_wrapper/config/WindowCfg.h
-        ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.h
-        ${_BASE_DIR}/sdl_wrapper/config/ImageCfg.cpp
-        ${_BASE_DIR}/sdl_wrapper/config/TextCfg.h
-        ${_BASE_DIR}/sdl_wrapper/config/TextCfg.cpp
-
-        ${_BASE_DIR}/sdl_wrapper/containers/IHandler.h
-        ${_BASE_DIR}/sdl_wrapper/containers/Image_Handler.h
-        ${_BASE_DIR}/sdl_wrapper/containers/Image_Handler.cpp
-        ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.h
-        ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.cpp
 
         ${_BASE_DIR}/engine/Engine.h
         ${_BASE_DIR}/engine/Engine.cpp
@@ -73,20 +32,14 @@ target_include_directories(
     ${PROJECT_NAME}
         PRIVATE 
             ${_BASE_DIR}
-            ${SDL2_INCLUDE_DIR}
-            ${SDL2_IMAGE_INCLUDE_DIR}
-            ${SDL2_TTF_INCLUDE_DIR}
-            ${SDL2_MIXER_INCLUDE_DIR}
 )
 
 target_link_libraries(
     ${PROJECT_NAME}
         PRIVATE
-            utils
-            ${SDL2_LIBRARY}       # -lSDL2 flag
-            ${SDL2_IMAGE_LIBRARY} # -lSDL2_image flag
-            ${SDL2_TTF_LIBRARY}   # -lSDL2_ttf flag
-            ${SDL2_MIXER_LIBRARY} # -lSDL2_mixer flag  
+            sdl_wrapper
 )
 
 add_subdirectory(utils)
+add_subdirectory(sdl_wrapper)
+

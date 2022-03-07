@@ -1,11 +1,11 @@
-#include "Text_Handler.h"
+#include "sdl_wrapper/containers/Text_Handler.h"
 
 #include <SDL_ttf.h>
 #include <string>
 #include <iostream>
 
-#include "../config/TextCfg.h"
-#include "../SDL_Helpers.h"
+#include "sdl_wrapper/config/TextCfg.h"
+#include "sdl_wrapper/SDL_Helpers.h"
 #include "utils/drawing/Color.h"
 
 int32_t Text_Handler::loadRsrc()

@@ -1,10 +1,10 @@
-#include "Renderer.h"
+#include "sdl_wrapper/Renderer.h"
 
 #include <iostream>
 #include <SDL_render.h>
 #include <SDL_hints.h>
 
-#include "SDL_Helpers.h"
+#include "sdl_wrapper/SDL_Helpers.h"
 #include "utils/drawing/DrawParams.h"
 
 SDL_Rect createSDL_RectfromDrawParams(const DrawParams& drawParam)

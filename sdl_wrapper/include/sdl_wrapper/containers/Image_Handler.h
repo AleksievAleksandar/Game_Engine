@@ -5,7 +5,7 @@
 #include <vector>
 #include <unordered_map>
 
-#include "../config/ImageCfg.h"
+#include "sdl_wrapper/config/ImageCfg.h"
 #include "utils/drawing/Rectangle.h"
 #include "IHandler.h"
 

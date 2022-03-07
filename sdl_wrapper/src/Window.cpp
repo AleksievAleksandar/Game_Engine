@@ -1,6 +1,6 @@
-#include "Window.h"
-#include "SDL_Loader.h"
-#include "SDL_Helpers.h"
+#include "sdl_wrapper/Window.h"
+#include "sdl_wrapper/SDL_Loader.h"
+#include "sdl_wrapper/SDL_Helpers.h"
 
 #include <iostream>
 

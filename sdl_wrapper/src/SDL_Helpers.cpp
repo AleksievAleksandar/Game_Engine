@@ -1,5 +1,5 @@
-#include "SDL_Helpers.h"
-#include "config/WindowCfg.h"
+#include "sdl_wrapper/SDL_Helpers.h"
+#include "sdl_wrapper/config/WindowCfg.h"
 
 #include <SDL_video.h>
 #include <SDL_render.h>

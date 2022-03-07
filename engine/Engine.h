@@ -1,11 +1,11 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-#include "../sdl_wrapper/Window.h"
-#include "../sdl_wrapper/Renderer.h"
-#include "../sdl_wrapper/containers/Image_Handler.h"
-#include "../sdl_wrapper/containers/Text_Handler.h"
-#include "../sdl_wrapper/Input_Events.h"
+#include "sdl_wrapper/Window.h"
+#include "sdl_wrapper/Renderer.h"
+#include "sdl_wrapper/containers/Image_Handler.h"
+#include "sdl_wrapper/containers/Text_Handler.h"
+#include "sdl_wrapper/Input_Events.h"
 #include "../game/Game.h"
 
 #include <cstdint>
