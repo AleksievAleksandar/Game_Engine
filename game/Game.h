@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "../utils/drawing/DrawParams.h"
-#include "../utils/drawing/Rectangle.h"
+#include "utils/drawing/DrawParams.h"
+#include "utils/drawing/Rectangle.h"
 
 #include <cstdint>
 #include <unordered_map>

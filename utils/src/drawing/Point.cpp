@@ -1,4 +1,4 @@
-#include "Point.h"
+#include "utils/drawing/Point.h"
 
 const Point Point::UNKNOWN(100000, 100000);
 const Point Point::ZERO(0, 0);

@@ -1,7 +1,7 @@
 #ifndef DRAW_PARAMS_H
 #define DRAW_PARAMS_H
 
-#include "Point.h"
+#include "utils/drawing/Point.h"
 
 inline constexpr auto UNKNOWN_RSRC_ID = -1;
 inline constexpr auto FULL_OPACITY = 255;

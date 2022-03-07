@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <string>
 
-#include "../utils/drawing/DrawParams.h"
+#include "utils/drawing/DrawParams.h"
 
 //Forword Declarations
 struct SDL_Window;

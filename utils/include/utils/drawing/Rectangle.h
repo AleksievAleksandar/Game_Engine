@@ -1,7 +1,7 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "DrawParams.h"
+#include "utils/drawing/DrawParams.h"
 
 #include <cstdint>
 #include <sstream>

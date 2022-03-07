@@ -6,7 +6,7 @@
 #include <unordered_map>
 
 #include "../config/ImageCfg.h"
-#include "../../utils/drawing/Rectangle.h"
+#include "utils/drawing/Rectangle.h"
 #include "IHandler.h"
 
 //Forword Declarations

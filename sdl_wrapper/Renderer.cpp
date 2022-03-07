@@ -5,7 +5,7 @@
 #include <SDL_hints.h>
 
 #include "SDL_Helpers.h"
-#include "../utils/drawing/DrawParams.h"
+#include "utils/drawing/DrawParams.h"
 
 SDL_Rect createSDL_RectfromDrawParams(const DrawParams& drawParam)
 {

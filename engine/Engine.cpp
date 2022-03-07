@@ -1,14 +1,14 @@
 #include "Engine.h"
 
-#include "../utils/thread/ThreadUtils.h"
-#include "../utils/time_measurement/Time.h"
+#include "utils/thread/ThreadUtils.h"
+#include "utils/time_measurement/Time.h"
 
 #include <cstdlib>
 #include <iostream>
 #include <vector>
 
 // TODO remove me
-#include "../utils/drawing/Color.h"
+#include "utils/drawing/Color.h"
 #include "../common_defines/Common_Defines.h"
 
 int32_t Engine::init()

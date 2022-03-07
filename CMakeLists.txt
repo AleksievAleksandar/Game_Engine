@@ -3,6 +3,7 @@
 project(GameEngine LANGUAGES CXX)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers/helpers.cmake)
+
 set(CMAKE_MODULE_PATH 
     ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers/find_modules)
   
@@ -25,8 +26,10 @@ find_package(${SDL_MIXER_PKG_NAME} REQUIRED)
 
 set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
+
+message("base dir is: " ${_BASE_DIR})
+
 #generate project binary
-message(${_BASE_DIR})
 add_executable(
     ${PROJECT_NAME}  
         ${_BASE_DIR}/common_defines/Common_Defines.h
@@ -54,19 +57,6 @@ add_executable(
         ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.h
         ${_BASE_DIR}/sdl_wrapper/containers/Text_Handler.cpp
 
-        ${_BASE_DIR}/utils/input/EventDefines.h
-        ${_BASE_DIR}/utils/drawing/DrawParams.h
-        ${_BASE_DIR}/utils/drawing/Point.h
-        ${_BASE_DIR}/utils/drawing/Point.cpp
-        ${_BASE_DIR}/utils/drawing/Color.h
-        ${_BASE_DIR}/utils/drawing/Color.cpp
-        ${_BASE_DIR}/utils/drawing/Rectangle.h
-        ${_BASE_DIR}/utils/drawing/Rectangle.cpp
-        ${_BASE_DIR}/utils/thread/ThreadUtils.h
-        ${_BASE_DIR}/utils/thread/ThreadUtils.cpp
-        ${_BASE_DIR}/utils/time_measurement/Time.h
-        ${_BASE_DIR}/utils/time_measurement/Time.cpp
-
         ${_BASE_DIR}/engine/Engine.h
         ${_BASE_DIR}/engine/Engine.cpp
 
@@ -82,6 +72,7 @@ enable_target_warnings(${PROJECT_NAME})
 target_include_directories(
     ${PROJECT_NAME}
         PRIVATE 
+            ${_BASE_DIR}
             ${SDL2_INCLUDE_DIR}
             ${SDL2_IMAGE_INCLUDE_DIR}
             ${SDL2_TTF_INCLUDE_DIR}
@@ -91,8 +82,11 @@ target_include_directories(
 target_link_libraries(
     ${PROJECT_NAME}
         PRIVATE
+            utils
             ${SDL2_LIBRARY}       # -lSDL2 flag
             ${SDL2_IMAGE_LIBRARY} # -lSDL2_image flag
             ${SDL2_TTF_LIBRARY}   # -lSDL2_ttf flag
             ${SDL2_MIXER_LIBRARY} # -lSDL2_mixer flag  
 )
+
+add_subdirectory(utils)

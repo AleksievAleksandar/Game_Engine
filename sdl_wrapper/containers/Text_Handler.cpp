@@ -6,7 +6,7 @@
 
 #include "../config/TextCfg.h"
 #include "../SDL_Helpers.h"
-#include "../../utils/drawing/Color.h"
+#include "utils/drawing/Color.h"
 
 int32_t Text_Handler::loadRsrc()
 {
