@@ -79,9 +79,8 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 		std::cerr << "ERROR -> Text_Handler::createText() failed. Reason: can not create texture from surface." << std::endl;
 		return;
 	}
-	this->_textures.push_back(textTexture);
 
-	SDL_FreeSurface(textSurface);
+	this->_textures.push_back(textTexture);
 }
 
 SDL_Surface* Text_Handler::createTextureFromFonts(TTF_Font* font, const std::string& text, const Color& color)

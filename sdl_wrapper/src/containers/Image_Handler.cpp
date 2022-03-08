@@ -32,8 +32,6 @@ int32_t Image_Handler::loadRsrc()
 		}
 
 		this->_textures[i] = texture;
-
-		SDL_FreeSurface(tempSurface);
 	}
 
 	return EXIT_SUCCESS;

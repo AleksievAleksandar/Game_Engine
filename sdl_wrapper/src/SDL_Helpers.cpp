@@ -42,13 +42,16 @@ SDL_Surface* SDL_Helpers::getSurfaceFromWindow(SDL_Window* window)
 	return surface;
 }
 
-SDL_Texture* SDL_Helpers::getTextureFromSurface(SDL_Surface* surface)
+SDL_Texture* SDL_Helpers::getTextureFromSurface(SDL_Surface*& surface)
 {
 	SDL_Texture* texture = SDL_CreateTextureFromSurface(gRenderer, surface);
 	if (nullptr == texture)
 	{
 		std::cerr << "ERROR -> SDL_CreateTextureFromSurface(). SDL_Error: " << SDL_GetError() << std::endl;
 	}
+
+	SDL_FreeSurface(surface);
+	surface = nullptr;
 
 	return texture;
 }

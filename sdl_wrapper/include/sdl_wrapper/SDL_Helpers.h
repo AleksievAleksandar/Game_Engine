@@ -23,7 +23,7 @@ public:
 	static void destroyWindow(SDL_Window*& outWindow);
 
 	static SDL_Surface* getSurfaceFromWindow(SDL_Window* window);
-	static SDL_Texture* getTextureFromSurface(SDL_Surface* surface);
+	static SDL_Texture* getTextureFromSurface(SDL_Surface*& surface);
 	
 	static int32_t copy_SDL_Renderer_ptr(SDL_Renderer* renderer);
 
