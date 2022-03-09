@@ -91,7 +91,7 @@ SDL_Surface* Text_Handler::createTextureFromFonts(TTF_Font* font, const std::str
 	sdlColor.g = color.rgba.g;
 	sdlColor.r = color.rgba.r;
 
-	SDL_Surface* textSurface = TTF_RenderText_Solid(font, text.c_str(), sdlColor);
+	SDL_Surface* textSurface = TTF_RenderText_Blended(font, text.c_str(), sdlColor);
 
 	if (nullptr == textSurface)
 	{
