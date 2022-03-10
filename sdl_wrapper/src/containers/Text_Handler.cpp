@@ -10,7 +10,7 @@
 
 int32_t Text_Handler::loadRsrc()
 {
-	std::vector<std::pair<std::string, int32_t> > pathLocations = TextCfg::getTextPaths();
+	std::vector<std::pair<std::string, int32_t> > pathLocations = TextCfg::getFontsPaths();
 	for (size_t i = 0; i < pathLocations.size(); i++)
 	{
 		TTF_Font* font = TTF_OpenFont(pathLocations[i].first.c_str(), pathLocations[i].second);

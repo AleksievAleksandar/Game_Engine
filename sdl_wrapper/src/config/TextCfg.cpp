@@ -6,7 +6,7 @@ namespace
 	int32_t YAGORA_FONT_SIZE_36 = 36;
 }
 
-std::vector<std::pair<std::string, int32_t> > TextCfg::getTextPaths()
+std::vector<std::pair<std::string, int32_t> > TextCfg::getFontsPaths()
 {
 	std::vector<std::pair<std::string, int32_t> > paths;
 	paths.push_back(std::make_pair("../resources/fonts/AngelineVintage.ttf", ANGELIN_VINTAGE_FONT_SIZE_36));
