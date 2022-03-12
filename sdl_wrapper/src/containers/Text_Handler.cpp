@@ -52,8 +52,7 @@ void Text_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outColle
 		{
 			if (0 > drawParams[i].rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams[i].rsrcId)
 			{
-				std::cerr << "ERROR -> ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << std::endl;
-				outCollection.push_back(nullptr);
+				std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << std::endl;
 				break;
 			}
 			outCollection.push_back(this->_textures[drawParams[i].rsrcId]);
@@ -69,7 +68,8 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 		std::cerr << "ERROR -> Text_Handler::createText() failed. Invalid fontTypeIdx: " << fontTypeIdx << " provided." << std::endl;
 		return;
 	}
-	SDL_Surface* textSurface = this->createTextureFromFonts(it->second, text, color);
+
+	SDL_Surface* textSurface = SDL_Helpers::getSurfaceFromFont(it->second, text, color);
 	outTextHeight = textSurface->h;
 	outTextWidth = textSurface->w;
 
@@ -83,20 +83,3 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 	this->_textures.push_back(textTexture);
 }
 
-SDL_Surface* Text_Handler::createTextureFromFonts(TTF_Font* font, const std::string& text, const Color& color)
-{
-	SDL_Color sdlColor;
-	sdlColor.a = color.rgba.a;
-	sdlColor.b = color.rgba.b;
-	sdlColor.g = color.rgba.g;
-	sdlColor.r = color.rgba.r;
-
-	SDL_Surface* textSurface = TTF_RenderText_Blended(font, text.c_str(), sdlColor);
-
-	if (nullptr == textSurface)
-	{
-		std::cerr << "ERROR -> TTF_RenderText_Solid(). SDL_Error: " << SDL_GetError() << std::endl;
-	}
-
-	return textSurface;
-}

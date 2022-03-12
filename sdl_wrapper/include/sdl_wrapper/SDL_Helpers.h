@@ -11,6 +11,8 @@ struct SDL_Window;
 struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
+typedef struct _TTF_Font TTF_Font;
+struct Color;
 
 class SDL_Helpers
 {
@@ -24,6 +26,8 @@ public:
 
 	static SDL_Surface* getSurfaceFromWindow(SDL_Window* window);
 	static SDL_Texture* getTextureFromSurface(SDL_Surface*& surface);
+
+	static SDL_Surface* getSurfaceFromFont(TTF_Font* font, const std::string& text, const Color& color);
 	
 	static int32_t copy_SDL_Renderer_ptr(SDL_Renderer* renderer);
 

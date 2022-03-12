@@ -7,7 +7,7 @@
 #include "sdl_wrapper/containers/IHandler.h"
 
 //Forword Declarations
-typedef struct _TTF_Font TTF_Font;;
+typedef struct _TTF_Font TTF_Font;
 struct SDL_Texture;
 struct SDL_Surface;
 struct Color;
@@ -21,7 +21,6 @@ public:
 	void createText(const int32_t fontTypeIdx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);
 
 private:
-	SDL_Surface* createTextureFromFonts(TTF_Font* font, const std::string& text, const Color& color);
 
 	//the textures we'll be drawing
 	std::vector<SDL_Texture*> _textures;

@@ -1,8 +1,10 @@
 #include "sdl_wrapper/SDL_Helpers.h"
 #include "sdl_wrapper/config/WindowCfg.h"
+#include "utils/drawing/Color.h"
 
 #include <SDL_video.h>
 #include <SDL_render.h>
+#include <SDL_ttf.h>
 #include <iostream>
 
 static SDL_Renderer* gRenderer = nullptr;
@@ -54,6 +56,24 @@ SDL_Texture* SDL_Helpers::getTextureFromSurface(SDL_Surface*& surface)
 	surface = nullptr;
 
 	return texture;
+}
+
+SDL_Surface* SDL_Helpers::getSurfaceFromFont(TTF_Font* font, const std::string& text, const Color& color)
+{
+	SDL_Color sdlColor;
+	sdlColor.a = color.rgba.a;
+	sdlColor.b = color.rgba.b;
+	sdlColor.g = color.rgba.g;
+	sdlColor.r = color.rgba.r;
+
+	SDL_Surface* textSurface = TTF_RenderText_Blended(font, text.c_str(), sdlColor);
+
+	if (nullptr == textSurface)
+	{
+		std::cerr << "ERROR -> TTF_RenderText_Blended(). SDL_Error: " << SDL_GetError() << std::endl;
+	}
+
+	return textSurface;
 }
 
 int32_t SDL_Helpers::copy_SDL_Renderer_ptr(SDL_Renderer* renderer)
