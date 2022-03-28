@@ -2,6 +2,7 @@
 
 #include "utils/thread/ThreadUtils.h"
 #include "utils/time_measurement/Time.h"
+#include "manager_utils/DrawMgr.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -13,17 +14,8 @@
 
 int32_t Engine::init()
 {
-	if (EXIT_SUCCESS != this->_window.init())
-	{
-		std::cerr << "ERROR -> this->_window->init() failed. " << std::endl;
-		return EXIT_FAILURE;
-	}
-
-	if (EXIT_SUCCESS != this->_renderer.init(this->_window.getWindow()))
-	{
-		std::cerr << "ERROR -> this->_renderer.init() failed. " << std::endl;
-		return EXIT_FAILURE;
-	}
+	gDrawMgr = new DrawMgr();
+	gDrawMgr->init();
 
 	if (EXIT_SUCCESS != this->_imageHandler.loadRsrc())
 	{
@@ -66,9 +58,9 @@ void Engine::deinit()
 
 	this->_imageHandler.deinit();
 
-	this->_renderer.deinit();
-
-	this->_window.deinit();
+	gDrawMgr->deinit();
+	delete gDrawMgr;
+	gDrawMgr = nullptr;
 }
 
 void Engine::draw() const
@@ -81,7 +73,7 @@ void Engine::draw() const
 
 	for (size_t i = 0; i < textures.size(); i++)
 	{
-		this->_renderer.drawTexture(textures[i], drawParams[i]);
+		gDrawMgr->drawTexture(textures[i], drawParams[i]);
 	}
 }
 
@@ -98,9 +90,9 @@ void Engine::mainLoop()
 			break;
 		}
 
-		this->_renderer.clearScreen();
+		gDrawMgr->clearScreen();
 		this->draw();
-		this->_renderer.updateScreen();
+		gDrawMgr->updateScreen();
 
 		this->limitFPS(time.getElapsed().toMicroseconds());
 	}

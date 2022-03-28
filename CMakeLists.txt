@@ -22,6 +22,9 @@ add_executable(
         ${_BASE_DIR}/game/Game.h
         ${_BASE_DIR}/game/Game.cpp
 
+        ${_BASE_DIR}/manager_utils/DrawMgr.h
+        ${_BASE_DIR}/manager_utils/DrawMgr.cpp
+
         ${_BASE_DIR}/main.cpp
 )
 
