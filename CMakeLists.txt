@@ -24,6 +24,8 @@ add_executable(
 
         ${_BASE_DIR}/manager_utils/DrawMgr.h
         ${_BASE_DIR}/manager_utils/DrawMgr.cpp
+        ${_BASE_DIR}/manager_utils/RsrcMgr.h
+        ${_BASE_DIR}/manager_utils/RsrcMgr.cpp
 
         ${_BASE_DIR}/main.cpp
 )

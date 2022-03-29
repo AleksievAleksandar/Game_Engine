@@ -3,6 +3,7 @@
 #include "utils/thread/ThreadUtils.h"
 #include "utils/time_measurement/Time.h"
 #include "manager_utils/DrawMgr.h"
+#include "manager_utils/RsrcMgr.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -17,24 +18,16 @@ int32_t Engine::init()
 	gDrawMgr = new DrawMgr();
 	gDrawMgr->init();
 
-	if (EXIT_SUCCESS != this->_imageHandler.loadRsrc())
-	{
-		std::cerr << "ERROR -> _imageHandler.loadRsrc()" << std::endl;
-		return EXIT_FAILURE;
-	}
+	gRsrcMgr = new RsrcMgr();
+	gRsrcMgr->init();
 
-	if (EXIT_SUCCESS != this->_textHandler.loadRsrc())
-	{
-		std::cerr << "ERROR -> _textHandler.loadRsrc()" << std::endl;
-		return EXIT_FAILURE;
-	}
 
 	if (EXIT_SUCCESS != this->_event.init())
 	{
 		std::cerr << "ERROR -> this->_event->init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
-
+	
 	if (EXIT_SUCCESS != this->_game.init(this->_imageHandler.getTexturesDimensions()))
 	{
 		std::cerr << "ERROR -> this->_game->init() failed. " << std::endl;
@@ -54,9 +47,10 @@ void Engine::deinit()
 
 	this->_event.deinit();
 
-	this->_textHandler.deinit();
 
-	this->_imageHandler.deinit();
+	gRsrcMgr->deinit();
+	delete gRsrcMgr;
+	gRsrcMgr = nullptr;
 
 	gDrawMgr->deinit();
 	delete gDrawMgr;
