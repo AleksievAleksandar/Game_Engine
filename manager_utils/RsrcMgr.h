@@ -19,6 +19,12 @@ public:
 
 	int32_t init();
 	void deinit();
+
+	void createText(int32_t& outTextWidth, int32_t& outTextHeight);
+	std::unordered_map<int32_t, Rectangle> getImageDimensions();
+	void collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);
+	void collectTextsForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);
+
 private:
 	Image_Handler _imageHandler;
 	Text_Handler _textHandler;

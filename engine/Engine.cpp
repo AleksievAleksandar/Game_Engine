@@ -9,9 +9,6 @@
 #include <iostream>
 #include <vector>
 
-// TODO remove me
-#include "utils/drawing/Color.h"
-#include "../common_defines/Common_Defines.h"
 
 int32_t Engine::init()
 {
@@ -28,15 +25,14 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 	
-	if (EXIT_SUCCESS != this->_game.init(this->_imageHandler.getTexturesDimensions()))
+	if (EXIT_SUCCESS != this->_game.init(gRsrcMgr->getImageDimensions()))
 	{
 		std::cerr << "ERROR -> this->_game->init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 
 	//TODO remove me
-	this->_textHandler.createText(Fonts::ANGELINE_VINTAGE_FONT, "Aleksandar!", Colors::RED, this->_game._text.w, this->_game._text.h);
-	this->_textHandler.createText(Fonts::YAGORA_FONT, "Hello World!", Colors::GREEN, this->_game._text.w, this->_game._text.h);
+	gRsrcMgr->createText(this->_game._text.w, this->_game._text.h);
 
 	return EXIT_SUCCESS;
 }
@@ -62,8 +58,8 @@ void Engine::draw() const
 	std::vector<DrawParams> drawParams = this->_game.imagesForDrawing();
 
 	std::vector<SDL_Texture*> textures;
-	this->_imageHandler.collectTexturesForDrawing(textures, drawParams);
-	this->_textHandler.collectTexturesForDrawing(textures, drawParams);
+	gRsrcMgr->collectImagesForDrawing(textures, drawParams);
+	gRsrcMgr->collectTextsForDrawing(textures, drawParams);
 
 	for (size_t i = 0; i < textures.size(); i++)
 	{
