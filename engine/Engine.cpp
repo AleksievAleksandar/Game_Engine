@@ -18,7 +18,6 @@ int32_t Engine::init()
 	gRsrcMgr = new RsrcMgr();
 	gRsrcMgr->init();
 
-
 	if (EXIT_SUCCESS != this->_event.init())
 	{
 		std::cerr << "ERROR -> this->_event->init() failed. " << std::endl;
@@ -42,7 +41,6 @@ void Engine::deinit()
 	this->_game.deinit();
 
 	this->_event.deinit();
-
 
 	gRsrcMgr->deinit();
 	delete gRsrcMgr;

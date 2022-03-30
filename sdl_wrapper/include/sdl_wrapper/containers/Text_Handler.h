@@ -21,7 +21,6 @@ public:
 	void createText(const int32_t fontTypeIdx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);
 
 private:
-
 	//the textures we'll be drawing
 	std::vector<SDL_Texture*> _textures;
 
