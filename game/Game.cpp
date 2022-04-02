@@ -11,11 +11,7 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 	this->_layer_2.create(_textureDimensions, Textures::LAYER_2);
 	this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS);
 
-
-	this->_text.widgetType = WidgetType::TEXT;
-	//this->_text.rsrcId = Fonts::ANGELINE_VINTAGE_FONT;
-	this->_text.rsrcId = Fonts::YAGORA_FONT;
-	this->_text.pos = Point::ZERO;
+	this->_text.create(Fonts::YAGORA_FONT);
 
 	return EXIT_SUCCESS;
 }
@@ -67,8 +63,14 @@ std::vector<DrawParams> Game::imagesForDrawing() const
 	std::vector<DrawParams> drawParams;
 	drawParams.push_back(this->_press_keys.getDrawParams());
 	drawParams.push_back(this->_layer_2.getDrawParams());
-	drawParams.push_back(this->_text);
+	drawParams.push_back(this->_text.getDrawParams());
 
 	return drawParams;
+}
+
+void Game::setTextDimmensions(const int32_t param_w, const int32_t param_h)
+{
+	this->_text.setTextWidth(param_w);
+	this->_text.setTextHeight(param_h);
 }
 

@@ -4,6 +4,7 @@
 #include "utils/drawing/DrawParams.h"
 #include "utils/drawing/Rectangle.h"
 #include "game/Image.h"
+#include "game/Text.h"
 
 #include <cstdint>
 #include <unordered_map>
@@ -19,12 +20,12 @@ public:
 	void deinit();
 	bool handleEvent(InputEvent& event);
 	std::vector<DrawParams> imagesForDrawing() const;
-
-	DrawParams _text;
+	void setTextDimmensions(const int32_t param_w, const int32_t param_h);
 
 private:
 	Image _layer_2;
 	Image _press_keys;
+	Text _text;
 };
 
 #endif // !GAME_H

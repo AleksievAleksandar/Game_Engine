@@ -41,7 +41,9 @@ int32_t Engine::init()
 	}
 
 	//TODO remove me
-	gRsrcMgr->createText(this->_game._text.w, this->_game._text.h);
+	int32_t w, h;
+	gRsrcMgr->createText(w, h);
+	this->_game.setTextDimmensions(w, h);
 
 	return EXIT_SUCCESS;
 }
