@@ -13,9 +13,19 @@
 int32_t Engine::init()
 {
 	gDrawMgr = new DrawMgr();
+	if (nullptr == gDrawMgr)
+	{
+		std::cerr << "ERROR -> Failed for memory alloc for gDrawMgr. " << std::endl;
+		return EXIT_FAILURE;
+	}
 	gDrawMgr->init();
 
 	gRsrcMgr = new RsrcMgr();
+	if (nullptr == gRsrcMgr)
+	{
+		std::cerr << "ERROR -> Failed for memory alloc for gRsrcMgr. " << std::endl;
+		return EXIT_FAILURE;
+	}
 	gRsrcMgr->init();
 
 	if (EXIT_SUCCESS != this->_event.init())
