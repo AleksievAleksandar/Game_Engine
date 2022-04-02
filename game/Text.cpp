@@ -1,11 +1,12 @@
 #include "Text.h"
 
+#include "manager_utils/RsrcMgr.h"
+
 #include <iostream>
 
 int32_t Text::create(const Fonts::FontType& fontType)
 {
 	this->_drawParams.widgetType = WidgetType::TEXT;
-	//this->_drawParams.rsrcId = fontType;
 	this->_drawParams.rsrcId = fontType;
 	this->_drawParams.pos = Point::ZERO;
 
@@ -15,6 +16,11 @@ int32_t Text::create(const Fonts::FontType& fontType)
 void Text::draw() const
 {
 	//TODO
+}
+
+void Text::createContent(const std::string& text)
+{
+	gRsrcMgr->createText(text, this->_drawParams.w, this->_drawParams.h);
 }
 
 void Text::setTextWidth(int32_t wParam)

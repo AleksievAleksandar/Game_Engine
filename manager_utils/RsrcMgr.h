@@ -4,6 +4,8 @@
 #include "sdl_wrapper/containers/Image_Handler.h"
 #include "sdl_wrapper/containers/Text_Handler.h"
 
+#include <string>
+
 class RsrcMgr
 {
 public:
@@ -20,7 +22,7 @@ public:
 	int32_t init();
 	void deinit();
 
-	void createText(int32_t& outTextWidth, int32_t& outTextHeight);
+	void createText(const std::string& text, int32_t& outTextWidth, int32_t& outTextHeight);
 	std::unordered_map<int32_t, Rectangle> getImageDimensions();
 	void collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);
 	void collectTextsForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);

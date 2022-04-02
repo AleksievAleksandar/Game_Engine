@@ -9,12 +9,12 @@ public:
 	virtual ~Widget() = default;
 	virtual void draw() const = 0;
 
-	virtual void moveUp();
-	virtual void moveDown();
-	virtual void moveLeft();
-	virtual void moveRight();
+	void moveUp();
+	void moveDown();
+	void moveLeft();
+	void moveRight();
 
-	virtual void setOpacity(const int32_t delta);
+	void setOpacity(const int32_t delta);
 
 	virtual DrawParams getDrawParams() const;
 

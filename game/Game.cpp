@@ -12,6 +12,7 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 	this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS);
 
 	this->_text.create(Fonts::YAGORA_FONT);
+	this->_text.createContent("Hello World");
 
 	return EXIT_SUCCESS;
 }

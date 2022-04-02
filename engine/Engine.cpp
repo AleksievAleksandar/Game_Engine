@@ -40,11 +40,6 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 
-	//TODO remove me
-	int32_t w, h;
-	gRsrcMgr->createText(w, h);
-	this->_game.setTextDimmensions(w, h);
-
 	return EXIT_SUCCESS;
 }
 
