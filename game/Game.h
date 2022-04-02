@@ -3,6 +3,7 @@
 
 #include "utils/drawing/DrawParams.h"
 #include "utils/drawing/Rectangle.h"
+#include "game/Image.h"
 
 #include <cstdint>
 #include <unordered_map>
@@ -22,9 +23,8 @@ public:
 	DrawParams _text;
 
 private:
-	DrawParams _layer_2_image;
-	DrawParams _press_keys_image;
-	
+	Image _layer_2;
+	Image _press_keys;
 };
 
 #endif // !GAME_H
