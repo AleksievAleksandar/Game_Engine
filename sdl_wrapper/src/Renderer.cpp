@@ -7,7 +7,7 @@
 #include "sdl_wrapper/SDL_Helpers.h"
 #include "utils/drawing/DrawParams.h"
 
-SDL_Rect createSDL_RectfromDrawParams(const DrawParams& drawParam)
+SDL_Rect create_SDL_Rect_from_DrawParams(const DrawParams& drawParam)
 {
 	SDL_Rect rect;
 	rect.x = drawParam.pos.x;
@@ -91,7 +91,7 @@ void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) co
 
 void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) const
 {
-	SDL_Rect rect = createSDL_RectfromDrawParams(drawParam);
+	SDL_Rect rect = create_SDL_Rect_from_DrawParams(drawParam);
 
 	if (FULL_OPACITY == drawParam.opacity)
 	{
@@ -122,7 +122,7 @@ void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) con
 
 void Renderer::drawTexts(SDL_Texture* texture, const DrawParams& drawParam) const
 {
-	SDL_Rect rect = createSDL_RectfromDrawParams(drawParam);
+	SDL_Rect rect = create_SDL_Rect_from_DrawParams(drawParam);
 
 	if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
 	{
