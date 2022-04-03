@@ -1,6 +1,6 @@
 #include "sdl_wrapper/containers/Image_Handler.h"
+
 #include "sdl_wrapper/SDL_Helpers.h"
-#include "SDL_Render.h"
 #include "sdl_wrapper/config/ImageCfg.h"
 #include "../../common_defines/Common_Defines.h"
 
