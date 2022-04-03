@@ -112,7 +112,7 @@ void Text_Handler::reloadText(const int32_t idx, const std::string& text, int32_
 	}
 	else
 	{
-		std::cerr << "ERROR -> Trying to reload text with invalid index: " << idx << " in Text_Handler::reloadText()." << std::endl;
+		std::cerr << "ERROR -> Trying to reload text with invalid index: " << idx << " in Text_Handler::reloadText(). The text is not reloaded." << std::endl;
 	}
 }
 

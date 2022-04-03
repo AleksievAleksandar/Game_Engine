@@ -50,7 +50,7 @@ bool Game::handleEvent(InputEvent& event)
 		{
 			this->_press_keys.setOpacity(10);
 		}
-		else if (event.key == Keyboard::Key::KEY_R)
+		else if (event.key == Keyboard::Key::KEY_R && event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
 		{
 			this->_text.reloadContent("Aleksandar");
 		}
