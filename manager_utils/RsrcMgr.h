@@ -23,6 +23,7 @@ public:
 	void deinit();
 
 	void createText(const std::string& text, int32_t& outTextWidth, int32_t& outTextHeight);
+	void reloadText(const std::string& text, int32_t& outTextWidth, int32_t& outTextHeight);
 	std::unordered_map<int32_t, Rectangle> getImageDimensions();
 	void collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);
 	void collectTextsForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);

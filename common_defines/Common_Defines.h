@@ -20,8 +20,8 @@ namespace Fonts
 {
 	enum FontType
 	{
-		ANGELINE_VINTAGE_FONT,
 		YAGORA_FONT,
+		ANGELINE_VINTAGE_FONT,
 
 		COUNT
 	};

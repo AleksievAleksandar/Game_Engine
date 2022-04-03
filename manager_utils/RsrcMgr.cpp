@@ -33,8 +33,13 @@ void RsrcMgr::deinit()
 
 void RsrcMgr::createText(const std::string& text, int32_t& outTextWidth, int32_t& outTextHeight)
 {
-	this->_textHandler.createText(Fonts::ANGELINE_VINTAGE_FONT, text, Colors::RED, outTextWidth, outTextHeight);
+	//this->_textHandler.createText(Fonts::ANGELINE_VINTAGE_FONT, text, Colors::RED, outTextWidth, outTextHeight);
 	this->_textHandler.createText(Fonts::YAGORA_FONT, text, Colors::GREEN, outTextWidth, outTextHeight);
+}
+
+void RsrcMgr::reloadText(const std::string& text, int32_t& outTextWidth, int32_t& outTextHeight)
+{
+	this->_textHandler.reloadText(0, text, outTextWidth, outTextHeight);
 }
 
 std::unordered_map<int32_t, Rectangle> RsrcMgr::getImageDimensions()

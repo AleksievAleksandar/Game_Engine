@@ -20,7 +20,19 @@ void Text::draw() const
 
 void Text::createContent(const std::string& text)
 {
-	gRsrcMgr->createText(text, this->_drawParams.w, this->_drawParams.h);
+	if (this->firstTimeCreateContent)
+	{
+		gRsrcMgr->createText(text, this->_drawParams.w, this->_drawParams.h);
+		this->firstTimeCreateContent = false;
+	}
+}
+
+void Text::reloadContent(const std::string& newText)
+{
+	if (!this->firstTimeCreateContent)
+	{
+		gRsrcMgr->reloadText(newText, this->_drawParams.w, this->_drawParams.h);
+	}
 }
 
 void Text::setTextWidth(int32_t wParam)

@@ -50,6 +50,10 @@ bool Game::handleEvent(InputEvent& event)
 		{
 			this->_press_keys.setOpacity(10);
 		}
+		else if (event.key == Keyboard::Key::KEY_R)
+		{
+			this->_text.reloadContent("Aleksandar");
+		}
 
 		if (event.checkForExitRequestEvent())
 		{

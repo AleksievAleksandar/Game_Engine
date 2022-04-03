@@ -14,8 +14,12 @@ public:
 	void draw() const override;
 
 	void createContent(const std::string& text);
+	void reloadContent(const std::string& newText);
 	void setTextWidth(int32_t wParam);
 	void setTextHeight(int32_t hParam);
+
+private:
+	bool firstTimeCreateContent = true;
 };
 
 #endif // !TEXT_H

@@ -30,13 +30,13 @@ int32_t Renderer::init(SDL_Window* window)
 	this->_sdlRenderer = SDL_CreateRenderer(window, unspecifiedDriverID, SDL_RENDERER_ACCELERATED);
 	if (nullptr == this->_sdlRenderer)
 	{
-		std::cerr << "ERROR -> SDL_CreateRenderer()" << SDL_GetError() << std::endl;
+		std::cerr << "ERROR -> SDL_CreateRenderer() " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 	}
 
 	if (EXIT_SUCCESS != SDL_SetRenderDrawColor(this->_sdlRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE))
 	{
-		std::cerr << "ERROR -> SDL_SetRenderDrawColor()" << SDL_GetError() << std::endl;
+		std::cerr << "ERROR -> SDL_SetRenderDrawColor() " << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 	}
 
@@ -62,7 +62,7 @@ void Renderer::clearScreen()
 {
 	if (EXIT_SUCCESS != SDL_RenderClear(this->_sdlRenderer))
 	{
-		std::cerr << "ERROR -> Renderer::SDL_RenderClear()" << SDL_GetError() << std::endl;
+		std::cerr << "ERROR -> Renderer::SDL_RenderClear() " << SDL_GetError() << std::endl;
 	}
 }
 
@@ -97,19 +97,19 @@ void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) con
 	{
 		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
 		{
-			std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+			std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 		}
 	}
 	else
 	{
 		if (EXIT_SUCCESS != SDL_Helpers::setAlphaToTexture(texture, drawParam.opacity))
 		{
-			std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture()" << std::endl;
+			std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture() " << std::endl;
 		}
 
 		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
 		{
-			std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+			std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 		}
 
 		//Return FULL_OPACITY to texture 
@@ -126,6 +126,6 @@ void Renderer::drawTexts(SDL_Texture* texture, const DrawParams& drawParam) cons
 
 	if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
 	{
-		std::cerr << "ERROR -> Renderer::SDL_RenderCopy()" << SDL_GetError() << std::endl;
+		std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 	}
 }
