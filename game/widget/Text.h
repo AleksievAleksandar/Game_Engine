@@ -1,8 +1,8 @@
 #ifndef TEXT_H
 #define TEXT_H
 
-#include "game/Widget.h"
-#include "../common_defines/Common_Defines.h"
+#include "game/widget/Widget.h"
+#include "../../common_defines/Common_Defines.h"
 
 #include <cstdint>
 #include <string>

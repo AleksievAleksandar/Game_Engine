@@ -1,4 +1,4 @@
-#include "Image.h"
+#include "game/widget/Image.h"
 
 #include <iostream>
 

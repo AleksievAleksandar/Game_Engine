@@ -1,4 +1,4 @@
-#include "game/Widget.h"
+#include "game/widget/Widget.h"
 
 void Widget::moveUp()
 {

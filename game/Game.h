@@ -3,8 +3,8 @@
 
 #include "utils/drawing/DrawParams.h"
 #include "utils/drawing/Rectangle.h"
-#include "game/Image.h"
-#include "game/Text.h"
+#include "game/widget/Image.h"
+#include "game/widget/Text.h"
 
 #include <cstdint>
 #include <unordered_map>

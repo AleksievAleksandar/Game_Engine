@@ -1,9 +1,9 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
-#include "game/Widget.h"
+#include "game/widget/Widget.h"
 #include "utils/drawing/Rectangle.h"
-#include "../common_defines/Common_Defines.h"
+#include "../../common_defines/Common_Defines.h"
 
 #include <cstdint>
 #include <unordered_map>
