@@ -61,7 +61,6 @@ bool Game::handleEvent(InputEvent& event)
 		{
 			this->_text.reloadContent("Aleksandar");
 			this->_secondText.reloadContent("Aleksandar");
-
 		}
 
 		if (event.checkForExitRequestEvent())
@@ -72,20 +71,15 @@ bool Game::handleEvent(InputEvent& event)
 	return false;
 }
 
-std::vector<DrawParams> Game::imagesForDrawing() const
+std::vector<DrawParams> Game::giveWidgetsForDrawing() const
 {
 	std::vector<DrawParams> drawParams;
+
 	drawParams.push_back(this->_press_keys.getDrawParams());
 	drawParams.push_back(this->_layer_2.getDrawParams());
 	drawParams.push_back(this->_text.getDrawParams());
 	drawParams.push_back(this->_secondText.getDrawParams());
 
 	return drawParams;
-}
-
-void Game::setTextDimmensions(const int32_t param_w, const int32_t param_h)
-{
-	this->_text.setTextWidth(param_w);
-	this->_text.setTextHeight(param_h);
 }
 

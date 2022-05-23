@@ -45,7 +45,7 @@ void Engine::deinit()
 
 void Engine::draw() const
 {
-	std::vector<DrawParams> drawParams = this->_game.imagesForDrawing();
+	std::vector<DrawParams> drawParams = this->_game.giveWidgetsForDrawing();
 
 	std::vector<SDL_Texture*> textures;
 	gRsrcMgr->collectImagesForDrawing(textures, drawParams);

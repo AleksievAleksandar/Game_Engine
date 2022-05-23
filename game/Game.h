@@ -19,8 +19,7 @@ public:
 	int32_t init(const std::unordered_map<int32_t, Rectangle>& _textureDimensions);
 	void deinit();
 	bool handleEvent(InputEvent& event);
-	std::vector<DrawParams> imagesForDrawing() const;
-	void setTextDimmensions(const int32_t param_w, const int32_t param_h);
+	std::vector<DrawParams> giveWidgetsForDrawing() const;
 
 private:
 	Image _layer_2;
