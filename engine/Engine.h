@@ -4,6 +4,7 @@
 
 #include "sdl_wrapper/Input_Events.h"
 #include "../game/Game.h"
+#include "manager_utils/MgrHandler.h"
 
 #include <cstdint>
 
@@ -22,6 +23,7 @@ private:
 
 	InputEvent _event;
 	Game _game;
+	MgrHandler _mgrHandler;
 };
 
 #endif // !ENGINE_H

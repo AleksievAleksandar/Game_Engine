@@ -4,6 +4,7 @@
 #include "utils/time_measurement/Time.h"
 #include "manager_utils/DrawMgr.h"
 #include "manager_utils/RsrcMgr.h"
+#include "manager_utils/MgrHandler.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -12,21 +13,11 @@
 
 int32_t Engine::init()
 {
-	gDrawMgr = new DrawMgr();
-	if (nullptr == gDrawMgr)
+	if (EXIT_SUCCESS != this->_mgrHandler.init())
 	{
-		std::cerr << "ERROR -> Failed for memory alloc for gDrawMgr. " << std::endl;
+		std::cerr << "ERROR -> this->_event->_mgrHandler() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
-	gDrawMgr->init();
-
-	gRsrcMgr = new RsrcMgr();
-	if (nullptr == gRsrcMgr)
-	{
-		std::cerr << "ERROR -> Failed for memory alloc for gRsrcMgr. " << std::endl;
-		return EXIT_FAILURE;
-	}
-	gRsrcMgr->init();
 
 	if (EXIT_SUCCESS != this->_event.init())
 	{
@@ -49,13 +40,7 @@ void Engine::deinit()
 
 	this->_event.deinit();
 
-	gRsrcMgr->deinit();
-	delete gRsrcMgr;
-	gRsrcMgr = nullptr;
-
-	gDrawMgr->deinit();
-	delete gDrawMgr;
-	gDrawMgr = nullptr;
+	this->_mgrHandler.deinit();
 }
 
 void Engine::draw() const
