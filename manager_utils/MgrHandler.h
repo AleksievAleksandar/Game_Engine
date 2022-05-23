@@ -2,15 +2,6 @@
 #define MGR_HANDLER_H
 
 #include <cstdint>
-#include <string>
-#include <vector>
-#include <unordered_map>
-
-#include "utils/drawing/DrawParams.h"
-#include "utils/drawing/Rectangle.h"
-
-//Forward declarations
-struct SDL_Texture; //cross-platform GPU primitive
 
 class MgrHandler
 {
