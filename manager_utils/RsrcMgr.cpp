@@ -33,7 +33,6 @@ void RsrcMgr::deinit()
 
 void RsrcMgr::createText(const std::string& text, const int32_t fontTypeId, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight)
 {
-	//this->_textHandler.createText(Fonts::ANGELINE_VINTAGE_FONT, text, Colors::RED, outTextWidth, outTextHeight);
 	this->_textHandler.createText(fontTypeId, text, color, outTextWidth, outTextHeight);
 }
 

@@ -11,7 +11,12 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 	this->_layer_2.create(_textureDimensions, Textures::LAYER_2);
 	this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS);
 
-	if (EXIT_SUCCESS != this->_text.create("Hello World", Fonts::ANGELINE_VINTAGE_FONT))
+	if (EXIT_SUCCESS != this->_text.create("Hello World"))
+	{
+		return EXIT_FAILURE;
+	}
+
+	if (EXIT_SUCCESS != this->_secondText.create("secondText", Fonts::ANGELINE_VINTAGE_FONT, Colors::BLUE, Point(100, 100)))
 	{
 		return EXIT_FAILURE;
 	}
@@ -55,6 +60,8 @@ bool Game::handleEvent(InputEvent& event)
 		else if (event.key == Keyboard::Key::KEY_R && event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
 		{
 			this->_text.reloadContent("Aleksandar");
+			this->_secondText.reloadContent("Aleksandar");
+
 		}
 
 		if (event.checkForExitRequestEvent())
@@ -71,6 +78,7 @@ std::vector<DrawParams> Game::imagesForDrawing() const
 	drawParams.push_back(this->_press_keys.getDrawParams());
 	drawParams.push_back(this->_layer_2.getDrawParams());
 	drawParams.push_back(this->_text.getDrawParams());
+	drawParams.push_back(this->_secondText.getDrawParams());
 
 	return drawParams;
 }

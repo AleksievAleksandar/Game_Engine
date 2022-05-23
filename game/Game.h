@@ -26,6 +26,7 @@ private:
 	Image _layer_2;
 	Image _press_keys;
 	Text _text;
+	Text _secondText;
 };
 
 #endif // !GAME_H
