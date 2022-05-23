@@ -19,7 +19,7 @@ public:
 	void deinit() override;
 	void collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const override;
 	void createText(const int32_t fontTypeIdx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);
-	void reloadText(const int32_t idx, const std::string& newText, int32_t& outTextWidth, int32_t& outTextHeight);
+	void reloadText(const int32_t idx, const std::string& newText, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);
 
 private:
 	SDL_Texture* createTextTexture(TTF_Font* font, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);

@@ -52,7 +52,8 @@ void Text_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outColle
 		{
 			if (0 > drawParams[i].rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams[i].rsrcId)
 			{
-				std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId << std::endl;
+				std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId 
+						  << ". The size of _textures[] is: " << this->_textures.size() << std::endl;
 				break;
 			}
 			outCollection.push_back(this->_textures[drawParams[i].rsrcId]);
@@ -94,14 +95,14 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 	this->_textures.push_back(textTexture);
 }
 
-void Text_Handler::reloadText(const int32_t idx, const std::string& text, int32_t& outTextWidth, int32_t& outTextHeight)
+void Text_Handler::reloadText(const int32_t idx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight)
 {
 	if (!this->_textures.empty() && idx < static_cast<int32_t>(this->_textures.size()))
 	{
 		SDL_DestroyTexture(this->_textures[idx]);
 		this->_textures[idx] = nullptr;
 
-		SDL_Texture* textTexture = this->createTextTexture(this->_fonts[idx], text, Colors::GREEN, outTextWidth, outTextHeight);
+		SDL_Texture* textTexture = this->createTextTexture(this->_fonts[idx], text, color, outTextWidth, outTextHeight);
 		if (nullptr == textTexture)
 		{
 			std::cerr << "ERROR -> Text_Handler::reloadText() failed. Reason: can not reload texture from surface." << std::endl;

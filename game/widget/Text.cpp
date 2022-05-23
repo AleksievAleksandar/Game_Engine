@@ -4,13 +4,22 @@
 
 #include <iostream>
 
-int32_t Text::create(const Fonts::FontType& fontType)
+int32_t Text::create(const std::string& text, const Fonts::FontType& fontType, const Color& color)
 {
-	this->_drawParams.widgetType = WidgetType::TEXT;
-	this->_drawParams.rsrcId = fontType;
-	this->_drawParams.pos = Point::ZERO;
+	if (this->_firstTimeCreateContent)
+	{
+		this->_drawParams.widgetType = WidgetType::TEXT;
+		this->_drawParams.rsrcId = fontType;
+		this->_drawParams.pos = Point::ZERO;
+		this->_color = color;
 
-	return EXIT_SUCCESS;
+		gRsrcMgr->createText(text, fontType, color, this->_drawParams.w, this->_drawParams.h);
+		this->_firstTimeCreateContent = false;
+
+		return EXIT_SUCCESS;
+	}
+
+	return EXIT_FAILURE;
 }
 
 void Text::draw() const
@@ -18,20 +27,11 @@ void Text::draw() const
 	//TODO
 }
 
-void Text::createContent(const std::string& text)
-{
-	if (this->firstTimeCreateContent)
-	{
-		gRsrcMgr->createText(text, this->_drawParams.w, this->_drawParams.h);
-		this->firstTimeCreateContent = false;
-	}
-}
-
 void Text::reloadContent(const std::string& newText)
 {
-	if (!this->firstTimeCreateContent)
+	if (!this->_firstTimeCreateContent)
 	{
-		gRsrcMgr->reloadText(newText, this->_drawParams.w, this->_drawParams.h);
+		gRsrcMgr->reloadText(newText, this->_drawParams.rsrcId, this->_color, this->_drawParams.w, this->_drawParams.h);
 	}
 }
 
