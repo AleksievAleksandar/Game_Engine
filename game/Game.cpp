@@ -8,8 +8,15 @@
 
 int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensions)
 {
-	this->_layer_2.create(_textureDimensions, Textures::LAYER_2);
-	this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS);
+	if (EXIT_SUCCESS != this->_layer_2.create(_textureDimensions, Textures::LAYER_2))
+	{
+		return EXIT_FAILURE;
+	}
+
+	if (EXIT_SUCCESS != this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS))
+	{
+		return EXIT_FAILURE;
+	}
 
 	if (EXIT_SUCCESS != this->_text.create("Hello World"))
 	{
