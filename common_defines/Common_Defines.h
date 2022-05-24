@@ -46,6 +46,12 @@ namespace Fonts
 
 		COUNT
 	};
+
+	namespace Size
+	{
+		int32_t YAGORA_FONT_SIZE_36 = 36;
+		int32_t ANGELIN_VINTAGE_FONT_SIZE_36 = 36;
+	}
 }
 
 #endif // !COMMON_DEFINES_H
