@@ -7,8 +7,6 @@
 
 #include "utils/drawing/Rectangle.h"
 
-
-
 class ImageCfg
 {
 public:
