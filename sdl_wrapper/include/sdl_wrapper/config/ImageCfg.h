@@ -12,7 +12,7 @@
 class ImageCfg
 {
 public:
-	static std::vector<std::string> getImageParhs();
+	static std::vector<std::string> getImagePaths();
 	static std::unordered_map<int32_t, Rectangle> getImageSizes();
 };
 

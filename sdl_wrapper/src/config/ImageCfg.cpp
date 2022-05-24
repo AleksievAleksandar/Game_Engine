@@ -2,7 +2,7 @@
 
 #include "../../common_defines/Common_Defines.h"
 
-std::vector<std::string> ImageCfg::getImageParhs()
+std::vector<std::string> ImageCfg::getImagePaths()
 {
 	//Load image from disk
 	std::vector<std::string> imagePaths(Textures::COUNT);
