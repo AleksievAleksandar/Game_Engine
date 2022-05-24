@@ -41,7 +41,7 @@ void RsrcMgr::reloadText(const std::string& text, const int32_t fontTypeId, cons
 	this->_textHandler.reloadText(fontTypeId, text, color, outTextWidth, outTextHeight);
 }
 
-std::unordered_map<int32_t, Rectangle> RsrcMgr::getImageDimensions()
+std::unordered_map<int32_t, Rectangle> RsrcMgr::getImageDimensions() const
 {
 	return this->_imageHandler.getTexturesDimensions();
 }

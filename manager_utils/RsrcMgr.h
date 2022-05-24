@@ -26,7 +26,7 @@ public:
 	void reloadText(const std::string& text, const int32_t fontTypeId, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);
 	void collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);
 	void collectTextsForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams);
-	std::unordered_map<int32_t, Rectangle> getImageDimensions();
+	std::unordered_map<int32_t, Rectangle> getImageDimensions() const;
 
 private:
 	Image_Handler _imageHandler;
