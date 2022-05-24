@@ -2,8 +2,6 @@
 
 #include "../../common_defines/Common_Defines.h"
 
-#include <iostream>
-
 std::vector<std::string> ImageCfg::getImageParhs()
 {
 	//Load image from disk
