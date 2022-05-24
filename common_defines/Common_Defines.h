@@ -14,6 +14,27 @@ namespace Textures
 
 		COUNT
 	};
+
+	namespace ImageSize
+	{
+		constexpr auto PRESS_KEYS_IMG_HEIGHT = 480;
+		constexpr auto PRESS_KEYS_IMG_WIDTH = 640;
+
+		constexpr auto UP_IMG_HEIGHT = 640;
+		constexpr auto UP_IMG_WIDTH = 640;
+
+		constexpr auto DOWN_IMG_HEIGHT = 640;
+		constexpr auto DOWN_IMG_WIDTH = 640;
+
+		constexpr auto LEFT_IMG_HEIGHT = 640;
+		constexpr auto LEFT_IMG_WIDTH = 640;
+
+		constexpr auto RIGHT_IMG_HEIGHT = 640;
+		constexpr auto RIGHT_IMG_WIDTH = 640;
+
+		constexpr auto LAYER_2_IMG_HEIGHT = 150;
+		constexpr auto LAYER_2_IMG_WIDTH = 150;
+	}
 }
 
 namespace Fonts
