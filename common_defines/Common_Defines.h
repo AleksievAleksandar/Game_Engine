@@ -15,6 +15,16 @@ namespace Textures
 		COUNT
 	};
 
+	namespace Location
+	{
+		constexpr auto PRESS_KEYS_LOCATION = "../resources/pictures/press_keys.png";
+		constexpr auto PRESS_UP_LOCATION = "../resources/pictures/up.png";
+		constexpr auto PRESS_DOWN_LOCATION = "../resources/pictures/down.png";
+		constexpr auto PRESS_LEFT_LOCATION = "../resources/pictures/left.png";
+		constexpr auto PRESS_RIGHT_LOCATION = "../resources/pictures/right.png";
+		constexpr auto PRESS_LAYER_2_LOCATION = "../resources/pictures/layer_2.png";
+	}
+
 	namespace ImageSize
 	{
 		constexpr auto PRESS_KEYS_IMG_HEIGHT = 480;
@@ -46,6 +56,12 @@ namespace Fonts
 
 		COUNT
 	};
+
+	namespace Location
+	{
+		constexpr auto YAGORA_FONT_LOCATION = "../resources/fonts/Yagora.ttf";
+		constexpr auto ANGELINE_VINTAGE_FONT_LOCATION = "../resources/fonts/AngelineVintage.ttf";
+	}
 
 	namespace Size
 	{

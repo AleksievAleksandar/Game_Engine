@@ -7,12 +7,12 @@ std::vector<std::string> ImageCfg::getImagePaths()
 	//Load image from disk
 	std::vector<std::string> imagePaths(Textures::COUNT);
 
-	imagePaths[Textures::PRESS_KEYS] = "../resources/pictures/press_keys.png";
-	imagePaths[Textures::UP] = "../resources/pictures/up.png";
-	imagePaths[Textures::DOWN] = "../resources/pictures/down.png";
-	imagePaths[Textures::LEFT] = "../resources/pictures/left.png";
-	imagePaths[Textures::RIGHT] = "../resources/pictures/right.png";
-	imagePaths[Textures::LAYER_2] = "../resources/pictures/layer_2.png";
+	imagePaths[Textures::PRESS_KEYS] = Textures::Location::PRESS_KEYS_LOCATION;
+	imagePaths[Textures::UP] = Textures::Location::PRESS_UP_LOCATION;
+	imagePaths[Textures::DOWN] = Textures::Location::PRESS_DOWN_LOCATION;
+	imagePaths[Textures::LEFT] = Textures::Location::PRESS_LEFT_LOCATION;
+	imagePaths[Textures::RIGHT] = Textures::Location::PRESS_RIGHT_LOCATION;
+	imagePaths[Textures::LAYER_2] = Textures::Location::PRESS_LAYER_2_LOCATION;
 
 	return imagePaths;
 }
