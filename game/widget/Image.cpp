@@ -18,8 +18,3 @@ int32_t Image::create(const std::unordered_map<int32_t, Rectangle>& _textureDime
 
 	return EXIT_SUCCESS;
 }
-
-void Image::draw() const
-{
-	//TODO
-}

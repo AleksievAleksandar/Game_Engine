@@ -12,7 +12,6 @@ class Text : public Widget
 {
 public:
 	int32_t create(const std::string& text, const Fonts::FontType& fontType = Fonts::YAGORA_FONT, const Color& color = Colors::GREEN, const Point& position = Point::ZERO);
-	void draw() const override;
 
 	void reloadContent(const std::string& newText);
 	void setTextWidth(int32_t wParam);

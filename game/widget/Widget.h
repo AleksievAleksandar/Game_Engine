@@ -7,7 +7,6 @@ class Widget
 {
 public:
 	virtual ~Widget() = default;
-	virtual void draw() const = 0;
 
 	void moveUp();
 	void moveDown();
@@ -16,7 +15,7 @@ public:
 
 	void setOpacity(const int32_t delta);
 
-	virtual DrawParams getDrawParams() const;
+	DrawParams getDrawParams() const;
 
 protected:
 	DrawParams _drawParams;

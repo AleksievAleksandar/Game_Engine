@@ -12,7 +12,6 @@ class Image : public Widget
 {
 public:
 	int32_t create(const std::unordered_map<int32_t, Rectangle>& _textureDimensions, const Textures::ImageType& imageType);
-	void draw() const override;
 };
 
 #endif // !IMAGE_H

@@ -22,11 +22,6 @@ int32_t Text::create(const std::string& text, const Fonts::FontType& fontType, c
 	return EXIT_FAILURE;
 }
 
-void Text::draw() const
-{
-	//TODO
-}
-
 void Text::reloadContent(const std::string& newText)
 {
 	if (!this->_createForTheFirstTime)
