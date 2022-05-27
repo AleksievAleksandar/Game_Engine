@@ -11,6 +11,7 @@ namespace Textures
 		LEFT,
 		RIGHT,
 		LAYER_2,
+		RUNNING_GIRL,
 
 		COUNT
 	};

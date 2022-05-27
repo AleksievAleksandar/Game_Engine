@@ -18,6 +18,11 @@ int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensi
 		return EXIT_FAILURE;
 	}
 
+	if (EXIT_SUCCESS != this->_running_girl.create(_textureDimensions, Textures::RUNNING_GIRL))
+	{
+		return EXIT_FAILURE;
+	}
+
 	if (EXIT_SUCCESS != this->_text.create("Hello World"))
 	{
 		return EXIT_FAILURE;
@@ -84,6 +89,8 @@ std::vector<DrawParams> Game::giveWidgetsForDrawing() const
 
 	drawParams.push_back(this->_press_keys.getDrawParams());
 	drawParams.push_back(this->_layer_2.getDrawParams());
+	drawParams.push_back(this->_running_girl.getDrawParams());
+
 	drawParams.push_back(this->_text.getDrawParams());
 	drawParams.push_back(this->_secondText.getDrawParams());
 

@@ -10,6 +10,7 @@ namespace
 	constexpr auto PRESS_LEFT_LOCATION = "../resources/pictures/left.png";
 	constexpr auto PRESS_RIGHT_LOCATION = "../resources/pictures/right.png";
 	constexpr auto PRESS_LAYER_2_LOCATION = "../resources/pictures/layer_2.png";
+	constexpr auto RUNNING_GIRL_LOCATION = "../resources/pictures/running_girl.png";
 }
 
 namespace 
@@ -31,6 +32,9 @@ namespace
 
 	constexpr auto LAYER_2_IMG_HEIGHT = 150;
 	constexpr auto LAYER_2_IMG_WIDTH = 150;
+
+	constexpr auto RUNNING_GIRL_IMG_HEIGHT = 220;
+	constexpr auto RUNNING_GIRL_IMG_WIDTH = 1536;
 }
 
 std::vector<std::string> ImageCfg::getImagePaths()
@@ -44,6 +48,7 @@ std::vector<std::string> ImageCfg::getImagePaths()
 	imagePaths[Textures::LEFT] = PRESS_LEFT_LOCATION;
 	imagePaths[Textures::RIGHT] = PRESS_RIGHT_LOCATION;
 	imagePaths[Textures::LAYER_2] = PRESS_LAYER_2_LOCATION;
+	imagePaths[Textures::RUNNING_GIRL] = RUNNING_GIRL_LOCATION;
 
 	return imagePaths;
 }
@@ -84,6 +89,12 @@ std::unordered_map<int32_t, Rectangle> ImageCfg::getImageSizes()
 	rect.w = LAYER_2_IMG_WIDTH;
 	rect.h = LAYER_2_IMG_HEIGHT;
 	imageSizes.insert(std::make_pair(Textures::LAYER_2, rect));
+
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = RUNNING_GIRL_IMG_WIDTH;
+	rect.h = RUNNING_GIRL_IMG_HEIGHT;
+	imageSizes.insert(std::make_pair(Textures::RUNNING_GIRL, rect));
 
 	return imageSizes;
 }
