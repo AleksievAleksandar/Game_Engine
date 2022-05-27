@@ -55,11 +55,11 @@ bool Game::handleEvent(InputEvent& event)
 		}
 		else if (event.key == Keyboard::Key::KEY_LEFT)
 		{
-			this->_press_keys.moveLeft();
+			this->_running_girl.moveLeft();
 		}
 		else if (event.key == Keyboard::Key::KEY_RIGHT)
 		{
-			this->_press_keys.moveRight();
+			this->_running_girl.moveRight();
 		}
 		else if (event.key == Keyboard::Key::KEY_Z)
 		{
@@ -87,9 +87,9 @@ std::vector<DrawParams> Game::giveWidgetsForDrawing() const
 {
 	std::vector<DrawParams> drawParams;
 
-	drawParams.push_back(this->_press_keys.getDrawParams());
-	drawParams.push_back(this->_layer_2.getDrawParams());
-	drawParams.push_back(this->_running_girl.getDrawParams());
+	//drawParams.push_back(this->_press_keys.getDrawParams());
+	//drawParams.push_back(this->_layer_2.getDrawParams());
+	//drawParams.push_back(this->_running_girl.getDrawParams());
 
 	drawParams.push_back(this->_text.getDrawParams());
 	drawParams.push_back(this->_secondText.getDrawParams());

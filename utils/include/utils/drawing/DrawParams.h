@@ -29,7 +29,7 @@ struct DrawParams
 
 	int32_t w = 0;
 	int32_t h = 0;
-	Rectangle frame = Rectangle::ZERO;
+	Rectangle frame;
 
 	int32_t opacity = FULL_OPACITY;
 

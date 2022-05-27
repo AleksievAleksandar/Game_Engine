@@ -1,7 +1,7 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "utils/drawing/DrawParams.h"
+//#include "utils/drawing/DrawParams.h"
 
 #include <cstdint>
 #include <sstream>
@@ -14,11 +14,12 @@ public:
 	int32_t w = 0;
 	int32_t h = 0;
 
+	Rectangle() = default;
 	Rectangle(int32_t inputX, int32_t inputY, int32_t inputW, int32_t inputH);
 	Rectangle(const Rectangle& other);
 
 	Rectangle& operator=(const Rectangle& other);
-	Rectangle& operator=(const DrawParams& drawParams);
+	//Rectangle& operator=(const DrawParams& drawParams);
 
 	bool operator==(const Rectangle& other);
 	bool operator!=(const Rectangle& other);

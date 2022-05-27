@@ -12,8 +12,8 @@ SDL_Rect create_SDL_Rect_from_DrawParams(const DrawParams& drawParam)
 	SDL_Rect rect;
 	rect.x = drawParam.pos.x;
 	rect.y = drawParam.pos.y;
-	rect.w = drawParam.w;
-	rect.h = drawParam.h;
+	rect.w = drawParam.frame.w;
+	rect.h = drawParam.frame.h;
 
 	return rect;
 }
@@ -92,10 +92,20 @@ void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) co
 void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) const
 {
 	SDL_Rect rect = create_SDL_Rect_from_DrawParams(drawParam);
+	SDL_Rect frame;
+	frame.x = drawParam.pos.x;
+	frame.y = drawParam.pos.y;
+	frame.w = drawParam.frame.w;
+	frame.h = drawParam.frame.h;
+
+	std::cout << "drawParam.pos.x = " << drawParam.pos.x << std::endl;
+	std::cout << "drawParam.pos.y = " << drawParam.pos.y << std::endl;
+	std::cout << "drawParam.frame.w = " << drawParam.frame.w << std::endl;
+	std::cout << "drawParam.frame.h = " << drawParam.frame.h << std::endl;
 
 	if (FULL_OPACITY == drawParam.opacity)
 	{
-		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
+		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, &frame, &rect))
 		{
 			std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 		}
@@ -107,7 +117,7 @@ void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) con
 			std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture() " << std::endl;
 		}
 
-		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
+		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, &frame, &rect))
 		{
 			std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 		}

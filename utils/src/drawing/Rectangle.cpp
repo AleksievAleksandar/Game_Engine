@@ -21,15 +21,15 @@ Rectangle& Rectangle::operator=(const Rectangle& other)
 	return *this;
 }
 
-Rectangle& Rectangle::operator=(const DrawParams& drawParams)
-{
-	this->x = drawParams.pos.x;
-	this->y = drawParams.pos.y;
-	this->h = drawParams.h;
-	this->w = drawParams.w;
-
-	return *this;
-}
+//Rectangle& Rectangle::operator=(const DrawParams& drawParams)
+//{
+//	this->x = drawParams.pos.x;
+//	this->y = drawParams.pos.y;
+//	this->h = drawParams.h;
+//	this->w = drawParams.w;
+//
+//	return *this;
+//}
 
 bool Rectangle::operator==(const Rectangle& other)
 {
