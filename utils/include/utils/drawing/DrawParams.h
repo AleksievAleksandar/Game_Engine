@@ -2,6 +2,7 @@
 #define DRAW_PARAMS_H
 
 #include "utils/drawing/Point.h"
+#include "utils/drawing/Rectangle.h"
 
 inline constexpr auto UNKNOWN_RSRC_ID = -1;
 inline constexpr auto FULL_OPACITY = 255;
@@ -28,6 +29,7 @@ struct DrawParams
 
 	int32_t w = 0;
 	int32_t h = 0;
+	Rectangle frame = Rectangle::ZERO;
 
 	int32_t opacity = FULL_OPACITY;
 
