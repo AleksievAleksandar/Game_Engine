@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int32_t Image::create(const std::unordered_map<int32_t, Rectangle>& _textureDimensions, const Textures::ImageType& imageType, const int32_t numFrames)
+int32_t Image::create(const std::unordered_map<int32_t, Rectangle>& _textureDimensions, const Textures::ImageType& imageType, const bool hasFrames)
 {
 	auto it = _textureDimensions.find(imageType);
 	if (it == _textureDimensions.end())
@@ -19,7 +19,7 @@ int32_t Image::create(const std::unordered_map<int32_t, Rectangle>& _textureDime
 	_drawParams.frame.w = it->second.w;
 	_drawParams.frame.h = it->second.h;
 
-	if (1 < numFrames)
+	if (hasFrames)
 	{
 		_drawParams.frame.h = it->second.h;
 		_drawParams.frame.w = 256;
