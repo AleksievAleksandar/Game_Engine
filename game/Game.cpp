@@ -69,7 +69,8 @@ bool Game::handleEvent(InputEvent& event)
 		}
 		else if (event.key == Keyboard::Key::KEY_RIGHT)
 		{
-			this->_running_girl.moveRight();
+			//this->_running_girl.moveRight();
+			this->_running_girl.setNextFrame();
 		}
 		else if (event.key == Keyboard::Key::KEY_Z)
 		{

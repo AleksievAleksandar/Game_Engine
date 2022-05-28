@@ -13,6 +13,8 @@ public:
 	void moveLeft();
 	void moveRight();
 
+	void setNextFrame();
+
 	void setOpacity(const int32_t delta);
 
 	DrawParams getDrawParams() const;

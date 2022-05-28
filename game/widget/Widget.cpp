@@ -20,6 +20,11 @@ void Widget::moveRight()
 	this->_drawParams.pos.x++;
 }
 
+void Widget::setNextFrame()
+{
+	this->_drawParams.frame.x = 256;
+}
+
 void Widget::setOpacity(const int32_t delta)
 {
 	this->_drawParams.opacity += delta;
