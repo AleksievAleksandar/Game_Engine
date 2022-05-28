@@ -15,6 +15,11 @@ SDL_Rect create_SDL_Rect_from_DrawParams(const DrawParams& drawParam)
 	rect.w = drawParam.frame.w;
 	rect.h = drawParam.frame.h;
 
+	std::cout << "rect.x = " << rect.x << std::endl;
+	std::cout << "rect.y = " << rect.y << std::endl;
+	std::cout << "rect.w = " << rect.w << std::endl;
+	std::cout << "rect.h = " << rect.h << std::endl;
+
 	return rect;
 }
 
@@ -92,16 +97,17 @@ void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) co
 void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) const
 {
 	SDL_Rect rect = create_SDL_Rect_from_DrawParams(drawParam);
+
 	SDL_Rect frame;
-	frame.x = drawParam.pos.x;
-	frame.y = drawParam.pos.y;
+	frame.x = drawParam.frame.x;
+	frame.y = drawParam.frame.y;
 	frame.w = drawParam.frame.w;
 	frame.h = drawParam.frame.h;
 
-	std::cout << "drawParam.pos.x = " << drawParam.pos.x << std::endl;
-	std::cout << "drawParam.pos.y = " << drawParam.pos.y << std::endl;
-	std::cout << "drawParam.frame.w = " << drawParam.frame.w << std::endl;
-	std::cout << "drawParam.frame.h = " << drawParam.frame.h << std::endl;
+	//std::cout << "drawParam.pos.x = " << drawParam.pos.x << std::endl;
+	//std::cout << "drawParam.pos.y = " << drawParam.pos.y << std::endl;
+	//std::cout << "drawParam.frame.w = " << drawParam.frame.w << std::endl;
+	//std::cout << "drawParam.frame.h = " << drawParam.frame.h << std::endl;
 
 	if (FULL_OPACITY == drawParam.opacity)
 	{

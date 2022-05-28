@@ -25,11 +25,13 @@ enum class WidgetType : uint8_t
 
 struct DrawParams
 {
+	bool _hasFrames = false;
+
 	Point pos = Point::UNKNOWN;
 
 	int32_t w = 0;
 	int32_t h = 0;
-	Rectangle frame;
+	Rectangle frame = Rectangle::ZERO;
 
 	int32_t opacity = FULL_OPACITY;
 

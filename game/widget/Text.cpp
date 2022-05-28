@@ -13,7 +13,7 @@ int32_t Text::create(const std::string& text, const Fonts::FontType& fontType, c
 		this->_drawParams.pos = position;
 		this->_color = color;
 
-		gRsrcMgr->createText(text, fontType, color, this->_drawParams.w, this->_drawParams.h);
+		gRsrcMgr->createText(text, fontType, color, this->_drawParams.frame.w, this->_drawParams.frame.h);
 		this->_createForTheFirstTime = false;
 
 		return EXIT_SUCCESS;
@@ -26,7 +26,7 @@ void Text::reloadContent(const std::string& newText)
 {
 	if (!this->_createForTheFirstTime)
 	{
-		gRsrcMgr->reloadText(newText, this->_drawParams.rsrcId, this->_color, this->_drawParams.w, this->_drawParams.h);
+		gRsrcMgr->reloadText(newText, this->_drawParams.rsrcId, this->_color, this->_drawParams.frame.w, this->_drawParams.frame.h);
 	}
 }
 

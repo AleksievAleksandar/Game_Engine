@@ -14,7 +14,6 @@ public:
 	int32_t w = 0;
 	int32_t h = 0;
 
-	Rectangle() = default;
 	Rectangle(int32_t inputX, int32_t inputY, int32_t inputW, int32_t inputH);
 	Rectangle(const Rectangle& other);
 

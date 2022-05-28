@@ -11,7 +11,7 @@
 class Image : public Widget
 {
 public:
-	int32_t create(const std::unordered_map<int32_t, Rectangle>& _textureDimensions, const Textures::ImageType& imageType);
+	int32_t create(const std::unordered_map<int32_t, Rectangle>& _textureDimensions, const Textures::ImageType& imageType, const int32_t numFrames = 1);
 };
 
 #endif // !IMAGE_H

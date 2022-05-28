@@ -5,6 +5,7 @@
 #include <unordered_map>
 
 #include "sdl_wrapper/containers/IHandler.h"
+#include "utils/drawing/DrawParams.h"
 
 //Forword Declarations
 typedef struct _TTF_Font TTF_Font;
