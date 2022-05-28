@@ -1,5 +1,7 @@
 #include "game/widget/Widget.h"
 
+#include <iostream>
+
 void Widget::moveUp()
 {
 	this->_drawParams.pos.y--;
@@ -22,6 +24,11 @@ void Widget::moveRight()
 
 void Widget::setNextFrame()
 {
+	if (!this->_hasFrames)
+	{
+		std::cerr << "Trying to set next frame to image that has only one frame" << std::endl;
+		return;
+	}
 	this->_drawParams.frame.x = 256;
 }
 
