@@ -24,7 +24,7 @@ void Widget::moveRight()
 
 void Widget::setNextFrame()
 {
-	if (!this->_hasFrames)
+	if (!this->_drawParams._hasFrames)
 	{
 		std::cerr << "Trying to set next frame to image that has only one frame" << std::endl;
 		return;

@@ -27,7 +27,7 @@ int32_t Image::create(const std::unordered_map<int32_t, Rectangle>& _textureDime
 		_drawParams.frame.x = _drawParams.pos.x;
 		_drawParams.frame.y = _drawParams.pos.y;
 
-		this->_hasFrames = true;
+		this->_drawParams._hasFrames = true;
 		this->_drawParams.numFrames = numFrames;
 	}
 

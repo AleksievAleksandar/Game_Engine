@@ -20,7 +20,6 @@ public:
 	DrawParams getDrawParams() const;
 
 protected:
-	bool _hasFrames = false;
 	DrawParams _drawParams;
 };
 
