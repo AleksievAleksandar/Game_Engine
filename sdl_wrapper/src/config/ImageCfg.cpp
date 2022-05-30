@@ -73,6 +73,7 @@ std::unordered_map<int32_t, Frames> ImageCfg::getImageSizes()
 	imageSizes.insert(std::make_pair(Textures::PRESS_KEYS, rect));
 	rect.clear();
 
+
 	for (int32_t i = 0; i < UP_IMG_NUM_FRAMES; i++)
 	{
 		rect.push_back(Rectangle(0, 0, UP_IMG_WIDTH, UP_IMG_HEIGHT));
