@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <iostream>
 
-int32_t Game::init(const std::unordered_map<int32_t, Rectangle>& _textureDimensions)
+int32_t Game::init(const std::unordered_map<int32_t, Frames>& _textureDimensions)
 {
 	if (EXIT_SUCCESS != this->_layer_2.create(_textureDimensions, Textures::LAYER_2))
 	{

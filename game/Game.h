@@ -13,10 +13,12 @@
 //Forword Declarations
 struct InputEvent;
 
+using Frames = std::vector<Rectangle>;
+
 class Game
 {
 public:
-	int32_t init(const std::unordered_map<int32_t, Rectangle>& _textureDimensions);
+	int32_t init(const std::unordered_map<int32_t, Frames>& _textureDimensions);
 	void deinit();
 	bool handleEvent(InputEvent& event);
 	std::vector<DrawParams> giveWidgetsForDrawing() const;

@@ -12,6 +12,8 @@
 struct SDL_Surface;
 struct SDL_Texture;
 
+using Frames = std::vector<Rectangle>;
+
 class Image_Handler : public IHandler
 {
 public:
@@ -19,11 +21,11 @@ public:
 	void deinit() override;
 
 	void collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const override;
-	std::unordered_map<int32_t, Rectangle> getTexturesDimensions() const;
+	std::unordered_map<int32_t, Frames> getTexturesDimensions() const;
 
 private:
 	std::unordered_map<int32_t, SDL_Texture*> _textures;
-	std::unordered_map<int32_t, Rectangle> _textureDimensions;
+	std::unordered_map<int32_t, Frames> _textureDimensions;
 };
 
 #endif // !IMAGE_HANDLER_H

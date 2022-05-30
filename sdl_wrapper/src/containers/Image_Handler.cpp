@@ -67,7 +67,7 @@ void Image_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outColl
 	}
 }
 
-std::unordered_map<int32_t, Rectangle> Image_Handler::getTexturesDimensions() const
+std::unordered_map<int32_t, Frames> Image_Handler::getTexturesDimensions() const
 {
 	return this->_textureDimensions;
 }
