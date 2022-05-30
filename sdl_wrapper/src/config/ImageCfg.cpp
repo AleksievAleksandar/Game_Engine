@@ -17,24 +17,32 @@ namespace
 {
 	constexpr auto PRESS_KEYS_IMG_HEIGHT = 480;
 	constexpr auto PRESS_KEYS_IMG_WIDTH = 640;
+	constexpr auto PRESS_KEYS_IMG_NUM_FRAMES = 1;
 
 	constexpr auto UP_IMG_HEIGHT = 480;
 	constexpr auto UP_IMG_WIDTH = 640;
+	constexpr auto UP_IMG_NUM_FRAMES = 1;
 
 	constexpr auto DOWN_IMG_HEIGHT = 480;
 	constexpr auto DOWN_IMG_WIDTH = 640;
+	constexpr auto DOWN_IMG_NUM_FRAMES = 1;
 
 	constexpr auto LEFT_IMG_HEIGHT = 480;
 	constexpr auto LEFT_IMG_WIDTH = 640;
+	constexpr auto LEFT_IMG_NUM_FRAMES = 1;
 
 	constexpr auto RIGHT_IMG_HEIGHT = 480;
 	constexpr auto RIGHT_IMG_WIDTH = 640;
+	constexpr auto RIGHT_IMG_NUM_FRAMES = 1;
 
 	constexpr auto LAYER_2_IMG_HEIGHT = 150;
 	constexpr auto LAYER_2_IMG_WIDTH = 150;
+	constexpr auto LAYER_2_IMG_NUM_FRAMES = 1;
 
 	constexpr auto RUNNING_GIRL_IMG_HEIGHT = 220;
 	constexpr auto RUNNING_GIRL_IMG_WIDTH = 1536;
+	constexpr auto RUNNING_GIRL_IMG_NUM_FRAMES = 6;
+	constexpr auto RUNNING_GIRL_IMG_FRAME_WIDTH = 256;
 }
 
 std::vector<std::string> ImageCfg::getImagePaths()
@@ -53,48 +61,64 @@ std::vector<std::string> ImageCfg::getImagePaths()
 	return imagePaths;
 }
 
-std::unordered_map<int32_t, Rectangle> ImageCfg::getImageSizes()
+std::unordered_map<int32_t, Frames> ImageCfg::getImageSizes()
 {
-	std::unordered_map<int32_t, Rectangle> imageSizes;
-
-	Rectangle rect(0, 0, PRESS_KEYS_IMG_WIDTH, PRESS_KEYS_IMG_HEIGHT);
+	std::unordered_map<int32_t, Frames> imageSizes;
+	Frames rect; 
+	
+	for (int32_t i = 0; i < PRESS_KEYS_IMG_NUM_FRAMES; i++)
+	{
+		rect.push_back(Rectangle(0, 0, PRESS_KEYS_IMG_WIDTH, PRESS_KEYS_IMG_HEIGHT));
+	}
 	imageSizes.insert(std::make_pair(Textures::PRESS_KEYS, rect));
+	rect.clear();
 
-	rect.x = 0;
-	rect.y = 0;
-	rect.w = UP_IMG_WIDTH;
-	rect.h = UP_IMG_HEIGHT;
+	for (int32_t i = 0; i < UP_IMG_NUM_FRAMES; i++)
+	{
+		rect.push_back(Rectangle(0, 0, UP_IMG_WIDTH, UP_IMG_HEIGHT));
+	}
 	imageSizes.insert(std::make_pair(Textures::UP, rect));
+	rect.clear();
 
-	rect.x = 0;
-	rect.y = 0;
-	rect.w = DOWN_IMG_WIDTH;
-	rect.h = DOWN_IMG_HEIGHT;
+
+	for (int32_t i = 0; i < DOWN_IMG_NUM_FRAMES; i++)
+	{
+		rect.push_back(Rectangle(0, 0, DOWN_IMG_WIDTH, DOWN_IMG_HEIGHT));
+	}
 	imageSizes.insert(std::make_pair(Textures::DOWN, rect));
+	rect.clear();
 
-	rect.x = 0;
-	rect.y = 0;
-	rect.w = LEFT_IMG_WIDTH;
-	rect.h = LEFT_IMG_HEIGHT;
+
+	for (int32_t i = 0; i < LEFT_IMG_NUM_FRAMES; i++)
+	{
+		rect.push_back(Rectangle(0, 0, LEFT_IMG_WIDTH, LEFT_IMG_HEIGHT));
+	}
 	imageSizes.insert(std::make_pair(Textures::LEFT, rect));
+	rect.clear();
 
-	rect.x = 0;
-	rect.y = 0;
-	rect.w = RIGHT_IMG_WIDTH;
-	rect.h = RIGHT_IMG_HEIGHT;
+
+	for (int32_t i = 0; i < RIGHT_IMG_NUM_FRAMES; i++)
+	{
+		rect.push_back(Rectangle(0, 0, RIGHT_IMG_WIDTH, RIGHT_IMG_HEIGHT));
+	}
 	imageSizes.insert(std::make_pair(Textures::RIGHT, rect));
+	rect.clear();
 
-	rect.x = 0;
-	rect.y = 0;
-	rect.w = LAYER_2_IMG_WIDTH;
-	rect.h = LAYER_2_IMG_HEIGHT;
+
+	for (int32_t i = 0; i < LAYER_2_IMG_NUM_FRAMES; i++)
+	{
+		rect.push_back(Rectangle(0, 0, LAYER_2_IMG_WIDTH, LAYER_2_IMG_HEIGHT));
+	}
 	imageSizes.insert(std::make_pair(Textures::LAYER_2, rect));
+	rect.clear();
 
-	rect.x = 0;
-	rect.y = 0;
-	rect.w = RUNNING_GIRL_IMG_WIDTH;
-	rect.h = RUNNING_GIRL_IMG_HEIGHT;
+
+	for (int32_t i = 0; i < RUNNING_GIRL_IMG_NUM_FRAMES; i++)
+	{
+		rect.push_back(Rectangle(0 * RUNNING_GIRL_IMG_FRAME_WIDTH, 0, RUNNING_GIRL_IMG_FRAME_WIDTH, RUNNING_GIRL_IMG_HEIGHT));
+	}
 	imageSizes.insert(std::make_pair(Textures::RUNNING_GIRL, rect));
+	rect.clear();
 
 	return imageSizes;
 }
