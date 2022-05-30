@@ -8,15 +8,15 @@
 
 int32_t Game::init(const std::unordered_map<int32_t, Frames>& _textureDimensions)
 {
-	if (EXIT_SUCCESS != this->_layer_2.create(_textureDimensions, Textures::LAYER_2))
-	{
-		return EXIT_FAILURE;
-	}
+	//if (EXIT_SUCCESS != this->_layer_2.create(_textureDimensions, Textures::LAYER_2))
+	//{
+	//	return EXIT_FAILURE;
+	//}
 
-	if (EXIT_SUCCESS != this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS))
-	{
-		return EXIT_FAILURE;
-	}
+	//if (EXIT_SUCCESS != this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS))
+	//{
+	//	return EXIT_FAILURE;
+	//}
 
 	if (EXIT_SUCCESS != this->_running_girl.create(_textureDimensions, Textures::RUNNING_GIRL, Textures::ImageFrames::RUNNING_GIRL_FRAMES))
 	{
@@ -57,15 +57,16 @@ bool Game::handleEvent(InputEvent& event)
 
 		if (event.key == Keyboard::Key::KEY_UP)
 		{
-			this->_press_keys.moveUp();
+			//this->_press_keys.moveUp();
 		}
 		else if (event.key == Keyboard::Key::KEY_DOWN)
 		{
-			this->_press_keys.moveDown();
+			//this->_press_keys.moveDown();
 		}
 		else if (event.key == Keyboard::Key::KEY_LEFT)
 		{
 			this->_running_girl.moveLeft();
+			this->_running_girl.setPrevFrame();
 		}
 		else if (event.key == Keyboard::Key::KEY_RIGHT)
 		{
@@ -74,11 +75,11 @@ bool Game::handleEvent(InputEvent& event)
 		}
 		else if (event.key == Keyboard::Key::KEY_Z)
 		{
-			this->_press_keys.setOpacity(-10);
+			//this->_press_keys.setOpacity(-10);
 		}
 		else if (event.key == Keyboard::Key::KEY_X)
 		{
-			this->_press_keys.setOpacity(10);
+			//this->_press_keys.setOpacity(10);
 		}
 		else if (event.key == Keyboard::Key::KEY_R && event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
 		{
@@ -93,12 +94,12 @@ std::vector<DrawParams> Game::giveWidgetsForDrawing() const
 {
 	std::vector<DrawParams> drawParams;
 
-	drawParams.push_back(this->_press_keys.getDrawParams());
-	drawParams.push_back(this->_layer_2.getDrawParams());
+	//drawParams.push_back(this->_press_keys.getDrawParams());
+	//drawParams.push_back(this->_layer_2.getDrawParams());
 	drawParams.push_back(this->_running_girl.getDrawParams());
 
-	drawParams.push_back(this->_text.getDrawParams());
-	drawParams.push_back(this->_secondText.getDrawParams());
+	//drawParams.push_back(this->_text.getDrawParams());
+	//drawParams.push_back(this->_secondText.getDrawParams());
 
 	return drawParams;
 }

@@ -2,6 +2,8 @@
 
 #include "../../common_defines/Common_Defines.h"
 
+#include <iostream>
+
 namespace 
 {
 	constexpr auto PRESS_KEYS_LOCATION = "../resources/pictures/press_keys.png";
@@ -116,7 +118,9 @@ std::unordered_map<int32_t, Frames> ImageCfg::getImageSizes()
 
 	for (int32_t i = 0; i < RUNNING_GIRL_IMG_NUM_FRAMES; i++)
 	{
-		rect.push_back(Rectangle(0 * RUNNING_GIRL_IMG_FRAME_WIDTH, 0, RUNNING_GIRL_IMG_FRAME_WIDTH, RUNNING_GIRL_IMG_HEIGHT));
+		rect.push_back(Rectangle(i * RUNNING_GIRL_IMG_FRAME_WIDTH, 0, RUNNING_GIRL_IMG_FRAME_WIDTH, RUNNING_GIRL_IMG_HEIGHT));
+
+		std::cout << "RG Frames: " << i * RUNNING_GIRL_IMG_FRAME_WIDTH << " " << 0 << " " << RUNNING_GIRL_IMG_FRAME_WIDTH << " " << RUNNING_GIRL_IMG_HEIGHT << std::endl;
 	}
 	imageSizes.insert(std::make_pair(Textures::RUNNING_GIRL, rect));
 	rect.clear();

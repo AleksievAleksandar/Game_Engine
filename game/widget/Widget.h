@@ -14,6 +14,7 @@ public:
 	void moveRight();
 
 	void setNextFrame();
+	void setPrevFrame();
 
 	void setOpacity(const int32_t delta);
 
@@ -21,6 +22,7 @@ public:
 
 protected:
 	DrawParams _drawParams;
+
 };
 
 #endif // !I_WIDGET_H

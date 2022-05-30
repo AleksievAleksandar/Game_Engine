@@ -34,9 +34,8 @@ struct DrawParams
 	int32_t h = 0;
 
 	Rectangle frame = Rectangle::ZERO;
-	uint8_t numFrames = ONE_FRAME;
-
-	uint8_t currFrame = 0;
+	int32_t numFrames = ONE_FRAME;
+	int32_t currFrame = 0;
 
 	int32_t opacity = FULL_OPACITY;
 
