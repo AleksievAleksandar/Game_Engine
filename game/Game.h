@@ -24,8 +24,8 @@ public:
 	std::vector<DrawParams> giveWidgetsForDrawing() const;
 
 private:
-	//Image _layer_2;
-	//Image _press_keys;
+	Image _layer_2;
+	Image _press_keys;
 	Image _running_girl;
 
 	Text _text;
