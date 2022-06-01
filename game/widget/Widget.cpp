@@ -37,7 +37,7 @@ void Widget::setNextFrame()
 
 	for (size_t i = 0; i < 6; i++)
 	{
-		std::cout << "x = " << frames.at(6).at(i).x << " y = " << frames.at(6).at(i).y << std::endl;
+		std::cout << "x = " << frames.at(this->_drawParams.rsrcId).at(i).x << " y = " << frames.at(this->_drawParams.rsrcId).at(i).y << std::endl;
 	}
 
 	++this->_drawParams.currFrame;
@@ -46,7 +46,7 @@ void Widget::setNextFrame()
 		this->_drawParams.currFrame = 0;
 	}
 
-	this->_drawParams.frame = frames.at(6).at(this->_drawParams.currFrame);
+	this->_drawParams.frame = frames.at(this->_drawParams.rsrcId).at(this->_drawParams.currFrame);
 	std::cout << "curr frame = " << this->_drawParams.currFrame << std::endl;
 	std::cout << "rsrc ID = " << this->_drawParams.rsrcId << std::endl;
 }
@@ -65,7 +65,7 @@ void Widget::setPrevFrame()
 
 	for (size_t i = 0; i < 6; i++)
 	{
-		std::cout << "x = " << frames.at(6).at(i).x << " y = " << frames.at(6).at(i).y << std::endl;
+		std::cout << "x = " << frames.at(this->_drawParams.rsrcId).at(i).x << " y = " << frames.at(this->_drawParams.rsrcId).at(i).y << std::endl;
 	}
 
 	--this->_drawParams.currFrame;
@@ -74,7 +74,7 @@ void Widget::setPrevFrame()
 		this->_drawParams.currFrame = this->_drawParams.numFrames - 1;;
 	}
 
-	this->_drawParams.frame = frames.at(6).at(this->_drawParams.currFrame);
+	this->_drawParams.frame = frames.at(this->_drawParams.rsrcId).at(this->_drawParams.currFrame);
 	std::cout << "curr frame = " << this->_drawParams.currFrame << std::endl;
 	std::cout << "rsrc ID = " << this->_drawParams.rsrcId << std::endl;
 }
