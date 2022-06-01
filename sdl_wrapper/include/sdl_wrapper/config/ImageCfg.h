@@ -14,6 +14,9 @@ class ImageCfg
 public:
 	static std::vector<std::string> getImagePaths();
 	static std::unordered_map<int32_t, Frames> getImageSizes();
+
+private:
+	static Frames createFrames(const int32_t imgWidth, const int32_t imgHeight, const int32_t numFrames);
 };
 
 #endif // !IMAGE_PATH_CFG_H

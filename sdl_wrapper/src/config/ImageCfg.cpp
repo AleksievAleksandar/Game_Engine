@@ -47,6 +47,17 @@ namespace
 	constexpr auto RUNNING_GIRL_IMG_FRAME_WIDTH = 256;
 }
 
+Frames ImageCfg::createFrames(const int32_t imgWidth, const int32_t imgHeight, const int32_t numFrames)
+{
+	Frames frames;
+	for (int32_t i = 0; i < numFrames; i++)
+	{
+		frames.push_back(Rectangle(i * imgWidth, 0, imgWidth, imgHeight));
+	}
+
+	return frames;
+}
+
 std::vector<std::string> ImageCfg::getImagePaths()
 {
 	//Load image from disk
@@ -66,62 +77,31 @@ std::vector<std::string> ImageCfg::getImagePaths()
 std::unordered_map<int32_t, Frames> ImageCfg::getImageSizes()
 {
 	std::unordered_map<int32_t, Frames> imageSizes;
-	Frames rect; 
-	
-	for (int32_t i = 0; i < PRESS_KEYS_IMG_NUM_FRAMES; i++)
-	{
-		rect.push_back(Rectangle(0, 0, PRESS_KEYS_IMG_WIDTH, PRESS_KEYS_IMG_HEIGHT));
-	}
+	Frames rect = createFrames(PRESS_KEYS_IMG_WIDTH, PRESS_KEYS_IMG_HEIGHT, PRESS_KEYS_IMG_NUM_FRAMES);
 	imageSizes.insert(std::make_pair(Textures::PRESS_KEYS, rect));
 	rect.clear();
 
-
-	for (int32_t i = 0; i < UP_IMG_NUM_FRAMES; i++)
-	{
-		rect.push_back(Rectangle(0, 0, UP_IMG_WIDTH, UP_IMG_HEIGHT));
-	}
+	rect = createFrames(UP_IMG_WIDTH, UP_IMG_HEIGHT, UP_IMG_NUM_FRAMES);
 	imageSizes.insert(std::make_pair(Textures::UP, rect));
 	rect.clear();
 
-
-	for (int32_t i = 0; i < DOWN_IMG_NUM_FRAMES; i++)
-	{
-		rect.push_back(Rectangle(0, 0, DOWN_IMG_WIDTH, DOWN_IMG_HEIGHT));
-	}
+	rect = createFrames(DOWN_IMG_WIDTH, DOWN_IMG_HEIGHT, DOWN_IMG_NUM_FRAMES);
 	imageSizes.insert(std::make_pair(Textures::DOWN, rect));
 	rect.clear();
 
-
-	for (int32_t i = 0; i < LEFT_IMG_NUM_FRAMES; i++)
-	{
-		rect.push_back(Rectangle(0, 0, LEFT_IMG_WIDTH, LEFT_IMG_HEIGHT));
-	}
+	rect = createFrames(LEFT_IMG_WIDTH, LEFT_IMG_HEIGHT, LEFT_IMG_NUM_FRAMES);
 	imageSizes.insert(std::make_pair(Textures::LEFT, rect));
 	rect.clear();
 
-
-	for (int32_t i = 0; i < RIGHT_IMG_NUM_FRAMES; i++)
-	{
-		rect.push_back(Rectangle(0, 0, RIGHT_IMG_WIDTH, RIGHT_IMG_HEIGHT));
-	}
+	rect = createFrames(RIGHT_IMG_WIDTH, RIGHT_IMG_HEIGHT, RIGHT_IMG_NUM_FRAMES);
 	imageSizes.insert(std::make_pair(Textures::RIGHT, rect));
 	rect.clear();
 
-
-	for (int32_t i = 0; i < LAYER_2_IMG_NUM_FRAMES; i++)
-	{
-		rect.push_back(Rectangle(0, 0, LAYER_2_IMG_WIDTH, LAYER_2_IMG_HEIGHT));
-	}
+	rect = createFrames(LAYER_2_IMG_WIDTH, LAYER_2_IMG_HEIGHT, LAYER_2_IMG_NUM_FRAMES);
 	imageSizes.insert(std::make_pair(Textures::LAYER_2, rect));
 	rect.clear();
 
-
-	for (int32_t i = 0; i < RUNNING_GIRL_IMG_NUM_FRAMES; i++)
-	{
-		rect.push_back(Rectangle(i * RUNNING_GIRL_IMG_FRAME_WIDTH, 0, RUNNING_GIRL_IMG_FRAME_WIDTH, RUNNING_GIRL_IMG_HEIGHT));
-
-		std::cout << "RG Frames: " << i * RUNNING_GIRL_IMG_FRAME_WIDTH << " " << 0 << " " << RUNNING_GIRL_IMG_FRAME_WIDTH << " " << RUNNING_GIRL_IMG_HEIGHT << std::endl;
-	}
+	rect = createFrames(RUNNING_GIRL_IMG_FRAME_WIDTH, RUNNING_GIRL_IMG_HEIGHT, RUNNING_GIRL_IMG_NUM_FRAMES);
 	imageSizes.insert(std::make_pair(Textures::RUNNING_GIRL, rect));
 	rect.clear();
 
