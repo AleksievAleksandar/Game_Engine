@@ -1,5 +1,7 @@
 #include "game/widget/Image.h"
 
+#include "sdl_wrapper/Input_Events.h"
+
 #include <iostream>
 
 int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensions, const uint8_t imageType, const uint8_t numFrames)
@@ -25,4 +27,40 @@ int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensi
 	}
 
 	return EXIT_SUCCESS;
+}
+
+bool Image::handleEvent(InputEvent& event)
+{
+	if (TouchEvent::KEYBOARD_RELEASE != event.touchEvent)
+	{
+		return false;
+	}
+
+	switch (event.key)
+	{
+	case Keyboard::Key::KEY_RIGHT:
+		this->moveRight();
+		this->setNextFrame();
+		break;
+
+	case Keyboard::Key::KEY_LEFT:
+		this->moveLeft();
+		this->setPrevFrame();
+		break;
+
+	case Keyboard::Key::KEY_UP:
+		this->moveUp();
+		this->setPrevFrame();
+		break;
+
+	case Keyboard::Key::KEY_DOWN:
+		this->moveDown();
+		this->setNextFrame();
+		break;
+
+	default:
+		break;
+	}
+
+	return false;
 }

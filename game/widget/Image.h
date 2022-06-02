@@ -8,12 +8,16 @@
 #include <vector>
 #include <unordered_map>
 
+//Forward Declarations
+struct InputEvent;
+
 using Frames = std::vector<Rectangle>;
 
 class Image : public Widget
 {
 public:
 	int32_t create(const std::unordered_map<int32_t, Frames>& _textureDimensions, const uint8_t imageType, const uint8_t numFrames = 1);
+	bool handleEvent(InputEvent& event);
 };
 
 #endif // !IMAGE_H
