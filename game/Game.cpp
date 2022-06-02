@@ -70,13 +70,13 @@ bool Game::handleEvent(InputEvent& event)
 		}
 		else if (event.key == Keyboard::Key::KEY_LEFT)
 		{
-			this->_running_girl.moveLeft();
-			this->_running_girl.setPrevFrame();
+			//this->_running_girl.moveLeft();
+			//this->_running_girl.setPrevFrame();
 		}
 		else if (event.key == Keyboard::Key::KEY_RIGHT)
 		{
-			this->_running_girl.moveRight();
-			this->_running_girl.setNextFrame();
+			//this->_running_girl.moveRight();
+			//this->_running_girl.setNextFrame();
 		}
 		else if (event.key == Keyboard::Key::KEY_Z)
 		{
@@ -91,6 +91,8 @@ bool Game::handleEvent(InputEvent& event)
 			this->_text.reloadContent("Aleksandar");
 			this->_secondText.reloadContent("Aleksandar");
 		}
+
+		this->_running_girl.handleEvent(event);
 	}
 	return false;
 }
