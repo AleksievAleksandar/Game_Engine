@@ -21,7 +21,6 @@ int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensi
 
 	if (1 < numFrames)
 	{
-		this->_drawParams._hasFrames = true;
 		this->_drawParams.numFrames = numFrames;
 	}
 

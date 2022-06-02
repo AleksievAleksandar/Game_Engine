@@ -26,8 +26,6 @@ enum class WidgetType : uint8_t
 
 struct DrawParams
 {
-	bool _hasFrames = false;
-
 	Point pos = Point::UNKNOWN;
 
 	int32_t w = 0;
