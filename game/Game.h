@@ -3,7 +3,7 @@
 
 #include "utils/drawing/DrawParams.h"
 #include "utils/drawing/Rectangle.h"
-#include "game/widget/Image.h"
+#include "game/widget/Hero.h"
 #include "game/widget/Text.h"
 
 #include <cstdint>
@@ -24,9 +24,9 @@ public:
 	std::vector<DrawParams> giveWidgetsForDrawing() const;
 
 private:
-	Image _layer_2;
-	Image _press_keys;
-	Image _running_girl;
+	Hero _layer_2;
+	Hero _press_keys;
+	Hero _running_girl;
 
 	Text _text;
 	Text _secondText;
