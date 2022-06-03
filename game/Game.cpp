@@ -60,38 +60,6 @@ bool Game::handleEvent(InputEvent& event)
 			return false;
 		}
 
-		if (event.key == Keyboard::Key::KEY_UP)
-		{
-			this->_press_keys.moveUp();
-		}
-		else if (event.key == Keyboard::Key::KEY_DOWN)
-		{
-			this->_press_keys.moveDown();
-		}
-		else if (event.key == Keyboard::Key::KEY_LEFT)
-		{
-			//this->_running_girl.moveLeft();
-			//this->_running_girl.setPrevFrame();
-		}
-		else if (event.key == Keyboard::Key::KEY_RIGHT)
-		{
-			//this->_running_girl.moveRight();
-			//this->_running_girl.setNextFrame();
-		}
-		else if (event.key == Keyboard::Key::KEY_Z)
-		{
-			this->_press_keys.setOpacity(-10);
-		}
-		else if (event.key == Keyboard::Key::KEY_X)
-		{
-			this->_press_keys.setOpacity(10);
-		}
-		else if (event.key == Keyboard::Key::KEY_R && event.touchEvent == TouchEvent::KEYBOARD_RELEASE)
-		{
-			this->_text.reloadContent("Aleksandar");
-			this->_secondText.reloadContent("Aleksandar");
-		}
-
 		this->_running_girl.handleEvent(event);
 	}
 	return false;
