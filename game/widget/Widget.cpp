@@ -5,22 +5,22 @@
 
 void Widget::moveUp()
 {
-	this->_drawParams.pos.y--;
+	this->_drawParams.pos.y -= 10;
 }
 
 void Widget::moveDown()
 {
-	this->_drawParams.pos.y++;
+	this->_drawParams.pos.y += 10;
 }
 
 void Widget::moveLeft()
 {
-	this->_drawParams.pos.x--;
+	this->_drawParams.pos.x -= 10;
 }
 
 void Widget::moveRight()
 {
-	this->_drawParams.pos.x++;
+	this->_drawParams.pos.x += 10;
 }
 
 void Widget::setNextFrame()

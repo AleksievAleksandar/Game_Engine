@@ -22,7 +22,7 @@ void Hero::deinit()
 
 bool Hero::handleEvent(InputEvent& event)
 {
-	if (TouchEvent::KEYBOARD_RELEASE != event.touchEvent)
+	if (TouchEvent::KEYBOARD_PRESS != event.touchEvent)
 	{
 		return false;
 	}

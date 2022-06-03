@@ -10,19 +10,19 @@ int32_t Game::init(const std::unordered_map<int32_t, Frames>& _textureDimensions
 {
 	if (EXIT_SUCCESS != this->_layer_2.create(_textureDimensions, Textures::LAYER_2))
 	{
-		std::cerr << "ERROR -> Failed to create image with ID: " << Textures::LAYER_2 << std::endl;
+		std::cerr << "ERROR -> Failed to create image obj with ID: " << Textures::LAYER_2 << std::endl;
 		return EXIT_FAILURE;
 	}
 
 	if (EXIT_SUCCESS != this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS))
 	{
-		std::cerr << "ERROR -> Failed to create image with ID: " << Textures::PRESS_KEYS << std::endl;
+		std::cerr << "ERROR -> Failed to create image obj with ID: " << Textures::PRESS_KEYS << std::endl;
 		return EXIT_FAILURE;
 	}
 
 	if (EXIT_SUCCESS != this->_running_girl.create(_textureDimensions, Textures::RUNNING_GIRL, Textures::ImageFrames::RUNNING_GIRL_FRAMES))
 	{
-		std::cerr << "ERROR -> Failed to create image with ID: " << Textures::RUNNING_GIRL << std::endl;
+		std::cerr << "ERROR -> Failed to create hero obj with ID: " << Textures::RUNNING_GIRL << std::endl;
 		return EXIT_FAILURE;
 	}
 
@@ -55,12 +55,22 @@ bool Game::handleEvent(InputEvent& event)
 			return true;
 		}
 
+		this->_running_girl.handleEvent(event);
+
+
 		if (event.touchEvent != TouchEvent::KEYBOARD_RELEASE)
 		{
 			return false;
 		}
 
-		this->_running_girl.handleEvent(event);
+		if (event.key == Keyboard::Key::KEY_NUMPAD_PLUS)
+		{
+			this->_press_keys.setOpacity(10);
+		}
+		else if (event.key == Keyboard::Key::KEY_NUMPAD_MINUS)
+		{
+			this->_press_keys.setOpacity(-10);
+		}
 	}
 	return false;
 }
