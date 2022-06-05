@@ -39,3 +39,8 @@ void Text::setTextHeight(int32_t hParam)
 {
 	this->_drawParams.h = hParam;
 }
+
+void Text::draw() const
+{
+	Widget::draw();
+}

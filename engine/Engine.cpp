@@ -45,16 +45,18 @@ void Engine::deinit()
 
 void Engine::draw() const
 {
-	std::vector<DrawParams> drawParams = this->_game.giveWidgetsForDrawing();
+	//std::vector<DrawParams> drawParams = this->_game.giveWidgetsForDrawing();
 
-	std::vector<SDL_Texture*> textures;
-	gRsrcMgr->collectImagesForDrawing(textures, drawParams);
-	gRsrcMgr->collectTextsForDrawing(textures, drawParams);
+	//std::vector<SDL_Texture*> textures;
+	//gRsrcMgr->collectImagesForDrawing(textures, drawParams);
+	//gRsrcMgr->collectTextsForDrawing(textures, drawParams);
 
-	for (size_t i = 0; i < textures.size(); i++)
-	{
-		gDrawMgr->drawTexture(textures[i], drawParams[i]);
-	}
+	//for (size_t i = 0; i < textures.size(); i++)
+	//{
+	//	gDrawMgr->drawTexture(textures[i], drawParams[i]);
+	//}
+
+	this->_game.draw();
 }
 
 void Engine::mainLoop()

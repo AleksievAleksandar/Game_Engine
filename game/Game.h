@@ -22,6 +22,7 @@ public:
 	void deinit();
 	bool handleEvent(InputEvent& event);
 	std::vector<DrawParams> giveWidgetsForDrawing() const;
+	void draw() const;
 
 private:
 	Image _layer_2;

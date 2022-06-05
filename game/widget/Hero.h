@@ -10,6 +10,8 @@ public:
 	void deinit();
 	bool handleEvent(InputEvent& event);
 	DrawParams getDrawParams() const;
+	void draw() const;
+
 private:
 	Image _image;
 };

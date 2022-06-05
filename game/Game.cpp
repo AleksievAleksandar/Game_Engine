@@ -89,3 +89,13 @@ std::vector<DrawParams> Game::giveWidgetsForDrawing() const
 	return drawParams;
 }
 
+void Game::draw() const
+{
+	this->_press_keys.draw();
+	this->_layer_2.draw();
+	this->_running_girl.draw();
+
+	//this->_text.draw();
+	//this->_secondText.draw();
+}
+

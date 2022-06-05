@@ -19,6 +19,7 @@ public:
 	void setOpacity(const int32_t delta);
 
 	DrawParams getDrawParams() const;
+	void draw() const;
 
 protected:
 	DrawParams _drawParams;

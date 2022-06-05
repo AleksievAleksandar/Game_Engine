@@ -28,3 +28,8 @@ int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensi
 
 	return EXIT_SUCCESS;
 }
+
+void Image::draw() const
+{
+	Widget::draw();
+}

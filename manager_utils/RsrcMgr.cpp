@@ -46,12 +46,17 @@ std::unordered_map<int32_t, Frames> RsrcMgr::getImageDimensions() const
 	return this->_imageHandler.getTexturesDimensions();
 }
 
-void RsrcMgr::collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams)
+void RsrcMgr::collectImageForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams)
 {
-	this->_imageHandler.collectTexturesForDrawing(outCollection, drawParams);
+	this->_imageHandler.collectSingleTextureForDrawing(outCollection, drawParams);
 }
 
-void RsrcMgr::collectTextsForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams)
-{
-	this->_textHandler.collectTexturesForDrawing(outCollection, drawParams);
-}
+//void RsrcMgr::collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams)
+//{
+//	this->_imageHandler.collectTexturesForDrawing(outCollection, drawParams);
+//}
+//
+//void RsrcMgr::collectTextsForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams)
+//{
+//	this->_textHandler.collectTexturesForDrawing(outCollection, drawParams);
+//}

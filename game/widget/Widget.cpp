@@ -1,5 +1,6 @@
 #include "game/widget/Widget.h"
 #include "manager_utils/RsrcMgr.h"
+#include "manager_utils/DrawMgr.h"
 
 #include <iostream>
 
@@ -87,4 +88,13 @@ void Widget::setOpacity(const int32_t delta)
 DrawParams Widget::getDrawParams() const
 {
 	return this->_drawParams;
+}
+
+void Widget::draw() const
+{
+	SDL_Texture* texture = nullptr;
+
+	gRsrcMgr->collectImageForDrawing(texture, this->_drawParams);
+
+	gDrawMgr->drawTexture(texture, this->_drawParams);
 }
