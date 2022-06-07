@@ -44,23 +44,6 @@ void Text_Handler::deinit()
 	}
 }
 
-void Text_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const
-{
-	for (size_t i = 0; i < drawParams.size(); i++)
-	{
-		if (drawParams[i].widgetType == WidgetType::TEXT)
-		{
-			if (0 > drawParams[i].rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams[i].rsrcId)
-			{
-				std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams[i].rsrcId 
-						  << ". The size of _textures[] is: " << this->_textures.size() << std::endl;
-				break;
-			}
-			outCollection.push_back(this->_textures[drawParams[i].rsrcId]);
-		}
-	}
-}
-
 SDL_Texture* Text_Handler::createTextTexture(TTF_Font* font, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight)
 {
 	SDL_Surface* textSurface = SDL_Helpers::getSurfaceFromFont(font, text, color);
@@ -117,7 +100,7 @@ void Text_Handler::reloadText(const int32_t idx, const std::string& text, const 
 	}
 }
 
-void Text_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams)
+void Text_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const
 {
 	if (0 > drawParams.rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams.rsrcId)
 	{

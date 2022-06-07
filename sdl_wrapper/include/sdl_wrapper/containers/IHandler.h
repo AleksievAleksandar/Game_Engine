@@ -14,7 +14,7 @@ class IHandler
 public:
 	virtual int32_t loadRsrc() = 0;
 	virtual void deinit() = 0;
-	virtual void collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const = 0;
+	virtual void collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const = 0;
 
 	virtual ~IHandler() {};
 };

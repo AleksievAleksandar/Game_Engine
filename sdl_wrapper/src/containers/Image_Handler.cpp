@@ -47,32 +47,12 @@ void Image_Handler::deinit()
 	}
 }
 
-void Image_Handler::collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const
-{
-	for (size_t i = 0; i < drawParams.size(); i++)
-	{
-		if (drawParams[i].widgetType == WidgetType::IMAGE)
-		{
-			auto it = this->_textures.find(drawParams[i].rsrcId);
-			if (it != this->_textures.end())
-			{
-				outCollection.push_back(it->second);
-			}
-			else
-			{
-				std::cerr << "ERROR -> Image_Handler::collectTexturesForDrawing() failed. Wrong Rsrc ID: " << drawParams[i].rsrcId << " is provided." << std::endl;
-				break;
-			}
-		}
-	}
-}
-
 std::unordered_map<int32_t, Frames> Image_Handler::getTexturesDimensions() const
 {
 	return this->_textureDimensions;
 }
 
-void Image_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams)
+void Image_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const
 {
 	if (drawParams.widgetType == WidgetType::IMAGE)
 	{

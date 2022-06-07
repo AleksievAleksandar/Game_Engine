@@ -20,10 +20,9 @@ public:
 	int32_t loadRsrc() override;
 	void deinit() override;
 
-	void collectTexturesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams) const override;
 	std::unordered_map<int32_t, Frames> getTexturesDimensions() const;
 
-	void collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams);
+	void collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const override;
 
 private:
 	std::unordered_map<int32_t, SDL_Texture*> _textures;
