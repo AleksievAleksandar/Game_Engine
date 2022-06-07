@@ -117,3 +117,14 @@ void Text_Handler::reloadText(const int32_t idx, const std::string& text, const 
 	}
 }
 
+void Text_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams)
+{
+	if (0 > drawParams.rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams.rsrcId)
+	{
+		std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams.rsrcId
+			<< ". The size of _textures[] is: " << this->_textures.size() << std::endl;
+		outCollection = nullptr;
+		return;
+	}
+	outCollection = this->_textures[drawParams.rsrcId];
+}

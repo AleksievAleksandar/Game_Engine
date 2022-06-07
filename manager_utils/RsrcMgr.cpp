@@ -48,7 +48,20 @@ std::unordered_map<int32_t, Frames> RsrcMgr::getImageDimensions() const
 
 void RsrcMgr::collectImageForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams)
 {
-	this->_imageHandler.collectSingleTextureForDrawing(outCollection, drawParams);
+	switch (drawParams.widgetType)
+	{
+	case WidgetType::IMAGE:
+		this->_imageHandler.collectSingleTextureForDrawing(outCollection, drawParams);
+		break;
+
+	case WidgetType::TEXT:
+		this->_textHandler.collectSingleTextureForDrawing(outCollection, drawParams);
+		break;
+
+	default:
+		break;
+	}
+	
 }
 
 //void RsrcMgr::collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams)

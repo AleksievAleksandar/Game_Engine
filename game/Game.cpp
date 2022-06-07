@@ -71,6 +71,10 @@ bool Game::handleEvent(InputEvent& event)
 		{
 			this->_press_keys.setOpacity(-10);
 		}
+		else if (event.key == Keyboard::Key::KEY_R)
+		{
+			this->_text.reloadContent("RELOADED TEXT");
+		}
 	}
 	return false;
 }
@@ -95,7 +99,7 @@ void Game::draw() const
 	this->_layer_2.draw();
 	this->_running_girl.draw();
 
-	//this->_text.draw();
-	//this->_secondText.draw();
+	this->_text.draw();
+	this->_secondText.draw();
 }
 
