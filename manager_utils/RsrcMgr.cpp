@@ -58,18 +58,15 @@ void RsrcMgr::collectImageForDrawing(SDL_Texture*& outCollection, const DrawPara
 		this->_textHandler.collectSingleTextureForDrawing(outCollection, drawParams);
 		break;
 
+	case WidgetType::UNKNOWN:
+		std::cerr << "ERROR-> trying to collect UNKNOWN WidgetType with RsrcMgr::collectImageForDrawing()" << std::endl;
+		break;
+
 	default:
+		std::cerr << "ERROR-> trying to collect unsupported WidgetType: " 
+			      << static_cast<uint8_t>(drawParams.widgetType) 
+			      << " with RsrcMgr::collectImageForDrawing()" << std::endl;
 		break;
 	}
 	
 }
-
-//void RsrcMgr::collectImagesForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams)
-//{
-//	this->_imageHandler.collectTexturesForDrawing(outCollection, drawParams);
-//}
-//
-//void RsrcMgr::collectTextsForDrawing(std::vector<SDL_Texture*>& outCollection, const std::vector<DrawParams>& drawParams)
-//{
-//	this->_textHandler.collectTexturesForDrawing(outCollection, drawParams);
-//}
