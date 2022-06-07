@@ -48,6 +48,8 @@ std::unordered_map<int32_t, Frames> RsrcMgr::getImageDimensions() const
 
 void RsrcMgr::collectImageForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams)
 {
+	outCollection = nullptr;
+
 	switch (drawParams.widgetType)
 	{
 	case WidgetType::IMAGE:
@@ -67,6 +69,5 @@ void RsrcMgr::collectImageForDrawing(SDL_Texture*& outCollection, const DrawPara
 			      << static_cast<uint8_t>(drawParams.widgetType) 
 			      << " with RsrcMgr::collectImageForDrawing()" << std::endl;
 		break;
-	}
-	
+	}	
 }
