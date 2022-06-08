@@ -21,7 +21,7 @@ public:
 	int32_t init(const std::unordered_map<int32_t, Frames>& _textureDimensions);
 	void deinit();
 	bool handleEvent(InputEvent& event);
-	std::vector<DrawParams> giveWidgetsForDrawing() const;
+	//std::vector<DrawParams> giveWidgetsForDrawing() const;
 	void draw() const;
 
 private:

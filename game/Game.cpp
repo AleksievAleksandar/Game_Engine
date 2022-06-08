@@ -79,19 +79,19 @@ bool Game::handleEvent(InputEvent& event)
 	return false;
 }
 
-std::vector<DrawParams> Game::giveWidgetsForDrawing() const
-{
-	std::vector<DrawParams> drawParams;
-
-	drawParams.push_back(this->_press_keys.getDrawParams());
-	drawParams.push_back(this->_layer_2.getDrawParams());
-	drawParams.push_back(this->_running_girl.getDrawParams());
-
-	drawParams.push_back(this->_text.getDrawParams());
-	drawParams.push_back(this->_secondText.getDrawParams());
-
-	return drawParams;
-}
+//std::vector<DrawParams> Game::giveWidgetsForDrawing() const
+//{
+//	std::vector<DrawParams> drawParams;
+//
+//	drawParams.push_back(this->_press_keys.getDrawParams());
+//	drawParams.push_back(this->_layer_2.getDrawParams());
+//	drawParams.push_back(this->_running_girl.getDrawParams());
+//
+//	drawParams.push_back(this->_text.getDrawParams());
+//	drawParams.push_back(this->_secondText.getDrawParams());
+//
+//	return drawParams;
+//}
 
 void Game::draw() const
 {
