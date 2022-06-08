@@ -45,6 +45,7 @@ add_library(
         ${_SRC_DIR}/Window.cpp
         ${_SRC_DIR}/config/ImageCfg.cpp
         ${_SRC_DIR}/config/TextCfg.cpp
+        ${_SRC_DIR}/containers/IHandler.cpp
         ${_SRC_DIR}/containers/Image_Handler.cpp
         ${_SRC_DIR}/containers/Text_Handler.cpp
 )

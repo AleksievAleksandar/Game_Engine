@@ -28,15 +28,7 @@ int32_t Text_Handler::loadRsrc()
 
 void Text_Handler::deinit()
 {
-	for (auto& texture : this->_textures)
-	{
-		if (nullptr != texture.second)
-		{
-			SDL_DestroyTexture(texture.second);
-			texture.second = nullptr;
-		}
-	}
-
+	IHandler::deinit();
 	for (auto& it : this->_fonts)
 	{
 		TTF_CloseFont(it.second);
@@ -98,18 +90,4 @@ void Text_Handler::reloadText(const int32_t idx, const std::string& text, const 
 	{
 		std::cerr << "ERROR -> Trying to reload text with invalid index: " << idx << " in Text_Handler::reloadText(). The text is not reloaded." << std::endl;
 	}
-}
-
-void Text_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const
-{
-	const auto& it = this->_textures.find(drawParams.rsrcId);
-
-	if (it == this->_textures.end())
-	{
-		std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams.rsrcId << std::endl;
-		outCollection = nullptr;
-		return;
-	}
-
-	outCollection = it->second;
 }

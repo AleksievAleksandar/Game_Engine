@@ -2,7 +2,7 @@
 #define IHANDLER_H
 
 #include <cstdint>
-#include <vector>
+#include <unordered_map>
 
 #include "utils/drawing/DrawParams.h"
 
@@ -13,8 +13,8 @@ class IHandler
 {
 public:
 	virtual int32_t loadRsrc() = 0;
-	virtual void deinit() = 0;
-	virtual void collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const = 0;
+	virtual void deinit();
+	virtual void collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const;
 
 	virtual ~IHandler() {};
 

@@ -39,30 +39,10 @@ int32_t Image_Handler::loadRsrc()
 
 void Image_Handler::deinit()
 {
-	//Deallocate texture
-	for (auto& it : this->_textures)
-	{
-		SDL_DestroyTexture(it.second);
-		it.second = nullptr;
-	}
+	IHandler::deinit();
 }
 
 std::unordered_map<int32_t, Frames> Image_Handler::getTexturesDimensions() const
 {
 	return this->_textureDimensions;
 }
-
-void Image_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const
-{
-	auto it = this->_textures.find(drawParams.rsrcId);
-	if (it != this->_textures.end())
-	{
-		outCollection = it->second;
-	}
-	else
-	{
-		std::cerr << "ERROR -> Image_Handler::collectTexturesForDrawing() failed. Wrong Rsrc ID: " << drawParams.rsrcId << " is provided." << std::endl;
-		outCollection = nullptr;
-	}
-}
-
