@@ -4,10 +4,9 @@
 #include <cstdint>
 #include <unordered_map>
 
-#include "utils/drawing/DrawParams.h"
-
-//Forword Declarations
+//Forward Declarations
 struct SDL_Texture;
+struct DrawParams;
 
 class IHandler
 {

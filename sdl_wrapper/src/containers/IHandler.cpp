@@ -1,4 +1,5 @@
 #include "sdl_wrapper/containers/IHandler.h"
+#include "utils/drawing/DrawParams.h"
 
 #include <iostream>
 #include <SDL_ttf.h>
