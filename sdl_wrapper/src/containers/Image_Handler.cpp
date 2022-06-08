@@ -54,17 +54,15 @@ std::unordered_map<int32_t, Frames> Image_Handler::getTexturesDimensions() const
 
 void Image_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const
 {
-	if (drawParams.widgetType == WidgetType::IMAGE)
+	auto it = this->_textures.find(drawParams.rsrcId);
+	if (it != this->_textures.end())
 	{
-		auto it = this->_textures.find(drawParams.rsrcId);
-		if (it != this->_textures.end())
-		{
-			outCollection = it->second;
-		}
-		else
-		{
-			std::cerr << "ERROR -> Image_Handler::collectTexturesForDrawing() failed. Wrong Rsrc ID: " << drawParams.rsrcId << " is provided." << std::endl;
-			outCollection = nullptr;
-		}
+		outCollection = it->second;
+	}
+	else
+	{
+		std::cerr << "ERROR -> Image_Handler::collectTexturesForDrawing() failed. Wrong Rsrc ID: " << drawParams.rsrcId << " is provided." << std::endl;
+		outCollection = nullptr;
 	}
 }
+
