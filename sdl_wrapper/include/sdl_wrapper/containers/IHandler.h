@@ -17,6 +17,10 @@ public:
 	virtual void collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const = 0;
 
 	virtual ~IHandler() {};
+
+protected:
+	//the textures we'll be drawing
+	std::unordered_map<int32_t, SDL_Texture*> _textures;
 };
 
 #endif // !IHANDLER_H

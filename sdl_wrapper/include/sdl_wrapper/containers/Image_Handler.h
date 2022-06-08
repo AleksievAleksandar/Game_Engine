@@ -25,7 +25,6 @@ public:
 	void collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const override;
 
 private:
-	std::unordered_map<int32_t, SDL_Texture*> _textures;
 	std::unordered_map<int32_t, Frames> _textureDimensions;
 };
 

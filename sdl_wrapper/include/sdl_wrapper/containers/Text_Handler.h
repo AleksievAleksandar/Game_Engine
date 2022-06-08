@@ -27,9 +27,7 @@ public:
 private:
 	SDL_Texture* createTextTexture(TTF_Font* font, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight);
 
-	//the textures we'll be drawing
-	std::unordered_map<int32_t, SDL_Texture*> _textures;
-
+	
 	std::unordered_map<int32_t, TTF_Font*> _fonts;
 };
 
