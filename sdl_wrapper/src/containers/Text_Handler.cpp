@@ -30,10 +30,10 @@ void Text_Handler::deinit()
 {
 	for (auto& texture : this->_textures)
 	{
-		if (nullptr != texture)
+		if (nullptr != texture.second)
 		{
-			SDL_DestroyTexture(texture);
-			texture = nullptr;
+			SDL_DestroyTexture(texture.second);
+			texture.second = nullptr;
 		}
 	}
 
@@ -75,7 +75,7 @@ void Text_Handler::createText(const int32_t fontTypeIdx, const std::string& text
 		return;
 	}
 
-	this->_textures.push_back(textTexture);
+	this->_textures[fontTypeIdx] = textTexture;
 }
 
 void Text_Handler::reloadText(const int32_t idx, const std::string& text, const Color& color, int32_t& outTextWidth, int32_t& outTextHeight)
@@ -102,12 +102,14 @@ void Text_Handler::reloadText(const int32_t idx, const std::string& text, const 
 
 void Text_Handler::collectSingleTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams) const
 {
-	if (0 > drawParams.rsrcId || static_cast<int32_t>(this->_textures.size()) <= drawParams.rsrcId)
+	const auto& it = this->_textures.find(drawParams.rsrcId);
+
+	if (it == this->_textures.end())
 	{
-		std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams.rsrcId
-			<< ". The size of _textures[] is: " << this->_textures.size() << std::endl;
+		std::cerr << "ERROR -> Text_Handler::collectTexturesForDrawing() failed. Providing invalid rsrcId: " << drawParams.rsrcId << std::endl;
 		outCollection = nullptr;
 		return;
 	}
-	outCollection = this->_textures[drawParams.rsrcId];
+
+	outCollection = it->second;
 }
