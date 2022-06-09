@@ -11,6 +11,7 @@ public:
 	bool handleEvent(InputEvent& event);
 	DrawParams getDrawParams() const;
 	void draw() const;
+	void setPosition(const Point& position);
 
 private:
 	Image _image;

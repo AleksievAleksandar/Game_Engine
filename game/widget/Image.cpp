@@ -18,7 +18,7 @@ int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensi
 
 	_drawParams.h = it->second[0].h;
 	_drawParams.w = it->second[0].w;
-	_drawParams.pos = Point::ZERO;
+	_drawParams.pos = Point::UNKNOWN;
 
 	_drawParams.frame = it->second[0];
 

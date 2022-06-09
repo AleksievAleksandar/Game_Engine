@@ -85,6 +85,11 @@ void Widget::setOpacity(const int32_t delta)
 	this->_drawParams.opacity += delta;
 }
 
+void Widget::setPosition(const Point& position)
+{
+	this->_drawParams.pos = position;
+}
+
 DrawParams Widget::getDrawParams() const
 {
 	return this->_drawParams;

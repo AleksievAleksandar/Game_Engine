@@ -13,18 +13,21 @@ int32_t Game::init(const std::unordered_map<int32_t, Frames>& _textureDimensions
 		std::cerr << "ERROR -> Failed to create image obj with ID: " << Textures::LAYER_2 << std::endl;
 		return EXIT_FAILURE;
 	}
+	this->_layer_2.setPosition(Point::ZERO);
 
 	if (EXIT_SUCCESS != this->_press_keys.create(_textureDimensions, Textures::PRESS_KEYS))
 	{
 		std::cerr << "ERROR -> Failed to create image obj with ID: " << Textures::PRESS_KEYS << std::endl;
 		return EXIT_FAILURE;
 	}
+	this->_press_keys.setPosition(Point(100, 100));
 
 	if (EXIT_SUCCESS != this->_running_girl.create(_textureDimensions, Textures::RUNNING_GIRL, Textures::ImageFrames::RUNNING_GIRL_FRAMES))
 	{
 		std::cerr << "ERROR -> Failed to create hero obj with ID: " << Textures::RUNNING_GIRL << std::endl;
 		return EXIT_FAILURE;
 	}
+	this->_running_girl.setPosition(Point(200, 200));
 
 	if (EXIT_SUCCESS != this->_text.create("Hello World"))
 	{

@@ -17,6 +17,7 @@ public:
 	void setPrevFrame();
 
 	void setOpacity(const int32_t delta);
+	void setPosition(const Point& position);
 
 	DrawParams getDrawParams() const;
 	void draw() const;

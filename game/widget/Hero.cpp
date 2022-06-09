@@ -65,3 +65,8 @@ void Hero::draw() const
 {
 	this->_image.draw();
 }
+
+void Hero::setPosition(const Point& position)
+{
+	this->_image.setPosition(position);
+}
