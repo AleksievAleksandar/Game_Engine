@@ -24,10 +24,12 @@ int32_t Text::create(const std::string& text, const Fonts::FontType& fontType, c
 
 void Text::reloadContent(const std::string& newText)
 {
-	if (!this->_createForTheFirstTime)
+	if (this->_createForTheFirstTime)
 	{
-		gRsrcMgr->reloadText(newText, this->_drawParams.rsrcId, this->_color, this->_drawParams.frame.w, this->_drawParams.frame.h);
+		std::cerr << "Trying to reload a text that is not created already" << std::endl;
+		return;
 	}
+	gRsrcMgr->reloadText(newText, this->_drawParams.rsrcId, this->_color, this->_drawParams.frame.w, this->_drawParams.frame.h);
 }
 
 void Text::setTextWidth(int32_t wParam)
