@@ -29,7 +29,7 @@ public:
 
 	std::unordered_map<int32_t, Frames> getImageDimensions() const;
 
-	void collectImageForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams);
+	void getTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams);
 
 private:
 	Image_Handler _imageHandler;

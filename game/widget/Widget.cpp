@@ -94,7 +94,7 @@ void Widget::draw() const
 {
 	SDL_Texture* texture = nullptr;
 
-	gRsrcMgr->collectImageForDrawing(texture, this->_drawParams);
+	gRsrcMgr->getTextureForDrawing(texture, this->_drawParams);
 
 	gDrawMgr->drawTexture(texture, this->_drawParams);
 }
