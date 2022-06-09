@@ -7,7 +7,7 @@
 inline constexpr auto UNKNOWN_RSRC_ID = -1;
 inline constexpr auto FULL_OPACITY = 255;
 inline constexpr auto ZERO_OPACITY = 0;
-inline constexpr auto ONE_FRAME = 1;
+inline constexpr auto UNKNOWN_NUM_FRAMES = -1;
 
 enum class BlendMode : uint8_t
 {
@@ -32,7 +32,7 @@ struct DrawParams
 	int32_t h = 0;
 
 	Rectangle frame = Rectangle::ZERO;
-	int32_t numFrames = ONE_FRAME;
+	int32_t numFrames = UNKNOWN_NUM_FRAMES;
 	int32_t currFrame = 0;
 
 	int32_t opacity = FULL_OPACITY;

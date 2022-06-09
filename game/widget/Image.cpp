@@ -12,6 +12,7 @@ int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensi
 		std::cerr << "ERROR -> Can not find Texture ID: " << imageType << " to init() Game." << std::endl;
 		return EXIT_FAILURE;
 	}
+
 	_drawParams.widgetType = WidgetType::IMAGE;
 	_drawParams.rsrcId = it->first;
 
@@ -21,10 +22,7 @@ int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensi
 
 	_drawParams.frame = it->second[0];
 
-	if (1 < numFrames)
-	{
-		this->_drawParams.numFrames = numFrames;
-	}
+	this->_drawParams.numFrames = numFrames;
 
 	return EXIT_SUCCESS;
 }
