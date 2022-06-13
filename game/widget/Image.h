@@ -2,16 +2,8 @@
 #define IMAGE_H
 
 #include "game/widget/Widget.h"
-#include "utils/drawing/Rectangle.h"
 
 #include <cstdint>
-#include <vector>
-#include <unordered_map>
-
-//Forward Declarations
-struct InputEvent;
-
-using Frames = std::vector<Rectangle>;
 
 class Image : public Widget
 {

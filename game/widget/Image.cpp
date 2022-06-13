@@ -1,6 +1,5 @@
 #include "game/widget/Image.h"
 
-#include "sdl_wrapper/Input_Events.h"
 #include "manager_utils/RsrcMgr.h"
 
 #include <iostream>

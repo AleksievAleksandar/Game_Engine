@@ -3,6 +3,9 @@
 
 #include "game/widget/Image.h"
 
+//Forward Declarations
+struct InputEvent;
+
 class Hero
 {
 public:
