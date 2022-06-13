@@ -1,11 +1,13 @@
 #include "game/widget/Image.h"
 
 #include "sdl_wrapper/Input_Events.h"
+#include "manager_utils/RsrcMgr.h"
 
 #include <iostream>
 
-int32_t Image::create(const std::unordered_map<int32_t, Frames>& _textureDimensions, const uint8_t imageType, const Point& pos, const uint8_t numFrames)
+int32_t Image::create(const uint8_t imageType, const Point& pos, const uint8_t numFrames)
 {
+	const std::unordered_map<int32_t, Frames>& _textureDimensions = gRsrcMgr->getImageDimensions();
 	auto it = _textureDimensions.find(imageType);
 	if (it == _textureDimensions.end())
 	{

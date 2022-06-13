@@ -25,7 +25,7 @@ int32_t Engine::init()
 		return EXIT_FAILURE;
 	}
 	
-	if (EXIT_SUCCESS != this->_game.init(gRsrcMgr->getImageDimensions()))
+	if (EXIT_SUCCESS != this->_game.init())
 	{
 		std::cerr << "ERROR -> this->_game->init() failed. " << std::endl;
 		return EXIT_FAILURE;

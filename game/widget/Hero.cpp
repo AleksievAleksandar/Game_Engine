@@ -4,9 +4,9 @@
 
 #include <iostream>
 
-int32_t Hero::create(const std::unordered_map<int32_t, Frames>& _textureDimensions, const uint8_t imageType, const Point& pos, const uint8_t numFrames)
+int32_t Hero::create(const uint8_t imageType, const Point& pos, const uint8_t numFrames)
 {
-	if (EXIT_SUCCESS != this->_image.create(_textureDimensions, imageType, pos, numFrames))
+	if (EXIT_SUCCESS != this->_image.create(imageType, pos, numFrames))
 	{
 		std::cerr << "ERROR -> Failed to create image with ID: " << imageType << std::endl;
 		return EXIT_FAILURE;
