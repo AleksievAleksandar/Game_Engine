@@ -22,8 +22,9 @@ int32_t Image::create(const uint8_t imageType, const Point& pos, const uint8_t n
 	_drawParams.pos = pos;
 
 	_drawParams.frame = it->second[0];
-
 	this->_drawParams.numFrames = numFrames;
+
+	_drawParams.rotationCenter = Point((_drawParams.h / 2), (_drawParams.w / 2));
 
 	return EXIT_SUCCESS;
 }

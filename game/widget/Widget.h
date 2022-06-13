@@ -19,12 +19,16 @@ public:
 	void setOpacity(const int32_t delta);
 	void setPosition(const Point& position);
 
+	void setFlipMode(const FlipMode& flipMode);
+
+	void setRotationAngle(const double delta);
+	void setRotationCenter(const Point& newRotCenter);
+
 	DrawParams getDrawParams() const;
 	void draw() const;
 
 protected:
 	DrawParams _drawParams;
-
 };
 
 #endif // !I_WIDGET_H

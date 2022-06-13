@@ -32,11 +32,13 @@ bool Hero::handleEvent(InputEvent& event)
 	case Keyboard::Key::KEY_RIGHT:
 		this->_image.moveRight();
 		this->_image.setNextFrame();
+		this->_image.setFlipMode(FlipMode::FLIP_NONE);
 		break;
 
 	case Keyboard::Key::KEY_LEFT:
 		this->_image.moveLeft();
 		this->_image.setPrevFrame();
+		this->_image.setFlipMode(FlipMode::FLIP_HORIZONTAL);
 		break;
 
 	case Keyboard::Key::KEY_UP:
@@ -47,6 +49,14 @@ bool Hero::handleEvent(InputEvent& event)
 	case Keyboard::Key::KEY_DOWN:
 		this->_image.moveDown();
 		this->_image.setNextFrame();
+		break;
+
+	case Keyboard::Key::KEY_Q:
+		this->_image.setRotationAngle(10.0);
+		break;
+
+	case Keyboard::Key::KEY_W:
+		this->_image.setRotationCenter(Point::ZERO);
 		break;
 
 	default:

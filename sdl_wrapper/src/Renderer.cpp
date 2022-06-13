@@ -105,9 +105,15 @@ void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) con
 	SDL_Rect rect = create_SDL_Rect_from_DrawParams(drawParam);
 	SDL_Rect frame = create_SDL_Rect_Frame_from_DrawParams(drawParam);
 
+	SDL_Point rotationPoint;
+	rotationPoint.x = drawParam.rotationCenter.x;
+	rotationPoint.y = drawParam.rotationCenter.y;
+
+	SDL_RendererFlip flipMode = static_cast<SDL_RendererFlip>(drawParam.flipMode);
+
 	if (FULL_OPACITY == drawParam.opacity)
 	{
-		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, &frame, &rect))
+		if (EXIT_SUCCESS != SDL_RenderCopyEx(this->_sdlRenderer, texture, &frame, &rect, drawParam.rotationAngle, &rotationPoint, flipMode))
 		{
 			std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 		}
@@ -119,7 +125,7 @@ void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) con
 			std::cerr << "ERROR -> SDL_Helpers::setAlphaToTexture() " << std::endl;
 		}
 
-		if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, &frame, &rect))
+		if (EXIT_SUCCESS != SDL_RenderCopyEx(this->_sdlRenderer, texture, &frame, &rect, drawParam.rotationAngle, &rotationPoint, flipMode))
 		{
 			std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 		}
@@ -135,8 +141,14 @@ void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) con
 void Renderer::drawTexts(SDL_Texture* texture, const DrawParams& drawParam) const
 {
 	SDL_Rect rect = create_SDL_Rect_from_DrawParams(drawParam);
+	
+	SDL_Point rotationPoint;
+	rotationPoint.x = drawParam.rotationCenter.x;
+	rotationPoint.y = drawParam.rotationCenter.y;
 
-	if (EXIT_SUCCESS != SDL_RenderCopy(this->_sdlRenderer, texture, nullptr, &rect))
+	SDL_RendererFlip flipMode = static_cast<SDL_RendererFlip>(drawParam.flipMode);
+
+	if (EXIT_SUCCESS != SDL_RenderCopyEx(this->_sdlRenderer, texture, nullptr, &rect, drawParam.rotationAngle, &rotationPoint, flipMode))
 	{
 		std::cerr << "ERROR -> Renderer::SDL_RenderCopy() " << SDL_GetError() << std::endl;
 	}

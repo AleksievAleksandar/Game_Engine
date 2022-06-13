@@ -90,6 +90,21 @@ void Widget::setPosition(const Point& position)
 	this->_drawParams.pos = position;
 }
 
+void Widget::setFlipMode(const FlipMode& flipMode)
+{
+	this->_drawParams.flipMode = flipMode;
+}
+
+void Widget::setRotationAngle(const double delta)
+{
+	this->_drawParams.rotationAngle += delta;
+}
+
+void Widget::setRotationCenter(const Point& newRotCenter)
+{
+	this->_drawParams.rotationCenter = newRotCenter;
+}
+
 DrawParams Widget::getDrawParams() const
 {
 	return this->_drawParams;
