@@ -3,7 +3,7 @@
 
 
 #include "sdl_wrapper/Input_Events.h"
-#include "../game/Game.h"
+#include "game/Game.h"
 #include "manager_utils/MgrHandler.h"
 
 #include <cstdint>
