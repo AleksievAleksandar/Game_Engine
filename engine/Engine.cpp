@@ -15,19 +15,19 @@ int32_t Engine::init()
 {
 	if (EXIT_SUCCESS != this->_mgrHandler.init())
 	{
-		std::cerr << "ERROR -> this->_event->_mgrHandler() failed. " << std::endl;
+		std::cerr << "ERROR -> this->_mgrHandler.init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 
 	if (EXIT_SUCCESS != this->_event.init())
 	{
-		std::cerr << "ERROR -> this->_event->init() failed. " << std::endl;
+		std::cerr << "ERROR -> this->_event.init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 	
 	if (EXIT_SUCCESS != this->_game.init())
 	{
-		std::cerr << "ERROR -> this->_game->init() failed. " << std::endl;
+		std::cerr << "ERROR -> this->_game.init() failed. " << std::endl;
 		return EXIT_FAILURE;
 	}
 
