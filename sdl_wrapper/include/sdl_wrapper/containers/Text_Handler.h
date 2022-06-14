@@ -7,10 +7,9 @@
 #include "sdl_wrapper/containers/IHandler.h"
 #include "utils/drawing/DrawParams.h"
 
-//Forword Declarations
+//Forward Declarations
 typedef struct _TTF_Font TTF_Font;
 struct SDL_Texture;
-struct SDL_Surface;
 struct Color;
 
 class Text_Handler : public IHandler
