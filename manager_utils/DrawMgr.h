@@ -21,7 +21,7 @@ public:
 
 	int32_t init();
 	void deinit();
-	void drawTexture(SDL_Texture* texture, const DrawParams& drawParam);
+	void drawTexture(SDL_Texture*& texture, const DrawParams& drawParam);
 	void clearScreen();
 	void updateScreen();
 

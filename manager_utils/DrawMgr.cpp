@@ -27,7 +27,7 @@ void DrawMgr::deinit()
 	this->_window.deinit();
 }
 
-void DrawMgr::drawTexture(SDL_Texture* texture, const DrawParams& drawParam)
+void DrawMgr::drawTexture(SDL_Texture*& texture, const DrawParams& drawParam)
 {
 	this->_renderer.drawTexture(texture, drawParam);
 }

@@ -83,7 +83,7 @@ void Renderer::updateScreen()
 	SDL_RenderPresent(this->_sdlRenderer);
 }
 
-void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) const
+void Renderer::drawTexture(SDL_Texture*& texture, const DrawParams& drawParam) const
 {
 	if (WidgetType::IMAGE == drawParam.widgetType)
 	{
@@ -99,7 +99,7 @@ void Renderer::drawTexture(SDL_Texture* texture, const DrawParams& drawParam) co
 	}
 }
 
-void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) const
+void Renderer::drawImages(SDL_Texture*& texture, const DrawParams& drawParam) const
 {
 	if (FULL_OPACITY == drawParam.opacity)
 	{
@@ -122,12 +122,12 @@ void Renderer::drawImages(SDL_Texture* texture, const DrawParams& drawParam) con
 	}
 }
 
-void Renderer::drawTexts(SDL_Texture* texture, const DrawParams& drawParam) const
+void Renderer::drawTexts(SDL_Texture*& texture, const DrawParams& drawParam) const
 {
 	this->renderTexture(texture, drawParam);
 }
 
-void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParam) const
+void Renderer::renderTexture(SDL_Texture*& texture, const DrawParams& drawParam) const
 {
 	SDL_Rect rect = create_SDL_Rect_from_DrawParams(drawParam);
 	SDL_Rect frame = create_SDL_Rect_Frame_from_DrawParams(drawParam);
