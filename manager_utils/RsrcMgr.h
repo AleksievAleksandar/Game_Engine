@@ -6,6 +6,9 @@
 
 #include <string>
 
+//Forward Declarations
+struct DrawParams;
+
 using Frames = std::vector<Rectangle>;
 
 class RsrcMgr

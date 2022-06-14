@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdint>
 
+#include "utils/drawing/DrawParams.h"
 #include "utils/drawing/Color.h"
 #include "../common_defines/Common_Defines.h"
 
