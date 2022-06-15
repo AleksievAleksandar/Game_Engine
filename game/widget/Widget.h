@@ -22,6 +22,7 @@ public:
 	void setFlipMode(const FlipMode& flipMode);
 
 	void rotateLeft(const double delta);
+	void rotateRight(const double delta);
 	void setRotationCenter(const Point& newRotCenter);
 
 	DrawParams getDrawParams() const;

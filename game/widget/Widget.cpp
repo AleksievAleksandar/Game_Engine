@@ -97,6 +97,11 @@ void Widget::setFlipMode(const FlipMode& flipMode)
 
 void Widget::rotateLeft(const double delta)
 {
+	this->_drawParams.rotationAngle -= delta;
+}
+
+void Widget::rotateRight(const double delta)
+{
 	this->_drawParams.rotationAngle += delta;
 }
 
