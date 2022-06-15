@@ -8,10 +8,6 @@
 #include "utils/drawing/Rectangle.h"
 #include "IHandler.h"
 
-//Forword Declarations
-struct SDL_Surface;
-struct SDL_Texture;
-
 using Frames = std::vector<Rectangle>;
 
 class Image_Handler : public IHandler
