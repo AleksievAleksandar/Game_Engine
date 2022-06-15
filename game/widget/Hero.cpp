@@ -52,7 +52,7 @@ bool Hero::handleEvent(InputEvent& event)
 		break;
 
 	case Keyboard::Key::KEY_Q:
-		this->_image.setRotationAngle(10.0);
+		this->_image.rotateLeft(10.0);
 		break;
 
 	case Keyboard::Key::KEY_W:
