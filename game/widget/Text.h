@@ -16,7 +16,6 @@ public:
 	void reloadContent(const std::string& newText);
 	void setTextWidth(int32_t wParam);
 	void setTextHeight(int32_t hParam);
-	void draw() const;
 
 private:
 	bool _createForTheFirstTime = true;

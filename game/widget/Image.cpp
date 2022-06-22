@@ -28,8 +28,3 @@ int32_t Image::create(const uint8_t imageType, const Point& pos, const uint8_t n
 
 	return EXIT_SUCCESS;
 }
-
-void Image::draw() const
-{
-	Widget::draw();
-}
