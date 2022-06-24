@@ -47,18 +47,18 @@ std::unordered_map<int32_t, Frames> RsrcMgr::getImageDimensions() const
 	return this->_imageHandler.getTexturesDimensions();
 }
 
-void RsrcMgr::getTextureForDrawing(SDL_Texture*& outCollection, const DrawParams& drawParams)
+void RsrcMgr::getTextureForDrawing(SDL_Texture*& outTexture, const DrawParams& drawParams)
 {
-	outCollection = nullptr;
+	outTexture = nullptr;
 
 	switch (drawParams.widgetType)
 	{
 	case WidgetType::IMAGE:
-		this->_imageHandler.collectSingleTextureForDrawing(outCollection, drawParams);
+		this->_imageHandler.collectSingleTextureForDrawing(outTexture, drawParams);
 		break;
 
 	case WidgetType::TEXT:
-		this->_textHandler.collectSingleTextureForDrawing(outCollection, drawParams);
+		this->_textHandler.collectSingleTextureForDrawing(outTexture, drawParams);
 		break;
 
 	case WidgetType::UNKNOWN:
