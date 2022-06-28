@@ -12,8 +12,8 @@ static SDL_Rect create_SDL_Rect_from_DrawParams(const DrawParams& drawParam)
 	SDL_Rect rect;
 	rect.x = drawParam.pos.x;
 	rect.y = drawParam.pos.y;
-	rect.w = drawParam.frame.w;
-	rect.h = drawParam.frame.h;
+	rect.w = drawParam.w;
+	rect.h = drawParam.h;
 
 	return rect;
 }

@@ -21,6 +21,9 @@ public:
 
 	void setFlipMode(const FlipMode& flipMode);
 
+	void setWidth(int32_t delta);
+	void setHeight(int32_t delta);
+
 	void rotateLeft(const double delta);
 	void rotateRight(const double delta);
 	void setRotationCenter(const Point& newRotCenter);

@@ -63,6 +63,11 @@ bool Game::handleEvent(InputEvent& event)
 			return false;
 		}
 
+		if (event.key == Keyboard::Key::KEY_Z)
+		{
+			this->_press_keys.setWidth(-50);
+		}
+
 		if (event.key == Keyboard::Key::KEY_NUMPAD_PLUS)
 		{
 			this->_press_keys.setOpacity(10);

@@ -95,6 +95,26 @@ void Widget::setFlipMode(const FlipMode& flipMode)
 	this->_drawParams.flipMode = flipMode;
 }
 
+void Widget::setWidth(int32_t delta)
+{
+	if (0 > (this->_drawParams.w += delta))
+	{
+		std::cerr << "You are trying to set this->_drawParams.w less than 0" << std::endl;
+		return;
+	}
+	this->_drawParams.w += delta;
+}
+
+void Widget::setHeight(int32_t delta)
+{
+	if (0 > (this->_drawParams.h += delta))
+	{
+		std::cerr << "You are trying to set this->_drawParams.h less than 0" << std::endl;
+		return;
+	}
+	this->_drawParams.h += delta;
+}
+
 void Widget::rotateLeft(const double delta)
 {
 	this->_drawParams.rotationAngle -= delta;
