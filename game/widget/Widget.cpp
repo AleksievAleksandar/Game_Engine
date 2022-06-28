@@ -36,13 +36,13 @@ void Widget::setNextFrame()
 	frames = gRsrcMgr->getImageDimensions();
 	frames.find(this->_drawParams.rsrcId);
 
-	for (size_t i = 0; i < 6; i++)
+	for (int32_t i = 0; i < this->_drawParams.numFrames; i++)
 	{
 		std::cout << "x = " << frames.at(this->_drawParams.rsrcId).at(i).x << " y = " << frames.at(this->_drawParams.rsrcId).at(i).y << std::endl;
 	}
 
 	++this->_drawParams.currFrame;
-	if (6 == this->_drawParams.currFrame)
+	if (this->_drawParams.numFrames == this->_drawParams.currFrame)
 	{
 		this->_drawParams.currFrame = 0;
 	}
@@ -64,7 +64,7 @@ void Widget::setPrevFrame()
 	frames = gRsrcMgr->getImageDimensions();
 	frames.find(this->_drawParams.rsrcId);
 
-	for (size_t i = 0; i < 6; i++)
+	for (int32_t i = 0; i < this->_drawParams.numFrames; i++)
 	{
 		std::cout << "x = " << frames.at(this->_drawParams.rsrcId).at(i).x << " y = " << frames.at(this->_drawParams.rsrcId).at(i).y << std::endl;
 	}
