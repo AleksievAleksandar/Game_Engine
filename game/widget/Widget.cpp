@@ -95,7 +95,7 @@ void Widget::setFlipMode(const FlipMode& flipMode)
 	this->_drawParams.flipMode = flipMode;
 }
 
-void Widget::setWidth(int32_t delta)
+void Widget::setWidth(const int32_t delta)
 {
 	if (0 > (this->_drawParams.w += delta))
 	{
@@ -105,7 +105,7 @@ void Widget::setWidth(int32_t delta)
 	this->_drawParams.w += delta;
 }
 
-void Widget::setHeight(int32_t delta)
+void Widget::setHeight(const int32_t delta)
 {
 	if (0 > (this->_drawParams.h += delta))
 	{
