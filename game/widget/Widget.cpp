@@ -130,11 +130,6 @@ void Widget::setRotationCenter(const Point& newRotCenter)
 	this->_drawParams.rotationCenter = newRotCenter;
 }
 
-DrawParams Widget::getDrawParams() const
-{
-	return this->_drawParams;
-}
-
 void Widget::draw() const
 {
 	SDL_Texture* texture = nullptr;

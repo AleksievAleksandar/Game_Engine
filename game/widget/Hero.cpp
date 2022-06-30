@@ -66,11 +66,6 @@ bool Hero::handleEvent(InputEvent& event)
 	return false;
 }
 
-DrawParams Hero::getDrawParams() const
-{
-	return this->_image.getDrawParams();
-}
-
 void Hero::draw() const
 {
 	this->_image.draw();

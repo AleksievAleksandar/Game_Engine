@@ -28,7 +28,6 @@ public:
 	void rotateRight(const double delta);
 	void setRotationCenter(const Point& newRotCenter);
 
-	DrawParams getDrawParams() const;
 	void draw() const;
 
 protected:
