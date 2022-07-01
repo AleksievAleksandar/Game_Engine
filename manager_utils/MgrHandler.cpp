@@ -13,7 +13,11 @@ int32_t MgrHandler::init()
 		std::cerr << "ERROR -> Failed for memory alloc for gDrawMgr. " << std::endl;
 		return EXIT_FAILURE;
 	}
-	gDrawMgr->init();
+	if (EXIT_SUCCESS != gDrawMgr->init())
+	{
+		std::cerr << "ERROR -> gDrawMgr->init()" << std::endl;
+		return EXIT_FAILURE;
+	}
 
 	gRsrcMgr = new RsrcMgr();
 	if (nullptr == gRsrcMgr)
@@ -21,7 +25,11 @@ int32_t MgrHandler::init()
 		std::cerr << "ERROR -> Failed for memory alloc for gRsrcMgr. " << std::endl;
 		return EXIT_FAILURE;
 	}
-	gRsrcMgr->init();
+	if (EXIT_SUCCESS != gRsrcMgr->init())
+	{
+		std::cerr << "ERROR -> gRsrcMgr->init()" << std::endl;
+		return EXIT_FAILURE;
+	}
 
 	return EXIT_SUCCESS;
 }
