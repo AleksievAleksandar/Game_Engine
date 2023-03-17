@@ -1,11 +1,14 @@
 ﻿cmake_minimum_required(VERSION 3.10.2)
 
+project(GameEngine 
+        VERSION 0.0.1
+        DESCRIPTION "Game Engine"
+        LANGUAGES CXX)
+
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers/helpers.cmake)
 
 set(CMAKE_MODULE_PATH 
     ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers/find_modules)
-
-project(GameEngine LANGUAGES CXX)
 
 set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
