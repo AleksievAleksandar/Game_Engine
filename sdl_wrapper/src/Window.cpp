@@ -28,7 +28,7 @@ int32_t Window::init()
 		std::cerr << "ERROR -> Window::getSurfaceFromWindow()" << std::endl;
 		return EXIT_FAILURE;
 	}
-	return int32_t();
+	return EXIT_SUCCESS;
 }
 
 void Window::deinit()

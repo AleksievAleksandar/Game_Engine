@@ -23,7 +23,7 @@ int32_t RsrcMgr::init()
 		return EXIT_FAILURE;
 	}
 
-	return EXIT_FAILURE;
+	return EXIT_SUCCESS;
 }
 
 void RsrcMgr::deinit()
