@@ -46,14 +46,14 @@ struct DrawParams
 	int32_t w = 0;
 	int32_t h = 0;
 
-	Rectangle frame = Rectangle::ZERO;
-	int32_t numFrames = UNKNOWN_NUM_FRAMES;
-	int32_t currFrame = 0;
+	Rectangle frame 	= Rectangle::ZERO;
+	int32_t numFrames 	= UNKNOWN_NUM_FRAMES;
+	int32_t currFrame 	= 0;
 
-	int32_t opacity = FULL_OPACITY;
+	int32_t opacity 		= FULL_OPACITY;
 
-	int32_t rsrcId = UNKNOWN_RSRC_ID;
-	WidgetType widgetType = WidgetType::UNKNOWN;
+	int32_t rsrcId 			= UNKNOWN_RSRC_ID;
+	WidgetType widgetType 	= WidgetType::UNKNOWN;
 
 	FlipMode flipMode = FlipMode::FLIP_NONE;
 };
