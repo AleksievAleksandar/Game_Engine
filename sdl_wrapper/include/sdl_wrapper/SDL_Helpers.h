@@ -21,6 +21,9 @@ public:
 	SDL_Helpers(const SDL_Helpers& other) = delete;
 	SDL_Helpers(SDL_Helpers&& other) = delete;
 
+	SDL_Helpers& operator=(const SDL_Helpers& other) = delete;
+	SDL_Helpers& operator=(SDL_Helpers&& other) = delete;
+
 	static int32_t createWindow(SDL_Window*& outWindow);
 	static void destroyWindow(SDL_Window*& outWindow);
 
