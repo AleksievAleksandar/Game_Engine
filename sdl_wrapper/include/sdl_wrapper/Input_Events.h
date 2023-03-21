@@ -15,10 +15,10 @@ public:
 	bool pollEvent();
 	bool checkForExitRequestEvent() const;
 
-	Point mousePos = Point::UNKNOWN;
-	int32_t key = Keyboard::Key::KEY_UNKNOWN;
-	uint8_t mouseButton = Mouse::MouseKey::UNKNOWN;
-	TouchEvent touchEvent = TouchEvent::UNKNOWN;
+	Point mousePos 			= Point::UNKNOWN;
+	int32_t key 			= Keyboard::Key::KEY_UNKNOWN;
+	uint8_t mouseButton 	= Mouse::MouseKey::UNKNOWN;
+	TouchEvent touchEvent 	= TouchEvent::UNKNOWN;
 
 private:
 	void processEvent();
