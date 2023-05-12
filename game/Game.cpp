@@ -1,6 +1,6 @@
 #include "Game.h"
 
-#include "../common_defines/Common_Defines.h"
+#include "common_defines/Common_Defines.h"
 #include "sdl_wrapper/Input_Events.h"
 
 #include <cstdlib>
